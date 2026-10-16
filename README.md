@@ -73,9 +73,7 @@ Verify it yourself: `bash scripts/contract.sh --dump <your dump>` repeats steps 
 
 ## The no-ROM policy
 
-Nothing derived from the game enters git, from the first commit. The `.gitignore` is the firewall;
-`tools/audit_public.py` (its sources in `config/firewall.txt`) and `scripts/health/asm_leak.py` are the gates, and the
-audit runs in CI on every push. A pasted listing of the game's instructions counts too. See `src/NOTICE.md`.
+No byte of the game enters git: no ROM, no disassembly listing, no memory image, and no converted assembly source. The repository does hold analysis notes derived from studying the game, such as address-keyed names and comments and documentation of how it works; these contain no game bytes and no pasted code. The `.gitignore`, `tools/audit_public.py` (its sources in `config/firewall.txt`) and `scripts/health/asm_leak.py` keep game data out, and the audit runs in CI on every push. A pasted listing of the game's instructions counts too. See `src/NOTICE.md`.
 
 ## How this project is made
 
