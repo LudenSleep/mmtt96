@@ -8,7 +8,7 @@ superseding G12 at a named commit; see "Reversal" below).
 Option (a). The converted instruction source lives locally only, under ignored `asm/` paths (`asm/src/<id>.asm`),
 regenerated from tracked sidecar files (names `config/names/*.tsv`, comments `config/ghidra/comments.tsv`, the
 campaign ledger `config/campaign/ledger.tsv`, signatures/routine names) plus the developer's own dump of the game.
-The repository never tracks instruction source, in this private phase or after publication.
+The repository never tracks instruction source, before or after publication.
 
 ## Options as offered (plan phase 1.7, ## Rationale)
 - (a) Private working tree / rebuild-from-dump: instruction source is generated (`db.py listing` + names + comments

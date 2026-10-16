@@ -129,7 +129,7 @@ make build PY=<python> NAMES=<dir>  # PY must import capstone (parse-time check 
 
 ### Git posture (decomp)
 
-- **Visibility at day one:** private at day one, to be published after Phase 9 passes — the ROM firewall applies either way (`config/firewall.txt`,
+- **Visibility:** private at day one, public since publication after Phase 9 — the ROM firewall applies either way (`config/firewall.txt`,
   `tools/audit_public.py`, the CI workflow). If ever private, a later flip is gated on the host's object store, never on
   a clean tree.
 - Never `git clean -x` in this tree (the game-derived data is ignored-but-present); the backup of the reverse-engineering

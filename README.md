@@ -6,17 +6,19 @@ A byte-identical, readable reassembly of **Micro Machines Turbo Tournament 96** 
 The game was written by hand in 68000 assembly, so this project has no C and no era compiler. It turns your own dump of
 the cartridge back into 68000 assembly source, gives that source names and comments, and assembles it again with the
 Macroassembler AS. Every build ends with a hash check: the rebuilt ROM must be identical to the original, byte for byte.
-The long-term aim, after the reassembly is readable, is a modified, browser-playable multiplayer version.
+The next goal is a modified build that switches the half-scale view (the "Mini Micro" pool-table view) on for every
+stage; after that, reviewing sprite and graphics changes, and understanding the four-player rules and the tie-break
+playoff.
 
 ## Status
 
 Progress numbers are never typed into this file; they come from the tools. Run `scripts/census/progress.py` (rows and
 bytes by kind and status, read from your build) and see the campaign ledger `config/campaign/ledger.tsv`
-(`scripts/census/ledger.py check` prints its counts). Today the reassembly is readable: every code region builds from
+(`scripts/census/ledger.py check` prints its counts). Phase 1.9 is complete, and the reassembly is readable: every code region builds from
 instruction source and carries a header comment, and every routine entry and memory operand has a meaning name or a
-recorded note of what would settle it (`scripts/census/ledger.py check --complete` passes). How the game itself works,
-system by system and with the evidence for each statement, is in `docs/mechanics.md`; start at its overview. Many
-behaviours there are still open hypotheses.
+recorded note of what would settle it (`scripts/census/ledger.py check --complete` passes). Every system of the game is
+explained, with the evidence for each statement, in `docs/mechanics.md`; start at its overview. Many behaviours there
+are still open hypotheses.
 
 ## Why the assembly source is not in this repository
 
@@ -87,20 +89,19 @@ to another project is written by a person; the project makes no automated reques
 
 ## Repository visibility
 
-This repository is **private**, and making it public is **deferred**. Nothing has been done toward it in phase 1.8
-beyond keeping the firewall green. It may be made public only when all three of these hold:
-
-1. The hosting service is proven free of every game-derived object ever pushed (G17/DK-56): old object ids are probed,
-   or the repository is recreated; a clean working tree is not proof.
-2. The developer has made their own copyright decision, outside any agent, on publishing tools and tables about a
-   commercial game.
-3. The publishing conditions are met (G58, G63, G64): any published numbers are generated with a freshness check, and
-   all outward text is written by a person.
+This repository is public. It contains no game data; the audit above runs in CI on every push to keep it that way. The
+developer decided to publish the project's own tools, tables and documentation.
 
 ## Acknowledgements
 
-Prior community work this project builds on or was checked against: none found on 2026-10-11 (web and GitHub search);
-only unrelated Master System tools and an HTML5 remake exist. The governance and method come from ProjectArchitect
+Prior community work used as reference only (read, linked, never copied; their licences apply to their own code):
+
+- hivvu/scale-miniatures (https://github.com/hivvu/scale-miniatures, GPL-3.0): a TypeScript rewrite of the 1994 PC game.
+- NymanLauri/micro-machines (https://github.com/NymanLauri/micro-machines, no licence stated): a C++ clone.
+- maxim-zhao/micromachineseditor (https://github.com/maxim-zhao/micromachineseditor, MIT): a Master System editor and
+  disassembly.
+
+The governance and method come from ProjectArchitect
 and the decomp-architect kit distilled from a finished matching decompilation.
 
 ## License

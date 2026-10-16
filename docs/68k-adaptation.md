@@ -16,7 +16,7 @@ turns back into the original 1 MiB ROM. The byte gate (rebuilt ROM hash equals t
 | 6 Multipliers | Repeated routines and tables found by signature; the type layer becomes named RAM variables and structs from the first labeled routine. |
 | 7 Codegen map + permuter | Not applicable to hand-written code. Replace with an **encoding map**: which assembler forms yield which bytes. Skip the permuter unless Phase 2 finds compiler-generated code (then reinstate Phases 4 and 7 as written). |
 | 8 Campaign | Convert data to instructions routine by routine, name and comment them, keeping the byte gate green after every batch. |
-| 9 Publish | The repo stays private. Phase 1.8 runs the reproducibility contract (fresh clone + own dump + README alone gives the identical ROM and green health; CI without a dump stays green). The public flip is deferred and gated on three conditions (README `## Repository visibility`): host proven free of every pushed game object (G17/DK-56), the developer's own copyright decision, the G58/G63/G64 publish conditions. |
+| 9 Publish | Phase 1.8 ran the reproducibility contract (fresh clone + own dump + README alone gives the identical ROM and green health; CI without a dump stays green). The repository is now public (README `## Repository visibility`). |
 | 10 Readability | Names, comments, include-file structure, constants for hardware registers. Reached in phase 1.9 (status below). |
 
 **Status (phase 1.8).** Kit phases 0-5 are done here as generation phases 0.5 and 1.1-1.5: 1.4 pinned the
@@ -27,7 +27,7 @@ listings, still byte-identical) and the encoding-form coverage scanner; it repla
 undecoded, checked by the health rung `ledger`); every inferred row has a recorded verdict; a first manual wave named
 and commented six regions; a scripted sweep then gave every operand target and routine entry a neutral name, and the rung `commentcheck` now checks every comment's mechanical claims (names, addresses, groups, counts, coverage) against the tables. What is
 left is readability (kit phase 10): comments and meaning names, in batches routed on the campaign ledger
-(`config/campaign/ledger.tsv`). 1.8 (kit phase 9) keeps the repo private: it runs the reproducibility contract (bootstrap, README build, CI without a dump) and defers the public flip behind the three conditions in row 9. 1.9 completed readability (next paragraph).
+(`config/campaign/ledger.tsv`). 1.8 (kit phase 9) ran the reproducibility contract (bootstrap, README build, CI without a dump); the repository has since been made public. 1.9 completed readability (next paragraph).
 
 **Status (phase 1.9).** Kit phase 10 (readability) is reached: every code region has a header (plate) comment, every
 routine entry and named operand carries a meaning name or an `unresolved:` verdict saying what would settle it, and no
