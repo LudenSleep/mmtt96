@@ -16,5 +16,3 @@
 ## Phase-close gate
 - binding: a phase closes only on `make clean && make build && make health` green
   (`build/mmtt96.bin: OK` and `health: pairs n/n agree`, exit 0).
-ops-setup-decomp.md | extract the medium and verify against the committed manifest | 155
-ops-tools.md | Ops tools — detail behind the card's Tools rows | 180

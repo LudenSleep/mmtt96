@@ -293,7 +293,8 @@ def _status_doc(root):
 
 def _curate_seed_line(root, conf, mode):
     """Return a curate: seed line: the migration line in any mode while LEGACY_INDEX.md has
-    entries, pa.json lacks `memory_routed` (3.14 T2) and `.claude-state/memory` holds a
+    entries, pa.json lacks `memory_routed` (3.14 T2) and `.claude-state/memory` (kept locally, not
+    part of this repository) holds a
     memory file (any *.md but MEMORY.md and gen*.md archives; 3.14 T4); else, planner-gen
     only, the closing-gen line when a GenerationEnd exists."""
     pe_dir = PE.phase_dir(root, conf)

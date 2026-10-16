@@ -1,0 +1,33 @@
+name: Bug report
+description: Something in the build, the tools or the docs does not work as described.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The command you ran and what it printed (the relevant lines only).
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, shell, Python version, commit hash.
+    validations:
+      required: false
+  - type: checkboxes
+    id: no-game-data
+    attributes:
+      label: No game data
+      options:
+        - label: I have not attached a ROM, dump, listing, memory image or save state
+          required: true
+    validations:
+      required: true

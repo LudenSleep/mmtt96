@@ -1054,7 +1054,8 @@ def main(argv=None):
                         "writes nothing and exits 1. No specs with --gen legacy: nothing "
                         "left to route; sets only the pa.json memory_routed marker")
     s.add_argument("--gen", required=True, help="generation id (e.g. 3 or legacy)")
-    s.add_argument("--dir", help="memory directory (default: <root>/.claude-state/memory)")
+    s.add_argument("--dir", help="memory directory (default: <root>/.claude-state/memory, kept "
+                        "locally, not part of this repository)")
 
     s = sub.add_parser("cookbook", help="demote cookbook entries to a generation archive")
     _add_dry_run(s)

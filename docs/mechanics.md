@@ -98,7 +98,7 @@ Modern words a reader may look for, and the period terms this project uses inste
 
 | Modern word | Term here | Note |
 |---|---|---|
-| camera | view and scroll | The screen shows a view onto the level; the scroll is the position the view is drawn at. There is no separate view object: the scroll is derived from the cars' positions every frame (section View and scrolling). |
+| view (screen) | view and scroll | The screen shows a view onto the level; the scroll is the position the view is drawn at. There is no separate view object: the scroll is derived from the cars' positions every frame (section View and scrolling). |
 | hitbox | collision area | The area tested for contact; its shape is named only when evidenced. |
 | level, stage, course, track, table | as the game's own data distinguishes | The game stores no single course record: a course is an internal course number indexing some thirty per-course tables (T10, section Level data and loading); the construction kit's own word is also course. Found (T5): the game's word is course; a time-trial list index maps to an internal course number that indexes per-course tables; a pool table is an art theme, not a record; "stage" here means a course's playing area in stage pixels. |
 | score | lights | The head-to-head score is a column of eight lights at the left screen edge; player 1's share is one word (section Scoring and win condition). |
@@ -125,7 +125,7 @@ The ten meaning names given in the rules group (plan 1.9 T15). Each name's evide
 
 ## Group 1: View and scrolling, with the pool-table scale
 
-### View and scrolling (what a modern reader would call the camera)
+### View and scrolling
 
 Answer to the locating question: there is no separate view-target object. Every race frame the game recomputes a
 target point straight from the positions of the cars that count for the view, then moves the view toward it by at most

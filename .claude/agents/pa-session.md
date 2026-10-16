@@ -89,7 +89,8 @@ asking to run the memory-curator now, saying it is required at every generation 
 line in its text). Options: "Run it now (Recommended)" and "Pause" (no skip).
 Pause → say it will be asked again next session and end the turn; no planner is spawned until the curator has run.
 Run it now → spawn `memory-curator` in the foreground with the brief
-`CURATE: <the curate line from the seed> · MEMORY: <root>/.claude-state/memory · RETURN: recap`, then relay its recap to
+`CURATE: <the curate line from the seed> · MEMORY: <root>/.claude-state/memory · RETURN: recap` (that folder is kept
+locally and is not part of this repository), then relay its recap to
 the developer in the same message as the plan summary below (never edit files yourself).
 When the seed carries an `Audit flag:` line (the newest PhaseEnd's Audit section has `- flag:` rows), or a generation is
 being opened, spawn `auditor` in the foreground next, before the planner, with the brief `AUDIT: <the flag line, or
@@ -98,7 +99,7 @@ generation start> · PHASE: <the closed phase id> · TABLES: <that PhaseEnd path
 writes `phase-ends/current/AUDIT.md`; you never read that file. Relay its VERDICTS, FIXED and CANDIDATES counts to the
 developer with the plan summary.
 Once the curator and the auditor have returned, tell the developer where the archived memories are
-(`<root>/.claude-state/memory/gen<G>.md`, `genlegacy.md` for a migration) in case he wants to keep something.
+(`<root>/.claude-state/memory/gen<G>.md`, `genlegacy.md` for a migration; local only, not part of this repository) in case he wants to keep something.
 In planner-gen mode only, when the seed carries a `Triage: <n> deferred items` line, spawn `discuss` in the foreground
 next, before the planner, with the brief `MODE: triage · ITEMS: <the seed's Deferred: lines> · RETURN: one EDITS line
 per item, PY tools/discussion.py triage <id> deferred:<phase>|deferred:gen<N>|dropped`; run its EDITS lines in one Bash

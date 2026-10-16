@@ -55,3 +55,8 @@ The rules that keep that honest, for every contributor and every agent:
 
 Small, per-routine or per-family changes; `make clean && make build` and `make health` green; a commit message that
 names what changed and how it was verified; no AI-attribution trailers.
+
+## Community files
+
+Conduct: `CODE_OF_CONDUCT.md`. Security concerns: `SECURITY.md`. Issues use the forms in `.github/ISSUE_TEMPLATE/`
+(bug report, question); pull requests use `.github/pull_request_template.md`.

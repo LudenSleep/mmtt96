@@ -46,12 +46,12 @@ from Git bash (Windows) or a shell (Linux), in the root of your clone.
      `docs/ops/ops-setup-decomp.md`). Unzip it and set `GHIDRA_INSTALL_DIR` to the unzipped folder.
    - GNU make and `sha1sum`: on Windows, Git bash (https://git-scm.com/download/win) supplies the shell and `sha1sum`;
      add GNU make (`winget install ezwinports.make`, https://www.gnu.org/software/make/) and put its `bin` on `PATH`.
-   - Tell the build which Python to use: `export PY=<python>` (the `Makefile` default is a Windows install path,
-     `C:/Program Files/Python311/python.exe`), or pass `make <target> PY=<python>` every time. A Python without
+   - Tell the build which Python to use: `export PY=<python>` (the `Makefile` default is `python3` if it runs,
+     else `python`), or pass `make <target> PY=<python>` every time. A Python without
      Capstone is rejected when make starts.
    - Only for research, not for building: MAME 0.289 (set `MAME_EXE` to the path of `mame.exe`; the MAME oracles
      refuse to start without it) and BizHawk 2.11 (set `BIZHAWK` to `EmuHawk.exe`, or put EmuHawk on `PATH`).
-   - Apart from the `Makefile`'s `PY` default, no tool assumes a path on your machine: Ghidra, MAME and BizHawk are
+   - No tool assumes a path on your machine: Ghidra, MAME and BizHawk are
      found only through `GHIDRA_INSTALL_DIR`, `MAME_EXE` and `BIZHAWK` (or `PATH`).
 3. **Bootstrap:** `bash scripts/bootstrap.sh --dump <your dump>`. It checks every prerequisite above (printing the
    source link of anything missing), downloads the Macroassembler AS snapshot from

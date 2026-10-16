@@ -5,7 +5,8 @@
 # needs Ghidra + Java (docs/ops/ops-setup-decomp.md). asm/src is ignored, never tracked (G12).
 # NAMES: names registry dir (ram.tsv, routines.tsv, ...) for split.py and db.py listing; default config/names.
 
-PY      ?= C:/Program Files/Python311/python.exe
+# PY default: python3 if it actually runs (a Windows Store stub exists but may not), else python
+PY      ?= $(shell python3 -c "import sys" >/dev/null 2>&1 && echo python3 || echo python)
 ROM     ?= disks/Micro Machines Turbo Tournament 96 (Europe) (v1.1) (J-Cart).md
 ASM     ?= tools/bin/asl/asw.exe
 P2BIN   ?= tools/bin/asl/p2bin.exe

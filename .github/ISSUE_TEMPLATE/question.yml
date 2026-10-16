@@ -1,0 +1,26 @@
+name: Question
+description: Ask about the project, the build or how the game works.
+labels: ["question"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What you already tried or read (file paths, commands).
+    validations:
+      required: false
+  - type: checkboxes
+    id: no-game-data
+    attributes:
+      label: No game data
+      options:
+        - label: I have not attached a ROM, dump, listing, memory image or save state
+          required: true
+    validations:
+      required: true

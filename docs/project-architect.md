@@ -114,7 +114,8 @@ session start for every agent that reads `CLAUDE.md`. PA3 keeps it enabled and c
 every generation start: standing facts belong in `HOW_WE_WORK.md`, rules in `rules/`,
 techniques in the cookbook. The memory index is kept small and current by a curator agent
 rather than switched off. The memory directory lives in the repository (`.claude-state/memory/`) behind a
-junction so a fresh machine restores it with `pa_install --project`.
+junction so a fresh machine restores it with `pa_install --project`. That folder is kept locally (gitignored) and is
+not part of this repository.
 
 ---
 
@@ -645,7 +646,7 @@ Standing decisions of 3.1 through 3.3 that change how a project is run:
   stay local.
 - A project's memories live in its repository (`.claude-state/memory/`) behind a junction
   from the harness's memory folder, so `pa_install --project` on a fresh machine restores
-  them. Never delete a memory; demote it to a linked
+  them; the folder is kept locally (gitignored) and is not part of this repository. Never delete a memory; demote it to a linked
   generation archive. Only the index costs context.
 - The generation-start ceremony (curator, demotions, trim, seed audit, `doctor --sizes`) runs
   before the planner at every generation boundary.
