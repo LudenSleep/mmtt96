@@ -2,9 +2,10 @@
 
 ## Bring your own copy of the game
 
-Every contributor extracts from their own legally obtained copy. Nothing derived from it is committed — no executable,
-payloads, disassembly, assets, build output, memory images, database, vendor SDK, or notes that paste the target's
-instructions. The `.gitignore` firewall stops the ordinary case; `tools/audit_public.py` refuses the rest and runs in CI
+Every contributor extracts from their own legally obtained copy. No byte of the game is committed: no ROM, extracted
+payloads, disassembly listing, converted assembly source, assets, build output, memory images, Ghidra database, vendor
+SDK, or notes that paste the game's instructions. Analysis notes that contain no game bytes are welcome: address-keyed
+names and comments, ledger rows, and documentation of how the game works. The `.gitignore` firewall stops the ordinary case; `tools/audit_public.py` refuses the rest and runs in CI
 on every push; review `git status` before every commit. CI (`.github/workflows/no-rom.yml`) has two jobs, neither
 needing a dump: `audits` (the public-repo audit) and `selftest` (census and signatures fixtures, the commentcheck
 self-test, a planted `asm_leak` control); see `docs/ops/ops-tools.md` `## ci`.

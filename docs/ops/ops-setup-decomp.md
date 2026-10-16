@@ -16,7 +16,7 @@ Line endings (phase 1.7 T4): tracked `.gitattributes` sets `* text=auto eol=lf`;
 | The build assembler (phase 1.4, T3) | Macroassembler AS V1.42 Bld 313 (`tools/bin/asl/asw.exe` + `p2bin.exe`, GPL-2.0+; snapshot asset `asl-windows-x86_64-v1.4.2.20261012-run38215198548.zip` from github.com/flamewing/asl-releases); zip + extract ignored, sha256 tracked: `cd tools/bin && sha256sum -c asl.zip.sha256` (verify before extracting) | Make (cwd `asm/`): `asw -q -xx -n -U -i . main.asm` then `p2bin main.p ../build/mmtt96.bin` (range deduced, flat). Header `cpu 68000`/`supmode on`/`padding off`/`org 0`. Assert: `if * <> $XXXXXX` / `error "<id>: end mismatch"` / `endif` → rc 2, no `.p`, no bin. Keeps `cmp #,Dn` vs `cmpi` as written; no auto moveq/addq; explicit `.s/.w/.l` honoured; bare `0(An)` shrinks to `(An)`, write `0.w(An)`. Encoding detail: `docs/encoding-map.md` |
 | The all-data baseline assembler (phase 1.3, T1; retired from the build in 1.4 T3) | clownassembler v1.1.3 `tools/bin/clownassembler_asm68k.exe` (131,072 B, AGPL-3.0-or-later, asm68k-compatible; https://github.com/Clownacy/clownassembler/releases/download/v1.1.3/clownassembler_asm68k.exe); exe ignored, sha256 tracked: `cd tools/bin && sha256sum -c clownassembler_asm68k.exe.sha256` (R1.3-001, R1.3-002) | command: `clownassembler_asm68k.exe //p <src.asm>,<out.bin>` (`/p` = flat binary, no header, no padding past the last byte; from Git bash/make write `//p` or set `MSYS_NO_PATHCONV=1`, else `/p` is rewritten to a path and the run fails rc=1). Boundary assert (end exclusive): `if * <> $XXXXXX` / `inform 3,"<msg>"` / `endc` → rc=1, no output file; `fail` and `error` are not directives (syntax error), `inform 0/1` only warn rc=0. No usage text (`/?` unrecognised). 1 MiB `dc.b` source: 0.35 s single file, 3.9 s as 1255 includes, byte-identical. One short region cascades an assert error into every later region; the first `On line` names the culprit. Encoding (phase 1.4 T1): no switches; nothing is optimised by default (unsuffixed Bcc/BSR/BRA = .w, unsuffixed abs and lea/pea/jmp/jsr label = abs.l, `move.l #` never moveq, `add/sub #,Dn` = addi/subi); short forms only by explicit `Bcc.s`, `(x).w` with RAM as `$FFFFxxxx`, `label(pc)`, `moveq`, `addq/subq`; `/o oz+` (0(An)→(An)) is the only optimiser; ae+ default pads dc.w at odd address; `@` = local label; `include` resolves against the process cwd only (run from source root); `align` not a directive (use `cnop`) |
 | The disassembler database | Ghidra 12.1.4 headless (`support/analyzeHeadless.bat`; zip `ghidra_12.1.4_PUBLIC_20260921.zip`, 569,649,598 B, published sha256 `ddac49f903da9d5bac833e5cc79395098b9c33cfd3279be5f31bd00387d2d4db` from the GitHub release API, phase 1.8 T3; manual install, `GHIDRA_INSTALL_DIR`), Java 21 (Temurin 21.0.12 if none on PATH); no MCP | the static oracle; tracked as the TEXT export `config/ghidra/*.tsv`, rebuilt and round-tripped by `scripts/ghidra/db.py` |
-| The emulator and its scripting bridge | MAME 0.289 (env `MAME_EXE` = path to `mame.exe`, required, e.g. `~/Tools/mame/mame.exe`), softlist launch `megadriv microm96` (slot rom_mm96 = J-Cart+EEPROM, no `-cart`), Lua `-autoboot_script` with `-debug -debugger none` | the runtime oracle; driven by `scripts/oracle/mame.py` |
+| The emulator and its scripting bridge | MAME 0.289 (env `MAME_EXE` = path to `mame.exe`, required, no default), softlist launch `megadriv microm96` (slot rom_mm96 = J-Cart+EEPROM, no `-cart`), Lua `-autoboot_script` with `-debug -debugger none` | the runtime oracle; driven by `scripts/oracle/mame.py` |
 | Second 68000 disassembler (phase 1.5, T1) | Capstone 5.0.9 (`pip install --require-hashes -r requirements-python.txt`: win_amd64 + manylinux x86_64 sha256s, phase 1.8 T3; was `pip install --user`, wheel `capstone-5.0.9-py3-none-win_amd64.whl`, sha256 `732cedbbb56d42e723f14d7af6387f1454194a820b4b96b56d1e53f865ef85d0`, verified against PyPI JSON; BSD-3); `capstone.__version__` reports 5.0.7, `pip show` 5.0.9 (report R1.5-001) | the boundary oracle's independent decoder; used by `scripts/oracle/boundaries.py` |
 
 ### The game and the medium
@@ -34,9 +34,9 @@ Line endings (phase 1.7 T4): tracked `.gitattributes` sets `* text=auto eol=lf`;
 
 ```
 # extract the medium and verify against the committed manifest
-"C:/Program Files/Python311/python.exe" scripts/extract/manifest.py           # writes config/manifest.retail.jsonl + extracted/retail/{raw,decoded}/
-"C:/Program Files/Python311/python.exe" scripts/extract/manifest.py --check   # exit 0 identical, 1 differs
-"C:/Program Files/Python311/python.exe" tools/audit_public.py                 # exit 0 = no tracked file matches a manifest hash
+"$PY" scripts/extract/manifest.py           # writes config/manifest.retail.jsonl + extracted/retail/{raw,decoded}/
+"$PY" scripts/extract/manifest.py --check   # exit 0 identical, 1 differs
+"$PY" tools/audit_public.py                 # exit 0 = no tracked file matches a manifest hash
 # the clean fleet verification — every binary from clean → extract → build, exit code read
 make clean && make build    # green = exit 0 + `build/mmtt96.bin: OK`; needs Ghidra + Java (make src)
 make src                    # asm/src only: db.py listing --all-code (all verified code), self-checked, ~12 s
@@ -129,11 +129,10 @@ make build PY=<python> NAMES=<dir>  # PY must import capstone (parse-time check 
 
 ### Git posture (decomp)
 
-- **Visibility:** private at day one, public since publication after Phase 9 — the ROM firewall applies either way (`config/firewall.txt`,
-  `tools/audit_public.py`, the CI workflow). If ever private, a later flip is gated on the host's object store, never on
-  a clean tree.
-- Never `git clean -x` in this tree (the game-derived data is ignored-but-present); the backup of the reverse-engineering
-  work is the text export + the checksum files + a private archive repository, not the ignored directories.
+- **Visibility:** developed privately through Phase 1.9, public since publication (2026-10) — the ROM firewall applies
+  either way (`config/firewall.txt`, `tools/audit_public.py`, the CI workflow).
+- Never `git clean -x` in a working clone (the game-derived data is ignored-but-present); the backup of the
+  reverse-engineering work is the tracked text export + the checksum files, not the ignored directories.
 
 ### Tooling inventory (decomp)
 
@@ -151,4 +150,4 @@ make build PY=<python> NAMES=<dir>  # PY must import capstone (parse-time check 
 | The tool dictionary — the source project's tools, verbatim, by ladder phase, keyed by the need each answers | `<kit master copy>/decomp-architect/corpus/tools/INDEX.md` (installed summary: `docs/tools-manifest.md`) | before designing or debugging a tool, grep the index by the need; the matching file is the jumping-off point, its Adapt column the list of what differs here |
 | The inherited knowledge base — the cookbook, its symptom index and the codegen map, verbatim | `<kit master copy>/decomp-architect/corpus/cookbook/` (installed front page: `docs/knowledge-corpus.md`) | same compiler family: look the symptom up, apply, re-prove on your bytes; another compiler: read the same pass in your compiler's source and find your own lever |
 | The inherited record — the source project's distilled records (the how-to, the decision log, the accelerators, the retrospective, the story, the playbook, the effort doctrine, the readability charter) and every phase-end, verbatim | `<kit master copy>/decomp-architect/corpus/record/` (installed front page: `docs/inherited-record.md`) | when a rule or kernel cites a source, open it here; the digest first, a phase-end on demand, the how-to in order |
-| Kit master copy location | ~/Projects/_kits/decomp-architect/ | — |
+| Kit master copy location | the developer's machine only; not published (the installed front pages above are) | — |

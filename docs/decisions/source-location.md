@@ -29,6 +29,8 @@ The repository never tracks instruction source, before or after publication.
 - G12 (`rules/G12.md`): nothing derived from the game in any tracked or published artifact from the first commit,
   including generated disassembly and any text file that pastes the target's instructions; no private-repository
   exemption (the source project relaxed it while private and paid with a full-history rewrite of about 4,000 commits).
+  (Clarified at publication: "derived" here means game bytes and code; address-keyed names, comments and documentation
+  that contain no game bytes are allowed, as `rules/G12.md` and the README's no-ROM policy now state.)
 
 ## Consequences (G12, DK-53..58)
 - G12 holds unchanged: `config/firewall.txt`, `.gitignore` class 3 (`asm/`, `build/`, `expected/`),

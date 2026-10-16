@@ -49,6 +49,10 @@ from Git bash (Windows) or a shell (Linux), in the root of your clone.
    - Tell the build which Python to use: `export PY=<python>` (the `Makefile` default is a Windows install path,
      `C:/Program Files/Python311/python.exe`), or pass `make <target> PY=<python>` every time. A Python without
      Capstone is rejected when make starts.
+   - Only for research, not for building: MAME 0.289 (set `MAME_EXE` to the path of `mame.exe`; the MAME oracles
+     refuse to start without it) and BizHawk 2.11 (set `BIZHAWK` to `EmuHawk.exe`, or put EmuHawk on `PATH`).
+   - Apart from the `Makefile`'s `PY` default, no tool assumes a path on your machine: Ghidra, MAME and BizHawk are
+     found only through `GHIDRA_INSTALL_DIR`, `MAME_EXE` and `BIZHAWK` (or `PATH`).
 3. **Bootstrap:** `bash scripts/bootstrap.sh --dump <your dump>`. It checks every prerequisite above (printing the
    source link of anything missing), downloads the Macroassembler AS snapshot from
    https://github.com/flamewing/asl-releases/releases/tag/snapshot-v1.4.2.20261012-run38215198548, checks it against
@@ -69,7 +73,7 @@ Verify it yourself: `bash scripts/contract.sh --dump <your dump>` repeats steps 
 `docs/verification.md`).
 
 `make clean && make build` is the clean rebuild. The emulators (MAME, BizHawk) are oracles used only for research
-(`make health-live`); you do not need them to build. More setup detail: `docs/ops/ops-setup-decomp.md`.
+(`make health-live`, which needs `MAME_EXE` and `BIZHAWK` from step 2); you do not need them to build. More setup detail: `docs/ops/ops-setup-decomp.md`.
 
 ## The no-ROM policy
 
@@ -87,8 +91,10 @@ to another project is written by a person; the project makes no automated reques
 
 ## Repository visibility
 
-This repository is public. It contains no game data; the audit above runs in CI on every push to keep it that way. The
-developer decided to publish the project's own tools, tables and documentation.
+This repository is public. The project was developed in a private repository through Phase 1.9 and then published
+with its own tools, tables and documentation; it contains no game data, and the audit above runs in CI on every push
+and pull request to keep it that way. Some records (the phase archives under `phase-ends/`, `docs/decisions/`) were
+written before publication and may still say "private"; they are kept as history.
 
 ## Acknowledgements
 
@@ -114,5 +120,7 @@ dumped ROM; none is provided here.
 
 ## Contributing
 
-See `CONTRIBUTING.md`: bring your own dump, never commit anything derived from it, and read the AI-use conduct section
-before your first change.
+New here? Read the `## Overview` section of `docs/mechanics.md` first, then build (above). See `CONTRIBUTING.md`: bring
+your own dump, never commit a byte of it, and read the AI-use conduct section before your first change. Questions and
+findings are welcome as GitHub issues and changes as pull requests (`CONTRIBUTING.md`, `## Submitting`); never attach a
+ROM, a listing, a memory dump or a save state to either.
