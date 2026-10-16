@@ -1,0 +1,76 @@
+name	value	kind	evidence
+vdp_reg_mode1	0x8000	vdp_reg	published-doc: Sega Genesis Software Manual VDP register map + C. MacDonald genvdp.txt, reg 00 mode set 1 (set form 100RRRRR DDDDDDDD); rom: writers.tsv vdp_reg_00 3/3 boot runs
+vdp_reg_mode2	0x8100	vdp_reg	published-doc: VDP register map (Genesis Software Manual, genvdp.txt), reg 01 mode set 2; rom: writers.tsv vdp_reg_01 3/3 boot runs
+vdp_reg_plane_a	0x8200	vdp_reg	published-doc: VDP register map, reg 02 scroll A (plane A) name table base; rom: writers.tsv vdp_reg_02 3/3; vdp_set_plane_a_base
+vdp_reg_window	0x8300	vdp_reg	published-doc: VDP register map, reg 03 window name table base; rom: writers.tsv vdp_reg_03 3/3; vdp_set_window_base
+vdp_reg_plane_b	0x8400	vdp_reg	published-doc: VDP register map, reg 04 scroll B (plane B) name table base; rom: writers.tsv vdp_reg_04 3/3; vdp_set_plane_b_base
+vdp_reg_sprite	0x8500	vdp_reg	published-doc: VDP register map, reg 05 sprite attribute table base; rom: writers.tsv vdp_reg_05 3/3; vdp_set_sprite_base
+vdp_reg_06	0x8600	vdp_reg	published-doc: VDP register map, reg 06 (128 KiB VRAM sprite bit; unused on a stock console); rom: writers.tsv vdp_reg_06 3/3
+vdp_reg_bgcolor	0x8700	vdp_reg	published-doc: VDP register map, reg 07 background colour (palette line, entry); rom: writers.tsv vdp_reg_07 3/3
+vdp_reg_08	0x8800	vdp_reg	published-doc: VDP register map, reg 08 (Master System mode only; unused in Mega Drive mode); rom: writers.tsv vdp_reg_08 3/3
+vdp_reg_09	0x8900	vdp_reg	published-doc: VDP register map, reg 09 (Master System mode only; unused in Mega Drive mode); rom: writers.tsv vdp_reg_09 3/3
+vdp_reg_hint	0x8A00	vdp_reg	published-doc: VDP register map, reg 0A horizontal interrupt counter (lines); rom: writers.tsv vdp_reg_0A 3/3
+vdp_reg_mode3	0x8B00	vdp_reg	published-doc: VDP register map, reg 0B mode set 3 (ext int, vscroll mode, hscroll mode); rom: writers.tsv vdp_reg_0B 3/3
+vdp_reg_mode4	0x8C00	vdp_reg	published-doc: VDP register map, reg 0C mode set 4 (H32/H40, shadow/highlight, interlace); rom: writers.tsv vdp_reg_0C 3/3
+vdp_reg_hscroll	0x8D00	vdp_reg	published-doc: VDP register map, reg 0D horizontal scroll table base; rom: writers.tsv vdp_reg_0D 3/3; vdp_set_hscroll_base
+vdp_reg_0e	0x8E00	vdp_reg	published-doc: VDP register map, reg 0E (128 KiB VRAM name table bits; unused on a stock console); rom: writers.tsv vdp_reg_0E 3/3
+vdp_reg_autoinc	0x8F00	vdp_reg	published-doc: VDP register map, reg 0F auto-increment (bytes added to the access address per data-port access); rom: writers.tsv vdp_reg_0F 3/3
+vdp_reg_plane_size	0x9000	vdp_reg	published-doc: VDP register map, reg 10 scroll (plane) size; rom: writers.tsv vdp_reg_10 3/3
+vdp_reg_window_x	0x9100	vdp_reg	published-doc: VDP register map, reg 11 window horizontal position; rom: writers.tsv vdp_reg_11 3/3
+vdp_reg_window_y	0x9200	vdp_reg	published-doc: VDP register map, reg 12 window vertical position; rom: writers.tsv vdp_reg_12 3/3
+vdp_reg_dma_len_lo	0x9300	vdp_reg	published-doc: VDP register map, reg 13 DMA length low byte (words); rom: writers.tsv vdp_reg_13 3/3
+vdp_reg_dma_len_hi	0x9400	vdp_reg	published-doc: VDP register map, reg 14 DMA length high byte; rom: writers.tsv vdp_reg_14 3/3
+vdp_reg_dma_src_lo	0x9500	vdp_reg	published-doc: VDP register map, reg 15 DMA source address bits 8-1; rom: writers.tsv vdp_reg_15 3/3
+vdp_reg_dma_src_mid	0x9600	vdp_reg	published-doc: VDP register map, reg 16 DMA source address bits 16-9; rom: writers.tsv vdp_reg_16 3/3
+vdp_reg_dma_src_hi	0x9700	vdp_reg	published-doc: VDP register map, reg 17 DMA source bits 22-17 + DMA mode (bits 7-6); rom: writers.tsv vdp_reg_17 3/3
+vdp_m1_blank_left	0x20	field:vdp_reg_mode1	published-doc: genvdp.txt reg 00 bit 5 (blank leftmost 8 pixels)
+vdp_m1_hint_en	0x10	field:vdp_reg_mode1	published-doc: VDP register map reg 00 bit 4 IE1 (horizontal interrupt enable)
+vdp_m1_normal	0x04	field:vdp_reg_mode1	published-doc: genvdp.txt reg 00 bit 2 (1 = full colour; Software Manual: set to 1)
+vdp_m1_hv_stop	0x02	field:vdp_reg_mode1	published-doc: VDP register map reg 00 bit 1 M3 (freeze H/V counter)
+vdp_m1_display_off	0x01	field:vdp_reg_mode1	published-doc: genvdp.txt reg 00 bit 0 (display disable)
+vdp_m2_vram128	0x80	field:vdp_reg_mode2	published-doc: genvdp.txt reg 01 bit 7 (128 KiB VRAM mode)
+vdp_m2_display	0x40	field:vdp_reg_mode2	published-doc: VDP register map reg 01 bit 6 DISP (display enable)
+vdp_m2_vint_en	0x20	field:vdp_reg_mode2	published-doc: VDP register map reg 01 bit 5 IE0 (vertical interrupt enable)
+vdp_m2_dma_en	0x10	field:vdp_reg_mode2	published-doc: VDP register map reg 01 bit 4 M1 (DMA enable)
+vdp_m2_v30	0x08	field:vdp_reg_mode2	published-doc: VDP register map reg 01 bit 3 M2 (30-cell vertical, PAL only)
+vdp_m2_md_mode	0x04	field:vdp_reg_mode2	published-doc: genvdp.txt reg 01 bit 2 M5 (Mega Drive display mode)
+vdp_m3_ext_int	0x08	field:vdp_reg_mode3	published-doc: VDP register map reg 0B bit 3 IE2 (external interrupt enable)
+vdp_m3_vscroll_2cell	0x04	field:vdp_reg_mode3	published-doc: VDP register map reg 0B bit 2 VSCR (vertical scroll per 2-cell column; 0 = whole screen)
+vdp_m3_hscroll_line	0x03	field:vdp_reg_mode3	published-doc: VDP register map reg 0B bits 1-0 = 11 (horizontal scroll per line; 00 = whole screen)
+vdp_m3_hscroll_cell	0x02	field:vdp_reg_mode3	published-doc: VDP register map reg 0B bits 1-0 = 10 (horizontal scroll per 8-line cell row)
+vdp_m4_h40	0x81	field:vdp_reg_mode4	published-doc: VDP register map reg 0C bits 7,0 RS0/RS1 (40-cell width; 0 = 32 cells)
+vdp_m4_shadow	0x08	field:vdp_reg_mode4	published-doc: VDP register map reg 0C bit 3 STE (shadow/highlight)
+vdp_m4_interlace2	0x06	field:vdp_reg_mode4	published-doc: VDP register map reg 0C bits 2-1 = 11 (double-resolution interlace)
+vdp_m4_interlace	0x02	field:vdp_reg_mode4	published-doc: VDP register map reg 0C bits 2-1 = 01 (interlace)
+vdp_ps_v128	0x30	field:vdp_reg_plane_size	published-doc: VDP register map reg 10 bits 5-4 = 11 (128 cells high)
+vdp_ps_v64	0x10	field:vdp_reg_plane_size	published-doc: VDP register map reg 10 bits 5-4 = 01 (64 cells high; 00 = 32)
+vdp_ps_h128	0x03	field:vdp_reg_plane_size	published-doc: VDP register map reg 10 bits 1-0 = 11 (128 cells wide)
+vdp_ps_h64	0x01	field:vdp_reg_plane_size	published-doc: VDP register map reg 10 bits 1-0 = 01 (64 cells wide; 00 = 32)
+vdp_win_right	0x80	field:vdp_reg_window_x	published-doc: VDP register map reg 11 bit 7 RIGT (window right of the position)
+vdp_win_down	0x80	field:vdp_reg_window_y	published-doc: VDP register map reg 12 bit 7 DOWN (window below the position)
+vdp_dma_copy	0xC0	field:vdp_reg_dma_src_hi	published-doc: VDP register map reg 17 bits 7-6 = 11 (VRAM copy)
+vdp_dma_fill	0x80	field:vdp_reg_dma_src_hi	published-doc: VDP register map reg 17 bits 7-6 = 10 (VRAM fill; 0x = 68000 memory to VDP)
+vdp_cd_vram_r	0x00	vdp_cd	published-doc: VDP access command code CD3-0 = 0000 VRAM read (Genesis Software Manual, genvdp.txt)
+vdp_cd_vram_w	0x01	vdp_cd	published-doc: VDP access command code 0001 VRAM write
+vdp_cd_cram_w	0x03	vdp_cd	published-doc: VDP access command code 0011 CRAM write
+vdp_cd_vsram_r	0x04	vdp_cd	published-doc: VDP access command code 0100 VSRAM read
+vdp_cd_vsram_w	0x05	vdp_cd	published-doc: VDP access command code 0101 VSRAM write
+vdp_cd_cram_r	0x08	vdp_cd	published-doc: VDP access command code 1000 CRAM read
+vdp_cd_dma	0x20	vdp_cd	published-doc: VDP access command code bit CD5 (start DMA)
+vdp_cmd_hi	adr,cd:(((cd)&3)<<14)|((adr)&$3FFF)	form	published-doc: VDP access command first word CD1 CD0 A13..A0 (Genesis Software Manual, genvdp.txt); rom: writers.tsv vram/cram/vsram command rows
+vdp_cmd_lo	adr,cd:((((cd)>>2)&$F)<<4)|(((adr)>>14)&3)	form	published-doc: VDP access command second word 0..0 CD5..CD2 0 0 A15 A14 (same sources)
+z80_bus_request	0x100	value:z80_busreq	published-doc: Genesis Software Manual Z80 control, word $0100 to A11100 requests the Z80 bus
+z80_bus_release	0x000	value:z80_busreq	published-doc: Genesis Software Manual Z80 control, word $0000 to A11100 returns the Z80 bus
+z80_bus_busy_bit	0x0	bitno:z80_busreq	published-doc: Genesis Software Manual Z80 control, bit 0 of the byte read at A11100 = 1 until the bus is granted
+z80_reset_assert	0x000	value:z80_reset	published-doc: Genesis Software Manual Z80 control, word $0000 to A11200 holds the Z80 in reset
+z80_reset_release	0x100	value:z80_reset	published-doc: Genesis Software Manual Z80 control, word $0100 to A11200 releases the Z80 reset
+io_data_low	0x00	value:io_data	published-doc: Genesis Software Manual I/O, data port A10003/5/7 byte with every output pin low (TH low selects the second 3-button read)
+io_th	0x40	bit:io_data	published-doc: Genesis Software Manual I/O data port bit 6 TH (3-button pad select line)
+io_tr	0x20	bit:io_data	published-doc: Genesis Software Manual I/O data port bit 5 TR
+io_tl	0x10	bit:io_data	published-doc: Genesis Software Manual I/O data port bit 4 TL
+io_ctrl_th_int	0x80	bit:io_ctrl	published-doc: Genesis Software Manual I/O control port A10009/B/D bit 7 (TH interrupt enable)
+io_ctrl_th_out	0x40	bit:io_ctrl	published-doc: Genesis Software Manual I/O control port bit 6 (TH is an output)
+io_ctrl_tr_out	0x20	bit:io_ctrl	published-doc: Genesis Software Manual I/O control port bit 5 (TR is an output)
+io_ctrl_tl_out	0x10	bit:io_ctrl	published-doc: Genesis Software Manual I/O control port bit 4 (TL is an output)
+vdp_no_scaling	-	fact	published-doc: VDP register map regs 00-17 (Genesis Software Manual, genvdp.txt) has no scale, zoom or rotation register; sprite sizes are fixed 1-4 x 1-4 cells; only scroll (whole/cell/line hscroll, whole/2-cell vscroll), priority and shadow/highlight; rom: writers.tsv sets regs 00-17 only (24/24 seen, 3/3 boot runs)
+basereg_a6	0xC00000	basereg	rom: a6 holds vdp_data for the whole game: written only by lea vdp_data at 000308 and 0003E6 (code_0002FA), movem save/restore pairs and the boot region init (usp clear before 000308); constants.py check asserts it

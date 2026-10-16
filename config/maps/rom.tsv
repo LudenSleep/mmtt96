@@ -1,0 +1,3 @@
+claim_id	addr_start	addr_end	claim	probe	datapoints	status	expect	second
+entry	0x000200	0x000200	entry_after_trap	boot.lua	boot_20261011T224048;boot_20261011T224049;boot_20261011T224051	verified	entry_after_trap=000200	bizhawk_rammap_20261012T082033;bizhawk_rammap_20261012T082037;bizhawk_rammap_20261012T082041
+z80_upload	0x015918	0x015918	bp_hit	boot.lua	boot_20261011T224048;boot_20261011T224049;boot_20261011T224051	verified		

@@ -1,0 +1,1651 @@
+start	end	kind	id	status	evidence
+0x000000	0x000100	vectors	vectors	verified	md-spec
+0x000100	0x000200	header	header	verified	md-spec
+0x000200	0x00028E	code	init	verified	emu:boot_20261011T224048;boot_20261011T224049;boot_20261011T224051; bp 0x00028C (bra.s, last insn) hit, 0x00028E never
+0x00028E	0x0002C4	data	init_table	verified	R1.1-002; ICD_BLK4 table after init bra.s @0x00028C; T4: mame read tap 3/3 runs by verified code
+0x0002C4	0x0002EA	z80	z80_boot_stub	verified	R1.1-002; init copy loop @0x00024E, count #$25, dest long @0x000294
+0x0002EA	0x0002FA	data	data_0002EA	verified	no xref; not executed; T4: mame read tap 3/3 runs by verified code
+0x0002FA	0x000A8C	code	code_0002FA	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x000A8C	0x000D14	code	code_000A8C	verified	ghidra; xref from verified code; not executed
+0x000D14	0x000FCE	code	code_000D14	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x000FCE	0x00102E	code	code_000FCE	verified	ghidra; xref from verified code; not executed
+0x00102E	0x00124C	code	code_00102E	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x00124C	0x0012B4	code	code_00124C	verified	ghidra; xref from verified code; not executed
+0x0012B4	0x00143C	code	code_0012B4	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x00143C	0x001584	code	code_00143C	verified	ghidra; xref from verified code; not executed
+0x001584	0x001588	data	data_001584	verified	ghidra; data xref from verified code; not executed
+0x001588	0x00158C	data	data_001588	verified	ghidra; data xref from verified code; not executed
+0x00158C	0x001590	data	data_00158C	verified	ghidra; data xref from verified code; not executed
+0x001590	0x001594	data	data_001590	verified	ghidra; data xref from verified code; not executed
+0x001594	0x001598	data	data_001594	verified	ghidra; data xref from verified code; not executed
+0x001598	0x00159C	data	data_001598	verified	ghidra; data xref from verified code; not executed
+0x00159C	0x0015A0	data	data_00159C	verified	ghidra; data xref from verified code; not executed
+0x0015A0	0x0015A4	data	data_0015A0	verified	ghidra; data xref from verified code; not executed
+0x0015A4	0x0015A8	data	data_0015A4	verified	ghidra; data xref from verified code; not executed
+0x0015A8	0x0015AC	data	data_0015A8	verified	ghidra; data xref from verified code; not executed
+0x0015AC	0x0015B0	data	data_0015AC	verified	ghidra; data xref from verified code; not executed
+0x0015B0	0x0015B4	data	data_0015B0	verified	ghidra; data xref from verified code; not executed
+0x0015B4	0x0015B8	data	data_0015B4	verified	ghidra; data xref from verified code; not executed
+0x0015B8	0x0015C0	data	data_0015B8	verified	ghidra; data xref from verified code; not executed
+0x0015C0	0x0016DA	code	code_0015C0	verified	ghidra; xref from verified code; not executed
+0x0016DA	0x0016E6	data	data_0016DA	verified	ghidra; data xref from verified code; not executed
+0x0016E6	0x0016FE	data	data_0016E6	verified	ghidra; data xref from verified code; not executed
+0x0016FE	0x001716	data	data_0016FE	verified	ghidra; data xref from verified code; not executed
+0x001716	0x001726	data	data_001716	verified	ghidra; data xref from verified code; not executed
+0x001726	0x001742	data	data_001726	verified	ghidra; data xref from verified code; not executed
+0x001742	0x001756	data	data_001742	verified	ghidra; data xref from verified code; not executed
+0x001756	0x001772	data	data_001756	verified	ghidra; data xref from verified code; not executed
+0x001772	0x001782	data	data_001772	verified	ghidra; data xref from verified code; not executed
+0x001782	0x001783	data	data_001782	verified	ghidra; data xref from verified code; not executed
+0x001783	0x001978	data	data_001783	verified	ghidra; data xref from verified code; not executed
+0x001978	0x00260E	code	code_001978	verified	ghidra; xref from verified code; not executed
+0x00260E	0x002626	data	data_00260E	verified	ghidra; data xref from verified code; not executed
+0x002626	0x00263E	data	data_002626	verified	ghidra; data xref from verified code; not executed
+0x00263E	0x002656	data	data_00263E	verified	ghidra; data xref from verified code; not executed
+0x002656	0x00266E	data	data_002656	verified	ghidra; data xref from verified code; not executed
+0x00266E	0x0045CE	code	code_00266E	verified	ghidra; xref from verified code; not executed
+0x0045CE	0x004D34	code	code_0045CE	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x004D34	0x0053BE	code	code_004D34	verified	ghidra; xref from verified code; not executed
+0x0053BE	0x0053F2	code	code_0053BE	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0053F2	0x005426	code	code_0053F2	verified	ghidra; xref from verified code; not executed
+0x005426	0x005480	code	code_005426	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x005480	0x0054E4	code	code_005480	verified	ghidra; xref from verified code; not executed
+0x0054E4	0x005638	code	code_0054E4	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x005638	0x005896	code	code_005638	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x005896	0x00589A	data	data_005896	verified	ghidra; data xref from verified code; not executed
+0x00589A	0x005BAA	code	code_00589A	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x005BAA	0x005BBA	data	data_005BAA	verified	ghidra; data xref from verified code; not executed
+0x005BBA	0x006170	code	code_005BBA	verified	ghidra; xref from verified code; not executed
+0x006170	0x006190	data	data_006170	inferred	no xref; not executed
+0x006190	0x006286	code	code_006190	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x006286	0x00635E	code	code_006286	verified	ghidra; xref from verified code; not executed
+0x00635E	0x0068D0	code	code_00635E	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x0068D0	0x0068D2	data	data_0068D0	inferred	no xref; not executed
+0x0068D2	0x0071C6	code	code_0068D2	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x0071C6	0x00735A	code	code_0071C6	verified	ghidra; xref from verified code; not executed
+0x00735A	0x00735C	data	data_00735A	verified	ghidra; data xref from verified code; not executed
+0x00735C	0x00736A	data	data_00735C	verified	ghidra; data xref from verified code; not executed
+0x00736A	0x00736C	data	data_00736A	verified	ghidra; data xref from verified code; not executed
+0x00736C	0x007376	data	data_00736C	verified	ghidra; data xref from verified code; not executed
+0x007376	0x00740E	code	code_007376	verified	ghidra; xref from verified code; not executed
+0x00740E	0x007410	data	data_00740E	verified	ghidra; data xref from verified code; not executed
+0x007410	0x007412	data	data_007410	verified	ghidra; data xref from verified code; not executed
+0x007412	0x007414	data	data_007412	verified	ghidra; data xref from verified code; not executed
+0x007414	0x007416	data	data_007414	verified	ghidra; data xref from verified code; not executed
+0x007416	0x007418	data	data_007416	verified	ghidra; data xref from verified code; not executed
+0x007418	0x00741A	data	data_007418	verified	ghidra; data xref from verified code; not executed
+0x00741A	0x007790	code	code_00741A	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x007790	0x007AB4	code	code_007790	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x007AB4	0x007B66	code	code_007AB4	verified	ghidra; xref from verified code; not executed
+0x007B66	0x007B9A	code	code_007B66	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x007B9A	0x007BA4	code	code_007B9A	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x007BA4	0x007BDC	code	code_007BA4	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x007BDC	0x007EF4	code	code_007BDC	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x007EF4	0x008030	code	code_007EF4	verified	ghidra; xref from verified code; not executed
+0x008030	0x008035	data	data_008030	verified	ghidra; data xref from verified code; not executed
+0x008035	0x008036	data	data_008035	verified	ghidra; data xref from verified code; not executed
+0x008036	0x00803A	data	data_008036	verified	ghidra; data xref from verified code; not executed
+0x00803A	0x00803B	data	data_00803A	verified	ghidra; data xref from verified code; not executed
+0x00803B	0x00803C	data	data_00803B	verified	ghidra; data xref from verified code; not executed
+0x00803C	0x00851E	code	code_00803C	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x00851E	0x00855A	code	code_00851E	verified	ghidra; xref from verified code; not executed
+0x00855A	0x0090E6	code	code_00855A	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x0090E6	0x0090E8	data	data_0090E6	verified	ghidra; data xref from verified code; not executed
+0x0090E8	0x0090EA	data	data_0090E8	verified	ghidra; data xref from verified code; not executed
+0x0090EA	0x0090EC	data	data_0090EA	verified	ghidra; data xref from verified code; not executed
+0x0090EC	0x0090EE	data	data_0090EC	verified	ghidra; data xref from verified code; not executed
+0x0090EE	0x009ADC	code	code_0090EE	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x009ADC	0x009B82	code	code_009ADC	verified	ghidra; xref from verified code; not executed
+0x009B82	0x009CBA	code	code_009B82	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x009CBA	0x00A38E	code	code_009CBA	verified	ghidra; xref from verified code; not executed
+0x00A38E	0x00A498	code	code_00A38E	verified	cov:cov_attract_20261011T232135; ghidra
+0x00A498	0x00A6C2	code	code_00A498	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x00A6C2	0x00B25C	code	code_00A6C2	verified	ghidra; xref from verified code; not executed
+0x00B25C	0x00BBDA	code	code_00B25C	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x00BBDA	0x00BC1A	code	code_00BBDA	verified	ghidra; xref from verified code; not executed
+0x00BC1A	0x00BDB4	code	code_00BC1A	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x00BDB4	0x00BE02	code	code_00BDB4	verified	ghidra; xref from verified code; not executed
+0x00BE02	0x00C558	code	code_00BE02	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x00C558	0x00C684	code	code_00C558	verified	ghidra; xref from verified code; not executed
+0x00C684	0x00C714	code	code_00C684	verified	cov:cov_race_20261012T073129; ghidra
+0x00C714	0x00C7F0	code	code_00C714	verified	ghidra; xref from verified code; not executed
+0x00C7F0	0x00C812	code	code_00C7F0	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x00C812	0x00C84C	code	code_00C812	verified	cov:cov_race_20261012T073129; ghidra
+0x00C84C	0x00C8E8	code	code_00C84C	verified	ghidra; xref from verified code; not executed
+0x00C8E8	0x00C998	code	code_00C8E8	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x00C998	0x00E738	code	code_00C998	verified	ghidra; xref from verified code; not executed
+0x00E738	0x00E746	data	data_00E738	inferred	no xref; not executed
+0x00E746	0x00EA9C	code	code_00E746	verified	ghidra; xref from verified code; not executed
+0x00EA9C	0x00EFFE	code	code_00EA9C	verified	cov:cov_race_20261012T073129; ghidra
+0x00EFFE	0x00F05E	code	code_00EFFE	verified	ghidra; xref from verified code; not executed
+0x00F05E	0x00F070	code	code_00F05E	verified	cov:cov_race_20261012T073129; ghidra
+0x00F070	0x00F0C2	code	code_00F070	verified	ghidra; xref from verified code; not executed
+0x00F0C2	0x00F6AE	code	code_00F0C2	verified	cov:cov_race_20261012T073129; ghidra
+0x00F6AE	0x00F8B0	code	code_00F6AE	verified	ghidra; xref from verified code; not executed
+0x00F8B0	0x00FC24	code	code_00F8B0	verified	cov:cov_race_20261012T073129; ghidra
+0x00FC24	0x00FC25	data	data_00FC24	verified	ghidra; data xref from verified code; not executed
+0x00FC25	0x00FC2A	data	data_00FC25	verified	ghidra; data xref from verified code; not executed
+0x00FC2A	0x00FC54	data	data_00FC2A	verified	ghidra; data xref from verified code; not executed
+0x00FC54	0x01005A	code	code_00FC54	verified	cov:cov_race_20261012T073129; ghidra
+0x01005A	0x01008C	code	code_01005A	verified	ghidra; xref from verified code; not executed
+0x01008C	0x0105E8	code	code_01008C	verified	cov:cov_race_20261012T073129; ghidra
+0x0105E8	0x01062E	code	code_0105E8	verified	ghidra; xref from verified code; not executed
+0x01062E	0x010774	code	code_01062E	verified	cov:cov_race_20261012T073129; ghidra
+0x010774	0x010810	code	code_010774	verified	ghidra; xref from verified code; not executed
+0x010810	0x010812	code	code_010810	verified	cov:cov_race_20261012T073129; ghidra
+0x010812	0x010826	code	code_010812	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x010826	0x0108AE	code	code_010826	verified	cov:cov_race_20261012T073129; ghidra
+0x0108AE	0x0108B6	data	data_0108AE	inferred	no xref; not executed
+0x0108B6	0x0108BE	code	code_0108B6	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0108BE	0x0108C2	data	data_0108BE	inferred	no xref; not executed
+0x0108C2	0x010B74	code	code_0108C2	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x010B74	0x010BA0	code	code_010B74	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x010BA0	0x010BB0	code	code_010BA0	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x010BB0	0x010BBE	code	code_010BB0	verified	ghidra; xref from verified code; not executed
+0x010BBE	0x010C8E	code	code_010BBE	verified	cov:cov_race_20261012T073129; ghidra
+0x010C8E	0x010D9C	code	code_010C8E	verified	ghidra; xref from verified code; not executed
+0x010D9C	0x010DDA	code	code_010D9C	verified	cov:cov_race_20261012T073129; ghidra
+0x010DDA	0x010E24	code	code_010DDA	verified	ghidra; xref from verified code; not executed
+0x010E24	0x010E48	code	code_010E24	verified	cov:cov_race_20261012T073129; ghidra
+0x010E48	0x010EE2	data	data_010E48	verified	ghidra; data xref from verified code; not executed
+0x010EE2	0x012688	code	code_010EE2	verified	ghidra; xref from verified code; not executed
+0x012688	0x01298A	code	code_012688	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x01298A	0x0129DE	code	code_01298A	verified	ghidra; xref from verified code; not executed
+0x0129DE	0x012EDE	code	code_0129DE	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x012EDE	0x012EE0	data	data_012EDE	inferred	no xref; not executed
+0x012EE0	0x012EE2	code	code_012EE0	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x012EE2	0x012EE8	data	data_012EE2	inferred	no xref; not executed
+0x012EE8	0x012EEA	code	code_012EE8	verified	cov:cov_race_20261012T073129; ghidra
+0x012EEA	0x012EEE	data	data_012EEA	inferred	no xref; not executed
+0x012EEE	0x012EF0	code	code_012EEE	verified	cov:cov_race_20261012T073129; ghidra
+0x012EF0	0x012EF4	data	data_012EF0	inferred	no xref; not executed
+0x012EF4	0x012EFC	code	code_012EF4	verified	cov:cov_attract_20261011T232135; ghidra
+0x012EFC	0x012FF6	code	code_012EFC	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x012FF6	0x0132FC	code	code_012FF6	verified	cov:cov_race_20261012T073129; ghidra
+0x0132FC	0x0133C2	code	code_0132FC	verified	ghidra; xref from verified code; not executed
+0x0133C2	0x0133DA	code	code_0133C2	verified	cov:cov_race_20261012T073129; ghidra
+0x0133DA	0x0133E2	code	code_0133DA	verified	ghidra; xref from verified code; not executed
+0x0133E2	0x013496	code	code_0133E2	verified	cov:cov_race_20261012T073129; ghidra
+0x013496	0x01387C	code	code_013496	verified	ghidra; xref from verified code; not executed
+0x01387C	0x0138BC	code	code_01387C	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0138BC	0x0138D4	code	code_0138BC	verified	cov:cov_race_20261012T073129; ghidra
+0x0138D4	0x01393C	code	code_0138D4	verified	ghidra; xref from verified code; not executed
+0x01393C	0x01398E	code	code_01393C	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x01398E	0x0139A6	code	img_layout_load	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0139A6	0x0139B0	code	code_0139A6	verified	cov:cov_race_20261012T073129; ghidra
+0x0139B0	0x013AB8	code	code_0139B0	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x013AB8	0x013AC0	code	code_013AB8	verified	ghidra; xref from verified code; not executed
+0x013AC0	0x013AC6	code	code_013AC0	verified	cov:cov_race_20261012T073129; ghidra
+0x013AC6	0x013ADA	code	code_013AC6	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x013ADA	0x013AEC	data	data_013ADA	inferred	no xref; not executed
+0x013AEC	0x013BD6	code	code_013AEC	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x013BD6	0x015694	code	code_013BD6	verified	ghidra; xref from verified code; not executed
+0x015694	0x0156B6	code	data_015694	verified	no xref; not executed; T1.6: dispatch closure data_03680E; capstone 0 invalid; not executed in 4 bp runs
+0x0156B6	0x0156C2	code	code_0156B6	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x0156C2	0x0156CC	code	code_0156C2	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0156CC	0x0156CE	code	code_0156CC	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x0156CE	0x015794	code	code_0156CE	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x015794	0x0157CC	data	data_015794	inferred	no xref; not executed
+0x0157CC	0x0157F0	code	code_0157CC	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0157F0	0x015800	data	data_0157F0	inferred	no xref; not executed
+0x015800	0x015830	code	code_015800	verified	ghidra; xref from verified code; not executed
+0x015830	0x015860	code	code_015830	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x015860	0x0158A2	code	code_015860	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x0158A2	0x0158D0	code	code_0158A2	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0158D0	0x0158E6	code	code_0158D0	verified	cov:cov_race_20261012T073129; ghidra
+0x0158E6	0x015918	data	data_0158E6	inferred	no xref; not executed
+0x015918	0x01597A	code	z80_upload_driver	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x01597A	0x016DE6	z80	z80_driver	verified	R1.1-002; upload @0x015928: src lea @0x01592E, len dbra #$146B @0x015934
+0x016DE6	0x016E0E	code	code_016DE6	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x016E0E	0x016E26	code	code_016E0E	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x016E26	0x01702C	code	data_016E26	verified	no xref; not executed; T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x01702C	0x017044	data	data_01702C	verified	T1.6: data xref from dispatch-closure code; not executed
+0x017044	0x01735E	code	code_017044	verified	T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x01735E	0x017444	data	data_01735E	verified	T1.6: data xref from dispatch-closure code; not executed
+0x017444	0x01753A	code	code_017444	verified	T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x01753A	0x017728	data	data_01753A	verified	T1.6: data xref from dispatch-closure code; not executed
+0x017728	0x017830	code	code_017728	verified	T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x017830	0x017850	data	data_017830	verified	T1.6: data xref from dispatch-closure code; not executed
+0x017850	0x017870	code	code_017850	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x017870	0x017FFC	code	data_017870	verified	no xref; not executed; T1.6: dispatch closure data_03680E,data_03691A; capstone 0 invalid; mame exec 29 block entries (bp runs)
+0x017FFC	0x018014	data	data_017FFC	verified	T1.6: data xref from dispatch-closure code; not executed
+0x018014	0x018294	code	code_018014	verified	T1.6: dispatch closure data_03691A; capstone 0 invalid; mame exec 27 block entries (bp runs)
+0x018294	0x0182BC	data	data_018294	verified	T1.6: data xref from dispatch-closure code; not executed
+0x0182BC	0x0186A2	code	code_0182BC	verified	T1.6: dispatch closure data_03691A; capstone 0 invalid; mame exec 20 block entries (bp runs)
+0x0186A2	0x0186DA	code	code_0186A0	verified	ghidra-only; not executed; T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x0186DA	0x018A44	code	data_0186DA	verified	no xref; not executed; T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x018A44	0x018A5C	code	code_018A44	verified	ghidra-only; not executed; T4: dispatch-table reach from verified code (2 tables, 47 entries)
+0x018A5C	0x018BAC	code	data_018A5C	verified	no xref; not executed; T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x018BAC	0x018BAE	code	code_018BAC	verified	ghidra-only; not executed; T4: dispatch-table reach from verified code (2 tables, 47 entries)
+0x018BAE	0x018D4C	code	data_018BAE	verified	no xref; not executed; T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x018D4C	0x018DB2	code	code_018D4C	verified	ghidra-only; not executed; T4: dispatch-table reach from verified code (2 tables, 47 entries)
+0x018DB2	0x01A2CC	code	data_018DB2	verified	no xref; not executed; T1.6: dispatch closure data_03691A; capstone 0 invalid; mame exec 76 block entries (bp runs)
+0x01A2CC	0x01A2EC	data	data_01A2CC	verified	T1.6: data xref from dispatch-closure code; not executed
+0x01A2EC	0x01A404	code	code_01A2EC	verified	T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x01A404	0x01A406	code	code_01A404	inferred	T1.6: lone rts after terminal branch; unreached; no xref
+0x01A406	0x01A4AE	code	code_01A406	verified	T1.6: dispatch closure data_03691A; capstone 0 invalid; not executed in 4 bp runs
+0x01A4AE	0x01A4C8	code	code_01A4AE	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01A4C8	0x01A918	code	data_01A4C8	verified	no xref; not executed; T1.6: dispatch closure data_03680E; capstone 0 invalid; mame exec 28 block entries (bp runs)
+0x01A918	0x01A970	data	data_01A918	verified	T1.6: data xref from dispatch-closure code; not executed
+0x01A970	0x01AB34	code	code_01A968	verified	ghidra-only; not executed; T1.6: dispatch closure data_03680E; capstone 0 invalid; mame exec 31 block entries (bp runs)
+0x01AB34	0x01AB54	data	data_01AB34	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from code_01A968 (verified, dispatch closure); not executed; mame data reads (attract 9000f)
+0x01AB54	0x01AB74	data	data_01AB54	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from code_01A968 (verified, dispatch closure); not executed; mame data reads (attract 9000f)
+0x01AB74	0x01AB76	data	data_01AB74	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from code_01A968 (verified, dispatch closure); not executed; mame data reads (attract 9000f)
+0x01AB76	0x01AB78	data	data_01AB76	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from code_01A968 (verified, dispatch closure); not executed; mame data reads (attract 9000f)
+0x01AB78	0x01AB7A	data	data_01AB78	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from code_01A968 (verified, dispatch closure); not executed; mame data reads (attract 9000f)
+0x01AB7A	0x01AB7C	data	data_01AB7A	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from code_01A968 (verified, dispatch closure); not executed; mame data reads (attract 9000f)
+0x01AB7C	0x01AB7E	data	data_01AB7C	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from code_01A968 (verified, dispatch closure); not executed; mame data reads (attract 9000f)
+0x01AB7E	0x01AB80	data	data_01AB7E	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from code_01A968 (verified, dispatch closure); not executed; mame data reads (attract 9000f)
+0x01AB80	0x01AB82	data	data_01AB80	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from code_01A968 (verified, dispatch closure); not executed; mame data reads (attract 9000f)
+0x01AB82	0x01ABD4	data	data_01AB82	verified	ghidra; data xref from unverified code; not executed; T1.6: data xref from dispatch-closure code; not executed
+0x01ABD4	0x01ACE4	code	code_01ABD4	verified	T1.6: dispatch closure data_03680E; capstone 0 invalid; not executed in 4 bp runs
+0x01ACE4	0x01ACFC	data	data_01ACE4	verified	T1.6: data xref from dispatch-closure code; not executed
+0x01ACFC	0x01B166	code	code_01ACFC	verified	T1.6: dispatch closure data_03680E; capstone 0 invalid; mame exec 28 block entries (bp runs)
+0x01B166	0x01B168	code	code_01B166	inferred	T1.6: lone rts after terminal branch; unreached; no xref
+0x01B168	0x01B268	code	code_01B168	verified	ghidra-only; not executed; T4: dispatch-table reach from verified code (2 tables, 47 entries)
+0x01B268	0x01B3AA	code	data_01B268	verified	no xref; not executed; T1.6: dispatch closure data_03680E; capstone 0 invalid; not executed in 4 bp runs
+0x01B3AA	0x01B42A	code	code_01B3AA	verified	ghidra-only; not executed; T4: dispatch-table reach from verified code (2 tables, 47 entries)
+0x01B42A	0x01B8D0	code	data_01B42A	verified	no xref; not executed; T1.6: dispatch closure data_03680E; capstone 0 invalid; not executed in 4 bp runs
+0x01B8D0	0x01B8D2	code	code_01B8D0	inferred	T1.6: lone rts after terminal branch; unreached; no xref
+0x01B8D2	0x01B934	code	code_01B8D2	verified	T1.6: dispatch closure data_03680E; capstone 0 invalid; not executed in 4 bp runs
+0x01B934	0x01B936	code	code_01B934	inferred	T1.6: lone rts after terminal branch; unreached; no xref
+0x01B936	0x01C70E	code	code_01B936	verified	T1.6: dispatch closure data_03680E; capstone 0 invalid; not executed in 4 bp runs
+0x01C70E	0x01C74A	code	code_01C70E	verified	ghidra; xref from verified code; not executed
+0x01C74A	0x01C752	code	data_01C74A	verified	no xref; not executed; T1.6: dispatch closure data_03680E; capstone 0 invalid; not executed in 4 bp runs
+0x01C752	0x01C760	code	code_01C752	verified	ghidra-only; not executed; T4: dispatch-table reach from verified code (2 tables, 47 entries)
+0x01C760	0x01C954	code	data_01C760	verified	no xref; not executed; T1.6: dispatch closure data_03680E; capstone 0 invalid; not executed in 4 bp runs
+0x01C954	0x01C964	data	data_01C954	verified	T1.6: data xref from dispatch-closure code; not executed
+0x01C964	0x01CE34	code	code_01C964	verified	T1.6: dispatch closure data_03680E; capstone 0 invalid; not executed in 4 bp runs
+0x01CE34	0x01DD18	code	code_01CE34	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01DD18	0x01DEA2	code	code_01DD18	verified	ghidra; xref from verified code; not executed
+0x01DEA2	0x01E02C	code	code_01DEA2	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01E02C	0x01E168	code	code_01E02C	verified	ghidra; xref from verified code; not executed
+0x01E168	0x01E20E	code	code_01E168	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01E20E	0x01E218	code	code_01E20E	verified	ghidra; xref from verified code; not executed
+0x01E218	0x01E504	code	code_01E218	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01E504	0x01E5F8	code	code_01E504	verified	ghidra; xref from verified code; not executed
+0x01E5F8	0x01E66A	code	code_01E5F8	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01E66A	0x01E76C	code	code_01E66A	verified	ghidra; xref from verified code; not executed
+0x01E76C	0x01E7E2	code	code_01E76C	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01E7E2	0x01E8B8	code	code_01E7E2	verified	ghidra; xref from verified code; not executed
+0x01E8B8	0x01E928	code	code_01E8B8	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01E928	0x01EA82	code	code_01E928	verified	ghidra; xref from verified code; not executed
+0x01EA82	0x01ECDC	code	code_01EA82	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01ECDC	0x01ED8A	code	code_01ECDC	verified	ghidra; xref from verified code; not executed
+0x01ED8A	0x01ED8C	data	data_01ED8A	inferred	no xref; not executed
+0x01ED8C	0x01F48E	code	code_01ED8C	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01F48E	0x01F4F0	code	code_01F48E	verified	ghidra; xref from verified code; not executed
+0x01F4F0	0x01F7F6	code	code_01F4F0	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x01F7F6	0x01F800	code	code_01F7F6	verified	ghidra; xref from verified code; not executed
+0x01F800	0x01F964	code	code_01F800	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x01F964	0x01F96A	code	code_01F964	verified	ghidra-only; vector target; not executed; T4: hint handler, mame forced hint 3/3
+0x01F96A	0x01FA2E	code	code_01F96A	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x01FA2E	0x01FA38	code	code_01FA2E	verified	ghidra-only; vector target; not executed; T5: exception-entry routine (vectors 25,26,27,29,31); forced entry 30/30 returned exact SP in 3 MAME scenarios, control vec28 6/6, neg vec2 0/3 return
+0x01FA38	0x01FA50	code	code_01FA38	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x01FA50	0x01FACC	code	vdp_dma	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x01FACC	0x020000	padding	pad_01facc	inferred	R1.1-002; uniform 0x00 fill, 1332 bytes; cov: 0 bytes executed (4 runs); no code xref; vector 2 (bus error) targets 0x01FACC (zero-slide if ever taken)
+0x020000	0x02FA86	data	sound_data	verified	no xref; not executed; T4: mame read tap 3/3 runs; P118: sound data, read by the Z80 driver through its bank window (banks 4, 5); was noted vdp dma source; T1.6: split at last read word
+0x02FA86	0x035416	data	data_02FA86	inferred	T1.6: never read in 3 MAME runs (head ctl fired); 0 xref; capstone 34% invalid
+0x035416	0x03544A	code	imp_decrunch	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x03544A	0x0355A6	code	imp_decrunch_core	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0355A6	0x0355A7	data	data_0355A6	verified	ghidra; data xref from verified code; not executed
+0x0355A7	0x0355A8	data	data_0355A7	verified	ghidra; data xref from verified code; not executed
+0x0355A8	0x0355A9	data	data_0355A8	verified	ghidra; data xref from verified code; not executed
+0x0355A9	0x0355AD	data	data_0355A9	verified	ghidra; data xref from verified code; not executed
+0x0355AD	0x0355B1	data	data_0355AD	verified	ghidra; data xref from verified code; not executed
+0x0355B1	0x0355B5	data	data_0355B1	verified	ghidra; data xref from verified code; not executed
+0x0355B5	0x0355B6	data	data_0355B5	verified	ghidra; data xref from verified code; not executed
+0x0355B6	0x0355DC	code	code_0355B6	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0355DC	0x03573C	code	code_0355DC	verified	ghidra; xref from verified code; not executed
+0x03573C	0x0357B8	code	code_03573C	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0357B8	0x03581C	data	data_0357B8	inferred	no xref; not executed
+0x03581C	0x03584E	code	code_03581C	inferred	ghidra-only; not executed
+0x03584E	0x035852	data	data_03584E	inferred	ghidra; data xref from unverified code; not executed
+0x035852	0x035890	data	data_035852	inferred	ghidra; data xref from unverified code; not executed
+0x035890	0x0359DE	code	code_035890	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x0359DE	0x035B2E	data	data_0359DE	verified	no xref; not executed; T4: jump table, imm ref from verified code, mame read 1 run
+0x035B2E	0x03633C	data	data_035B2E	verified	ghidra; data xref from verified code; not executed
+0x03633C	0x03680E	data	data_03633C	verified	ghidra; data xref from verified code; not executed
+0x03680E	0x03691A	data	data_03680E	verified	ghidra; data xref from verified code; not executed
+0x03691A	0x036A26	data	data_03691A	verified	ghidra; data xref from verified code; not executed
+0x036A26	0x036A28	data	data_036A26	verified	ghidra; data xref from verified code; not executed
+0x036A28	0x036A2A	data	data_036A28	verified	ghidra; data xref from verified code; not executed
+0x036A2A	0x036A2C	data	data_036A2A	verified	ghidra; data xref from verified code; not executed
+0x036A2C	0x036BEC	data	data_036A2C	verified	ghidra; data xref from verified code; not executed
+0x036BEC	0x036BEE	data	data_036BEC	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036BEE	0x036BF0	data	data_036BEE	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036BF0	0x036BF2	data	data_036BF0	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036BF2	0x036BF4	data	data_036BF2	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036BF4	0x036BF8	data	data_036BF4	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036BF8	0x036BFA	data	data_036BF8	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036BFA	0x036BFC	data	data_036BFA	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036BFC	0x036BFE	data	data_036BFC	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036BFE	0x036C00	data	data_036BFE	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036C00	0x036C04	data	data_036C00	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036C04	0x036CC4	data	data_036C04	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x036CC4	0x036CC6	data	data_036CC4	verified	ghidra; data xref from verified code; not executed
+0x036CC6	0x036CC8	data	data_036CC6	verified	ghidra; data xref from verified code; not executed
+0x036CC8	0x036CCA	data	data_036CC8	verified	ghidra; data xref from verified code; not executed
+0x036CCA	0x036CCC	data	data_036CCA	verified	ghidra; data xref from verified code; not executed
+0x036CCC	0x036CCE	data	data_036CCC	verified	ghidra; data xref from verified code; not executed
+0x036CCE	0x036CD0	data	data_036CCE	verified	ghidra; data xref from verified code; not executed
+0x036CD0	0x036CD2	data	data_036CD0	verified	ghidra; data xref from verified code; not executed
+0x036CD2	0x036EC4	data	data_036CD2	verified	ghidra; data xref from verified code; not executed
+0x036EC4	0x0374B4	data	data_036EC4	verified	ghidra; data xref from verified code; not executed
+0x0374B4	0x0374B6	data	data_0374B4	verified	ghidra; data xref from verified code; not executed
+0x0374B6	0x0374F4	data	data_0374B6	verified	ghidra; data xref from verified code; not executed
+0x0374F4	0x037534	data	data_0374F4	verified	ghidra; data xref from verified code; not executed
+0x037534	0x037574	data	data_037534	verified	ghidra; data xref from verified code; not executed
+0x037574	0x0375B4	data	data_037574	verified	ghidra; data xref from verified code; not executed
+0x0375B4	0x0375B6	data	data_0375B4	verified	ghidra; data xref from verified code; not executed
+0x0375B6	0x0375F4	data	data_0375B6	verified	ghidra; data xref from verified code; not executed
+0x0375F4	0x037634	data	data_0375F4	verified	ghidra; data xref from verified code; not executed
+0x037634	0x037644	data	data_037634	verified	ghidra; data xref from verified code; not executed
+0x037644	0x037646	data	data_037644	verified	ghidra; data xref from verified code; not executed
+0x037646	0x0377C4	data	data_037646	verified	ghidra; data xref from verified code; not executed
+0x0377C4	0x0377C6	data	data_0377C4	verified	ghidra; data xref from verified code; not executed
+0x0377C6	0x037944	data	data_0377C6	verified	ghidra; data xref from verified code; not executed
+0x037944	0x037946	data	data_037944	verified	ghidra; data xref from verified code; not executed
+0x037946	0x037AC4	data	data_037946	verified	ghidra; data xref from verified code; not executed
+0x037AC4	0x037AC6	data	data_037AC4	verified	ghidra; data xref from verified code; not executed
+0x037AC6	0x037C44	data	data_037AC6	verified	ghidra; data xref from verified code; not executed
+0x037C44	0x037C48	data	data_037C44	verified	ghidra; data xref from verified code; not executed
+0x037C48	0x037C4A	data	data_037C48	verified	ghidra; data xref from verified code; not executed
+0x037C4A	0x037C54	data	data_037C4A	verified	ghidra; data xref from verified code; not executed
+0x037C54	0x037C56	data	data_037C54	verified	ghidra; data xref from verified code; not executed
+0x037C56	0x037C5C	data	data_037C56	verified	ghidra; data xref from verified code; not executed
+0x037C5C	0x037C5E	data	data_037C5C	verified	ghidra; data xref from verified code; not executed
+0x037C5E	0x037C68	data	data_037C5E	verified	ghidra; data xref from verified code; not executed
+0x037C68	0x037C6A	data	data_037C68	verified	ghidra; data xref from verified code; not executed
+0x037C6A	0x038144	data	data_037C6A	verified	ghidra; data xref from verified code; not executed
+0x038144	0x038244	data	data_038144	verified	ghidra; data xref from verified code; not executed
+0x038244	0x038644	data	data_038244	verified	ghidra; data xref from verified code; not executed
+0x038644	0x038704	data	data_038644	verified	ghidra; data xref from verified code; not executed
+0x038704	0x038782	data	data_038704	verified	ghidra; data xref from verified code; not executed
+0x038782	0x0387C2	data	data_038782	verified	ghidra; data xref from verified code; not executed
+0x0387C2	0x038802	data	data_0387C2	verified	ghidra; data xref from verified code; not executed
+0x038802	0x038904	data	data_038802	verified	ghidra; data xref from verified code; not executed
+0x038904	0x038B04	data	data_038904	verified	ghidra; data xref from verified code; not executed
+0x038B04	0x038B06	data	data_038B04	verified	ghidra; data xref from verified code; not executed
+0x038B06	0x038B08	data	data_038B06	verified	ghidra; data xref from verified code; not executed
+0x038B08	0x038B0A	data	data_038B08	verified	ghidra; data xref from verified code; not executed
+0x038B0A	0x039004	data	data_038B0A	verified	ghidra; data xref from verified code; not executed
+0x039004	0x039008	data	data_039004	verified	ghidra; data xref from verified code; not executed
+0x039008	0x039104	data	data_039008	verified	ghidra; data xref from verified code; not executed
+0x039104	0x039110	data	data_039104	verified	ghidra; data xref from verified code; not executed
+0x039110	0x03911C	data	data_039110	verified	ghidra; data xref from verified code; not executed
+0x03911C	0x039128	data	data_03911C	verified	ghidra; data xref from verified code; not executed
+0x039128	0x039134	data	data_039128	verified	ghidra; data xref from verified code; not executed
+0x039134	0x039DF4	data	data_039134	verified	ghidra; data xref from verified code; not executed
+0x039DF4	0x039E3E	data	data_039DF4	verified	ghidra; data xref from verified code; not executed
+0x039E3E	0x03A834	data	data_039E3E	verified	ghidra; data xref from verified code; not executed
+0x03A834	0x03A840	data	data_03A834	verified	ghidra; data xref from verified code; not executed
+0x03A840	0x03A854	data	data_03A840	verified	ghidra; data xref from verified code; not executed
+0x03A854	0x03A868	data	data_03A854	verified	ghidra; data xref from verified code; not executed
+0x03A868	0x03A87C	data	data_03A868	verified	ghidra; data xref from verified code; not executed
+0x03A87C	0x03A882	data	data_03A87C	verified	ghidra; data xref from verified code; not executed
+0x03A882	0x03A89C	data	data_03A882	verified	ghidra; data xref from verified code; not executed
+0x03A89C	0x03A8AC	data	data_03A89C	verified	ghidra; data xref from verified code; not executed
+0x03A8AC	0x03A8BC	data	data_03A8AC	verified	ghidra; data xref from verified code; not executed
+0x03A8BC	0x03A8CC	data	data_03A8BC	verified	ghidra; data xref from verified code; not executed
+0x03A8CC	0x03A8E0	data	data_03A8CC	verified	ghidra; data xref from verified code; not executed
+0x03A8E0	0x03A8F0	data	data_03A8E0	verified	ghidra; data xref from verified code; not executed
+0x03A8F0	0x03A90E	data	data_03A8F0	verified	ghidra; data xref from verified code; not executed
+0x03A90E	0x03A90F	data	data_03A90E	verified	ghidra; data xref from verified code; not executed
+0x03A90F	0x03A91E	data	data_03A90F	verified	ghidra; data xref from verified code; not executed
+0x03A91E	0x03A92A	data	data_03A91E	verified	ghidra; data xref from verified code; not executed
+0x03A92A	0x03A936	data	data_03A92A	verified	ghidra; data xref from verified code; not executed
+0x03A936	0x03A942	data	data_03A936	verified	ghidra; data xref from verified code; not executed
+0x03A942	0x03A94E	data	data_03A942	verified	ghidra; data xref from verified code; not executed
+0x03A94E	0x03A95A	data	data_03A94E	verified	ghidra; data xref from verified code; not executed
+0x03A95A	0x03A966	data	data_03A95A	verified	ghidra; data xref from verified code; not executed
+0x03A966	0x03A972	data	data_03A966	verified	ghidra; data xref from verified code; not executed
+0x03A972	0x03A984	data	data_03A972	verified	ghidra; data xref from verified code; not executed
+0x03A984	0x03A994	data	data_03A984	verified	ghidra; data xref from verified code; not executed
+0x03A994	0x03A9A0	data	data_03A994	verified	ghidra; data xref from verified code; not executed
+0x03A9A0	0x03A9AE	data	data_03A9A0	verified	ghidra; data xref from verified code; not executed
+0x03A9AE	0x03A9C0	data	data_03A9AE	verified	ghidra; data xref from verified code; not executed
+0x03A9C0	0x03A9D0	data	data_03A9C0	verified	ghidra; data xref from verified code; not executed
+0x03A9D0	0x03A9DC	data	data_03A9D0	verified	ghidra; data xref from verified code; not executed
+0x03A9DC	0x03A9EC	data	data_03A9DC	verified	ghidra; data xref from verified code; not executed
+0x03A9EC	0x03A9FA	data	data_03A9EC	verified	ghidra; data xref from verified code; not executed
+0x03A9FA	0x03AA08	data	data_03A9FA	verified	ghidra; data xref from verified code; not executed
+0x03AA08	0x03AA12	data	data_03AA08	verified	ghidra; data xref from verified code; not executed
+0x03AA12	0x03AA1A	data	data_03AA12	verified	ghidra; data xref from verified code; not executed
+0x03AA1A	0x03AA9C	data	data_03AA1A	verified	ghidra; data xref from verified code; not executed
+0x03AA9C	0x03AAAC	data	data_03AA9C	verified	ghidra; data xref from verified code; not executed
+0x03AAAC	0x03AAC0	data	data_03AAAC	verified	ghidra; data xref from verified code; not executed
+0x03AAC0	0x03AAC3	data	data_03AAC0	verified	ghidra; data xref from verified code; not executed
+0x03AAC3	0x03AB00	data	data_03AAC3	verified	ghidra; data xref from verified code; not executed
+0x03AB00	0x03AB0C	data	data_03AB00	verified	ghidra; data xref from verified code; not executed
+0x03AB0C	0x03AB1C	data	data_03AB0C	verified	ghidra; data xref from verified code; not executed
+0x03AB1C	0x03AB2C	data	data_03AB1C	verified	ghidra; data xref from verified code; not executed
+0x03AB2C	0x03AB3E	data	data_03AB2C	verified	ghidra; data xref from verified code; not executed
+0x03AB3E	0x03AB4E	data	data_03AB3E	verified	ghidra; data xref from verified code; not executed
+0x03AB4E	0x03AB60	data	data_03AB4E	verified	ghidra; data xref from verified code; not executed
+0x03AB60	0x03AB9C	data	data_03AB60	verified	ghidra; data xref from verified code; not executed
+0x03AB9C	0x03ABA6	data	data_03AB9C	verified	ghidra; data xref from verified code; not executed
+0x03ABA6	0x03ABB2	data	data_03ABA6	verified	ghidra; data xref from verified code; not executed
+0x03ABB2	0x03ABBC	data	data_03ABB2	verified	ghidra; data xref from verified code; not executed
+0x03ABBC	0x03ABC4	data	data_03ABBC	verified	ghidra; data xref from verified code; not executed
+0x03ABC4	0x03ABCC	data	data_03ABC4	verified	ghidra; data xref from verified code; not executed
+0x03ABCC	0x03ABDC	data	data_03ABCC	verified	ghidra; data xref from verified code; not executed
+0x03ABDC	0x03ABF6	data	data_03ABDC	verified	ghidra; data xref from verified code; not executed
+0x03ABF6	0x03AC08	data	data_03ABF6	verified	ghidra; data xref from verified code; not executed
+0x03AC08	0x03AC20	data	data_03AC08	verified	ghidra; data xref from verified code; not executed
+0x03AC20	0x03AC3A	data	data_03AC20	verified	ghidra; data xref from verified code; not executed
+0x03AC3A	0x03AC48	data	data_03AC3A	verified	ghidra; data xref from verified code; not executed
+0x03AC48	0x03AC54	data	data_03AC48	verified	ghidra; data xref from verified code; not executed
+0x03AC54	0x03ACA4	data	data_03AC54	verified	ghidra; data xref from verified code; not executed
+0x03ACA4	0x03ACA5	data	data_03ACA4	verified	ghidra; data xref from verified code; not executed
+0x03ACA5	0x03ACB6	data	data_03ACA5	verified	ghidra; data xref from verified code; not executed
+0x03ACB6	0x03ACC8	data	data_03ACB6	verified	ghidra; data xref from verified code; not executed
+0x03ACC8	0x03ACC9	data	data_03ACC8	verified	ghidra; data xref from verified code; not executed
+0x03ACC9	0x03ACDA	data	data_03ACC9	verified	ghidra; data xref from verified code; not executed
+0x03ACDA	0x03ACE4	data	data_03ACDA	verified	ghidra; data xref from verified code; not executed
+0x03ACE4	0x03ACF0	data	data_03ACE4	verified	ghidra; data xref from verified code; not executed
+0x03ACF0	0x03ACFA	data	data_03ACF0	verified	ghidra; data xref from verified code; not executed
+0x03ACFA	0x03AD06	data	data_03ACFA	verified	ghidra; data xref from verified code; not executed
+0x03AD06	0x03AD16	data	data_03AD06	verified	ghidra; data xref from verified code; not executed
+0x03AD16	0x03AD26	data	data_03AD16	verified	ghidra; data xref from verified code; not executed
+0x03AD26	0x03AD34	data	data_03AD26	verified	ghidra; data xref from verified code; not executed
+0x03AD34	0x03AD46	data	data_03AD34	verified	ghidra; data xref from verified code; not executed
+0x03AD46	0x03AD54	data	data_03AD46	verified	ghidra; data xref from verified code; not executed
+0x03AD54	0x03AD66	data	data_03AD54	verified	ghidra; data xref from verified code; not executed
+0x03AD66	0x03AD74	data	data_03AD66	verified	ghidra; data xref from verified code; not executed
+0x03AD74	0x03AD80	data	data_03AD74	verified	ghidra; data xref from verified code; not executed
+0x03AD80	0x03AD90	data	data_03AD80	verified	ghidra; data xref from verified code; not executed
+0x03AD90	0x03ADA2	data	data_03AD90	verified	ghidra; data xref from verified code; not executed
+0x03ADA2	0x03ADB6	data	data_03ADA2	verified	ghidra; data xref from verified code; not executed
+0x03ADB6	0x03ADC4	data	data_03ADB6	verified	ghidra; data xref from verified code; not executed
+0x03ADC4	0x03ADDA	data	data_03ADC4	verified	ghidra; data xref from verified code; not executed
+0x03ADDA	0x03ADE8	data	data_03ADDA	verified	ghidra; data xref from verified code; not executed
+0x03ADE8	0x03ADFE	data	data_03ADE8	verified	ghidra; data xref from verified code; not executed
+0x03ADFE	0x03AE0C	data	data_03ADFE	verified	ghidra; data xref from verified code; not executed
+0x03AE0C	0x03AE1C	data	data_03AE0C	verified	ghidra; data xref from verified code; not executed
+0x03AE1C	0x03AE2C	data	data_03AE1C	verified	ghidra; data xref from verified code; not executed
+0x03AE2C	0x03AE3E	data	data_03AE2C	verified	ghidra; data xref from verified code; not executed
+0x03AE3E	0x03AE46	data	data_03AE3E	verified	ghidra; data xref from verified code; not executed
+0x03AE46	0x03AE4E	data	data_03AE46	verified	ghidra; data xref from verified code; not executed
+0x03AE4E	0x03AE60	data	data_03AE4E	verified	ghidra; data xref from verified code; not executed
+0x03AE60	0x03AE6F	data	data_03AE60	verified	ghidra; data xref from verified code; not executed
+0x03AE6F	0x03AE7D	data	data_03AE6F	verified	ghidra; data xref from verified code; not executed
+0x03AE7D	0x03AE8C	data	data_03AE7D	verified	ghidra; data xref from verified code; not executed
+0x03AE8C	0x03AE9E	data	data_03AE8C	verified	ghidra; data xref from verified code; not executed
+0x03AE9E	0x03AEAE	data	data_03AE9E	verified	ghidra; data xref from verified code; not executed
+0x03AEAE	0x03AEB6	data	data_03AEAE	verified	ghidra; data xref from verified code; not executed
+0x03AEB6	0x03AECC	data	data_03AEB6	verified	ghidra; data xref from verified code; not executed
+0x03AECC	0x03AEE2	data	data_03AECC	verified	ghidra; data xref from verified code; not executed
+0x03AEE2	0x03AEF8	data	data_03AEE2	verified	ghidra; data xref from verified code; not executed
+0x03AEF8	0x03AF0E	data	data_03AEF8	verified	ghidra; data xref from verified code; not executed
+0x03AF0E	0x03AF0F	data	data_03AF0E	verified	ghidra; data xref from verified code; not executed
+0x03AF0F	0x03AF1C	data	data_03AF0F	verified	ghidra; data xref from verified code; not executed
+0x03AF1C	0x03AF32	data	data_03AF1C	verified	ghidra; data xref from verified code; not executed
+0x03AF32	0x03AF33	data	data_03AF32	verified	ghidra; data xref from verified code; not executed
+0x03AF33	0x03AF3C	data	data_03AF33	verified	ghidra; data xref from verified code; not executed
+0x03AF3C	0x03AF4E	data	data_03AF3C	verified	ghidra; data xref from verified code; not executed
+0x03AF4E	0x03AF5E	data	data_03AF4E	verified	ghidra; data xref from verified code; not executed
+0x03AF5E	0x03AF66	data	data_03AF5E	verified	ghidra; data xref from verified code; not executed
+0x03AF66	0x03AFA4	data	data_03AF66	verified	ghidra; data xref from verified code; not executed
+0x03AFA4	0x03AFB5	data	data_03AFA4	verified	ghidra; data xref from verified code; not executed
+0x03AFB5	0x03AFC5	data	data_03AFB5	verified	ghidra; data xref from verified code; not executed
+0x03AFC5	0x03AFD5	data	data_03AFC5	verified	ghidra; data xref from verified code; not executed
+0x03AFD5	0x03AFE5	data	data_03AFD5	verified	ghidra; data xref from verified code; not executed
+0x03AFE5	0x03AFF5	data	data_03AFE5	verified	ghidra; data xref from verified code; not executed
+0x03AFF5	0x03B005	data	data_03AFF5	verified	ghidra; data xref from verified code; not executed
+0x03B005	0x03B012	data	data_03B005	verified	ghidra; data xref from verified code; not executed
+0x03B012	0x03B013	data	data_03B012	verified	ghidra; data xref from verified code; not executed
+0x03B013	0x03B022	data	data_03B013	verified	ghidra; data xref from verified code; not executed
+0x03B022	0x03B023	data	data_03B022	verified	ghidra; data xref from verified code; not executed
+0x03B023	0x03B02A	data	data_03B023	verified	ghidra; data xref from verified code; not executed
+0x03B02A	0x03B02B	data	data_03B02A	verified	ghidra; data xref from verified code; not executed
+0x03B02B	0x03B032	data	data_03B02B	verified	ghidra; data xref from verified code; not executed
+0x03B032	0x03B03A	data	data_03B032	verified	ghidra; data xref from verified code; not executed
+0x03B03A	0x03B03B	data	data_03B03A	verified	ghidra; data xref from verified code; not executed
+0x03B03B	0x03B042	data	data_03B03B	verified	ghidra; data xref from verified code; not executed
+0x03B042	0x03B04A	data	data_03B042	verified	ghidra; data xref from verified code; not executed
+0x03B04A	0x03B052	data	data_03B04A	verified	ghidra; data xref from verified code; not executed
+0x03B052	0x03B05A	data	data_03B052	verified	ghidra; data xref from verified code; not executed
+0x03B05A	0x03B062	data	data_03B05A	verified	ghidra; data xref from verified code; not executed
+0x03B062	0x03B06A	data	data_03B062	verified	ghidra; data xref from verified code; not executed
+0x03B06A	0x03B084	data	data_03B06A	verified	ghidra; data xref from verified code; not executed
+0x03B084	0x03B09E	data	data_03B084	verified	ghidra; data xref from verified code; not executed
+0x03B09E	0x03B0B8	data	data_03B09E	verified	ghidra; data xref from verified code; not executed
+0x03B0B8	0x03B0D2	data	data_03B0B8	verified	ghidra; data xref from verified code; not executed
+0x03B0D2	0x03B0E0	data	data_03B0D2	verified	ghidra; data xref from verified code; not executed
+0x03B0E0	0x03B0F0	data	data_03B0E0	verified	ghidra; data xref from verified code; not executed
+0x03B0F0	0x03B0F8	data	data_03B0F0	verified	ghidra; data xref from verified code; not executed
+0x03B0F8	0x03B106	data	data_03B0F8	verified	ghidra; data xref from verified code; not executed
+0x03B106	0x03B110	data	data_03B106	verified	ghidra; data xref from verified code; not executed
+0x03B110	0x03B126	data	data_03B110	verified	ghidra; data xref from verified code; not executed
+0x03B126	0x03B16A	data	data_03B126	verified	ghidra; data xref from verified code; not executed
+0x03B16A	0x03B172	data	data_03B16A	verified	ghidra; data xref from verified code; not executed
+0x03B172	0x03B17A	data	data_03B172	verified	ghidra; data xref from verified code; not executed
+0x03B17A	0x03B18E	data	data_03B17A	verified	ghidra; data xref from verified code; not executed
+0x03B18E	0x03B1A2	data	data_03B18E	verified	ghidra; data xref from verified code; not executed
+0x03B1A2	0x03B1B8	data	data_03B1A2	verified	ghidra; data xref from verified code; not executed
+0x03B1B8	0x03B1CE	data	data_03B1B8	verified	ghidra; data xref from verified code; not executed
+0x03B1CE	0x03B1EC	data	data_03B1CE	verified	ghidra; data xref from verified code; not executed
+0x03B1EC	0x03B1F2	data	data_03B1EC	verified	ghidra; data xref from verified code; not executed
+0x03B1F2	0x03B1FA	data	data_03B1F2	verified	ghidra; data xref from verified code; not executed
+0x03B1FA	0x03B212	data	data_03B1FA	verified	ghidra; data xref from verified code; not executed
+0x03B212	0x03B22A	data	data_03B212	verified	ghidra; data xref from verified code; not executed
+0x03B22A	0x03B236	data	data_03B22A	verified	ghidra; data xref from verified code; not executed
+0x03B236	0x03B242	data	data_03B236	verified	ghidra; data xref from verified code; not executed
+0x03B242	0x03B24E	data	data_03B242	verified	ghidra; data xref from verified code; not executed
+0x03B24E	0x03B25A	data	data_03B24E	verified	ghidra; data xref from verified code; not executed
+0x03B25A	0x03B26C	data	data_03B25A	verified	ghidra; data xref from verified code; not executed
+0x03B26C	0x03B27E	data	data_03B26C	verified	ghidra; data xref from verified code; not executed
+0x03B27E	0x03B28C	data	data_03B27E	verified	ghidra; data xref from verified code; not executed
+0x03B28C	0x03B29C	data	data_03B28C	verified	ghidra; data xref from verified code; not executed
+0x03B29C	0x03B2A8	data	data_03B29C	verified	ghidra; data xref from verified code; not executed
+0x03B2A8	0x03B2BC	data	data_03B2A8	verified	ghidra; data xref from verified code; not executed
+0x03B2BC	0x03B2CE	data	data_03B2BC	verified	ghidra; data xref from verified code; not executed
+0x03B2CE	0x03B2DC	data	data_03B2CE	verified	ghidra; data xref from verified code; not executed
+0x03B2DC	0x03B2EC	data	data_03B2DC	verified	ghidra; data xref from verified code; not executed
+0x03B2EC	0x03B2FA	data	data_03B2EC	verified	ghidra; data xref from verified code; not executed
+0x03B2FA	0x03B302	data	data_03B2FA	verified	ghidra; data xref from verified code; not executed
+0x03B302	0x03B30A	data	data_03B302	verified	ghidra; data xref from verified code; not executed
+0x03B30A	0x03B312	data	data_03B30A	verified	ghidra; data xref from verified code; not executed
+0x03B312	0x03B32A	data	data_03B312	verified	ghidra; data xref from verified code; not executed
+0x03B32A	0x03B33A	data	data_03B32A	verified	ghidra; data xref from verified code; not executed
+0x03B33A	0x03B34C	data	data_03B33A	verified	ghidra; data xref from verified code; not executed
+0x03B34C	0x03B360	data	data_03B34C	verified	ghidra; data xref from verified code; not executed
+0x03B360	0x03B36E	data	data_03B360	verified	ghidra; data xref from verified code; not executed
+0x03B36E	0x03B37E	data	data_03B36E	verified	ghidra; data xref from verified code; not executed
+0x03B37E	0x03B390	data	data_03B37E	verified	ghidra; data xref from verified code; not executed
+0x03B390	0x03B39E	data	data_03B390	verified	ghidra; data xref from verified code; not executed
+0x03B39E	0x03B3B2	data	data_03B39E	verified	ghidra; data xref from verified code; not executed
+0x03B3B2	0x03B3CC	data	data_03B3B2	verified	ghidra; data xref from verified code; not executed
+0x03B3CC	0x03B3E6	data	data_03B3CC	verified	ghidra; data xref from verified code; not executed
+0x03B3E6	0x03B400	data	data_03B3E6	verified	ghidra; data xref from verified code; not executed
+0x03B400	0x03B41A	data	data_03B400	verified	ghidra; data xref from verified code; not executed
+0x03B41A	0x03B428	data	data_03B41A	verified	ghidra; data xref from verified code; not executed
+0x03B428	0x03B43C	data	data_03B428	verified	ghidra; data xref from verified code; not executed
+0x03B43C	0x03B446	data	data_03B43C	verified	ghidra; data xref from verified code; not executed
+0x03B446	0x03B450	data	data_03B446	verified	ghidra; data xref from verified code; not executed
+0x03B450	0x03B45A	data	data_03B450	verified	ghidra; data xref from verified code; not executed
+0x03B45A	0x03B466	data	data_03B45A	verified	ghidra; data xref from verified code; not executed
+0x03B466	0x03B46E	data	data_03B466	verified	ghidra; data xref from verified code; not executed
+0x03B46E	0x03B476	data	data_03B46E	verified	ghidra; data xref from verified code; not executed
+0x03B476	0x03B47C	data	data_03B476	verified	ghidra; data xref from verified code; not executed
+0x03B47C	0x03B482	data	data_03B47C	verified	ghidra; data xref from verified code; not executed
+0x03B482	0x03B490	data	data_03B482	verified	ghidra; data xref from verified code; not executed
+0x03B490	0x03B49E	data	data_03B490	verified	ghidra; data xref from verified code; not executed
+0x03B49E	0x03B4AC	data	data_03B49E	verified	ghidra; data xref from verified code; not executed
+0x03B4AC	0x03B4BA	data	data_03B4AC	verified	ghidra; data xref from verified code; not executed
+0x03B4BA	0x03B4C8	data	data_03B4BA	verified	ghidra; data xref from verified code; not executed
+0x03B4C8	0x03B4D0	data	data_03B4C8	verified	ghidra; data xref from verified code; not executed
+0x03B4D0	0x03B4D6	data	data_03B4D0	verified	ghidra; data xref from verified code; not executed
+0x03B4D6	0x03B4DC	data	data_03B4D6	verified	ghidra; data xref from verified code; not executed
+0x03B4DC	0x03B4EA	data	data_03B4DC	verified	ghidra; data xref from verified code; not executed
+0x03B4EA	0x03B4F8	data	data_03B4EA	verified	ghidra; data xref from verified code; not executed
+0x03B4F8	0x03B506	data	data_03B4F8	verified	ghidra; data xref from verified code; not executed
+0x03B506	0x03B514	data	data_03B506	verified	ghidra; data xref from verified code; not executed
+0x03B514	0x03B522	data	data_03B514	verified	ghidra; data xref from verified code; not executed
+0x03B522	0x03B533	data	data_03B522	verified	ghidra; data xref from verified code; not executed
+0x03B533	0x03B53D	data	data_03B533	verified	ghidra; data xref from verified code; not executed
+0x03B53D	0x03B548	data	data_03B53D	verified	ghidra; data xref from verified code; not executed
+0x03B548	0x03B562	data	data_03B548	verified	ghidra; data xref from verified code; not executed
+0x03B562	0x03B57C	data	data_03B562	verified	ghidra; data xref from verified code; not executed
+0x03B57C	0x03B594	data	data_03B57C	verified	ghidra; data xref from verified code; not executed
+0x03B594	0x03B5A4	data	data_03B594	verified	ghidra; data xref from verified code; not executed
+0x03B5A4	0x03B5B4	data	data_03B5A4	verified	ghidra; data xref from verified code; not executed
+0x03B5B4	0x03B5CE	data	data_03B5B4	verified	ghidra; data xref from verified code; not executed
+0x03B5CE	0x03B5EA	data	data_03B5CE	verified	ghidra; data xref from verified code; not executed
+0x03B5EA	0x03B5F2	data	data_03B5EA	verified	ghidra; data xref from verified code; not executed
+0x03B5F2	0x03B60A	data	data_03B5F2	verified	ghidra; data xref from verified code; not executed
+0x03B60A	0x03B612	data	data_03B60A	verified	ghidra; data xref from verified code; not executed
+0x03B612	0x03B618	data	data_03B612	verified	ghidra; data xref from verified code; not executed
+0x03B618	0x03B62C	data	data_03B618	verified	ghidra; data xref from verified code; not executed
+0x03B62C	0x03B634	data	data_03B62C	verified	ghidra; data xref from verified code; not executed
+0x03B634	0x03B635	data	data_03B634	verified	ghidra; data xref from verified code; not executed
+0x03B635	0x03B63C	data	data_03B635	verified	ghidra; data xref from verified code; not executed
+0x03B63C	0x03B64C	data	data_03B63C	verified	ghidra; data xref from verified code; not executed
+0x03B64C	0x03B664	data	data_03B64C	verified	ghidra; data xref from verified code; not executed
+0x03B664	0x03B67E	data	data_03B664	verified	ghidra; data xref from verified code; not executed
+0x03B67E	0x03B690	data	data_03B67E	verified	ghidra; data xref from verified code; not executed
+0x03B690	0x03B69E	data	data_03B690	verified	ghidra; data xref from verified code; not executed
+0x03B69E	0x03B6B8	data	data_03B69E	verified	ghidra; data xref from verified code; not executed
+0x03B6B8	0x03B6D0	data	data_03B6B8	verified	ghidra; data xref from verified code; not executed
+0x03B6D0	0x03B6E6	data	data_03B6D0	verified	ghidra; data xref from verified code; not executed
+0x03B6E6	0x03B6F2	data	data_03B6E6	verified	ghidra; data xref from verified code; not executed
+0x03B6F2	0x03B6F3	data	data_03B6F2	verified	ghidra; data xref from verified code; not executed
+0x03B6F3	0x03B6FE	data	data_03B6F3	verified	ghidra; data xref from verified code; not executed
+0x03B6FE	0x03B718	data	data_03B6FE	verified	ghidra; data xref from verified code; not executed
+0x03B718	0x03B730	data	data_03B718	verified	ghidra; data xref from verified code; not executed
+0x03B730	0x03B74E	data	data_03B730	verified	ghidra; data xref from verified code; not executed
+0x03B74E	0x03B76C	data	data_03B74E	verified	ghidra; data xref from verified code; not executed
+0x03B76C	0x03B78A	data	data_03B76C	verified	ghidra; data xref from verified code; not executed
+0x03B78A	0x03B79C	data	data_03B78A	verified	ghidra; data xref from verified code; not executed
+0x03B79C	0x03B79D	data	data_03B79C	verified	ghidra; data xref from verified code; not executed
+0x03B79D	0x03BC2C	data	data_03B79D	verified	ghidra; data xref from verified code; not executed
+0x03BC2C	0x03BC3C	data	data_03BC2C	verified	ghidra; data xref from verified code; not executed
+0x03BC3C	0x03BC4C	data	data_03BC3C	verified	ghidra; data xref from verified code; not executed
+0x03BC4C	0x03BECC	data	data_03BC4C	verified	ghidra; data xref from verified code; not executed
+0x03BECC	0x03BF16	data	data_03BECC	verified	ghidra; data xref from verified code; not executed
+0x03BF16	0x03BF2E	data	data_03BF16	verified	ghidra; data xref from verified code; not executed
+0x03BF2E	0x03BF78	data	data_03BF2E	verified	ghidra; data xref from verified code; not executed
+0x03BF78	0x03BFE0	data	data_03BF78	verified	ghidra; data xref from verified code; not executed
+0x03BFE0	0x03BFEC	data	data_03BFE0	verified	ghidra; data xref from verified code; not executed
+0x03BFEC	0x03C030	data	data_03BFEC	verified	ghidra; data xref from verified code; not executed
+0x03C030	0x03C052	data	data_03C030	verified	ghidra; data xref from verified code; not executed
+0x03C052	0x03C07E	data	data_03C052	verified	ghidra; data xref from verified code; not executed
+0x03C07E	0x03C0C8	data	data_03C07E	verified	ghidra; data xref from verified code; not executed
+0x03C0C8	0x03C0D4	data	data_03C0C8	verified	ghidra; data xref from verified code; not executed
+0x03C0D4	0x03C18C	data	data_03C0D4	verified	ghidra; data xref from verified code; not executed
+0x03C18C	0x03C1A4	data	data_03C18C	verified	ghidra; data xref from verified code; not executed
+0x03C1A4	0x03C20C	data	data_03C1A4	verified	ghidra; data xref from verified code; not executed
+0x03C20C	0x03C24C	data	data_03C20C	verified	ghidra; data xref from verified code; not executed
+0x03C24C	0x03C264	data	data_03C24C	verified	ghidra; data xref from verified code; not executed
+0x03C264	0x03C31C	data	data_03C264	verified	ghidra; data xref from verified code; not executed
+0x03C31C	0x03C3DE	data	data_03C31C	verified	ghidra; data xref from verified code; not executed
+0x03C3DE	0x03C3F6	data	data_03C3DE	verified	ghidra; data xref from verified code; not executed
+0x03C3F6	0x03C4BC	data	data_03C3F6	verified	ghidra; data xref from verified code; not executed
+0x03C4BC	0x03C4FC	data	data_03C4BC	verified	ghidra; data xref from verified code; not executed
+0x03C4FC	0x03C532	data	data_03C4FC	verified	ghidra; data xref from verified code; not executed
+0x03C532	0x03C554	data	data_03C532	verified	ghidra; data xref from verified code; not executed
+0x03C554	0x03C634	data	data_03C554	verified	ghidra; data xref from verified code; not executed
+0x03C634	0x03C640	data	data_03C634	verified	ghidra; data xref from verified code; not executed
+0x03C640	0x03C6C8	data	data_03C640	verified	ghidra; data xref from verified code; not executed
+0x03C6C8	0x03C73A	data	data_03C6C8	verified	ghidra; data xref from verified code; not executed
+0x03C73A	0x03C75A	data	data_03C73A	verified	ghidra; data xref from verified code; not executed
+0x03C75A	0x03C76A	data	data_03C75A	verified	ghidra; data xref from verified code; not executed
+0x03C76A	0x03C772	data	data_03C76A	verified	ghidra; data xref from verified code; not executed
+0x03C772	0x03C773	data	data_03C772	verified	ghidra; data xref from verified code; not executed
+0x03C773	0x03C774	data	data_03C773	verified	ghidra; data xref from verified code; not executed
+0x03C774	0x03C778	data	data_03C774	verified	ghidra; data xref from verified code; not executed
+0x03C778	0x03C779	data	data_03C778	verified	ghidra; data xref from verified code; not executed
+0x03C779	0x03C77E	data	data_03C779	verified	ghidra; data xref from verified code; not executed
+0x03C77E	0x03C79E	data	data_03C77E	verified	ghidra; data xref from verified code; not executed
+0x03C79E	0x03C7AE	data	data_03C79E	verified	ghidra; data xref from verified code; not executed
+0x03C7AE	0x03C7B6	data	data_03C7AE	verified	ghidra; data xref from verified code; not executed
+0x03C7B6	0x03C7BA	data	data_03C7B6	verified	ghidra; data xref from verified code; not executed
+0x03C7BA	0x03C7BC	data	data_03C7BA	verified	ghidra; data xref from verified code; not executed
+0x03C7BC	0x03C7BD	data	data_03C7BC	verified	ghidra; data xref from verified code; not executed
+0x03C7BD	0x03C7E2	data	data_03C7BD	verified	ghidra; data xref from verified code; not executed
+0x03C7E2	0x03C7E4	data	data_03C7E2	verified	ghidra; data xref from verified code; not executed
+0x03C7E4	0x03C7E6	data	data_03C7E4	verified	ghidra; data xref from verified code; not executed
+0x03C7E6	0x03C7E8	data	data_03C7E6	verified	ghidra; data xref from verified code; not executed
+0x03C7E8	0x03C7EA	data	data_03C7E8	verified	ghidra; data xref from verified code; not executed
+0x03C7EA	0x03C806	data	data_03C7EA	verified	ghidra; data xref from verified code; not executed
+0x03C806	0x03C816	data	data_03C806	verified	ghidra; data xref from verified code; not executed
+0x03C816	0x03C826	data	data_03C816	verified	ghidra; data xref from verified code; not executed
+0x03C826	0x03C834	data	data_03C826	verified	ghidra; data xref from verified code; not executed
+0x03C834	0x03C842	data	data_03C834	verified	ghidra; data xref from verified code; not executed
+0x03C842	0x03C854	data	data_03C842	verified	ghidra; data xref from verified code; not executed
+0x03C854	0x03C85C	data	data_03C854	verified	ghidra; data xref from verified code; not executed
+0x03C85C	0x03C85D	data	data_03C85C	verified	ghidra; data xref from verified code; not executed
+0x03C85D	0x03C86E	data	data_03C85D	verified	ghidra; data xref from verified code; not executed
+0x03C86E	0x03C87E	data	data_03C86E	verified	ghidra; data xref from verified code; not executed
+0x03C87E	0x03C88C	data	data_03C87E	verified	ghidra; data xref from verified code; not executed
+0x03C88C	0x03C89E	data	data_03C88C	verified	ghidra; data xref from verified code; not executed
+0x03C89E	0x03C8AA	data	data_03C89E	verified	ghidra; data xref from verified code; not executed
+0x03C8AA	0x03C8B8	data	data_03C8AA	verified	ghidra; data xref from verified code; not executed
+0x03C8B8	0x03C8B9	data	data_03C8B8	verified	ghidra; data xref from verified code; not executed
+0x03C8B9	0x03C8C4	data	data_03C8B9	verified	ghidra; data xref from verified code; not executed
+0x03C8C4	0x03C8C5	data	data_03C8C4	verified	ghidra; data xref from verified code; not executed
+0x03C8C5	0x03C8D2	data	data_03C8C5	verified	ghidra; data xref from verified code; not executed
+0x03C8D2	0x03C8D3	data	data_03C8D2	verified	ghidra; data xref from verified code; not executed
+0x03C8D3	0x03C8DE	data	data_03C8D3	verified	ghidra; data xref from verified code; not executed
+0x03C8DE	0x03C8DF	data	data_03C8DE	verified	ghidra; data xref from verified code; not executed
+0x03C8DF	0x03C8E6	data	data_03C8DF	verified	ghidra; data xref from verified code; not executed
+0x03C8E6	0x03C8E7	data	data_03C8E6	verified	ghidra; data xref from verified code; not executed
+0x03C8E7	0x03C8F0	data	data_03C8E7	verified	ghidra; data xref from verified code; not executed
+0x03C8F0	0x03C8F2	data	data_03C8F0	verified	ghidra; data xref from verified code; not executed
+0x03C8F2	0x03C8F4	data	data_03C8F2	verified	ghidra; data xref from verified code; not executed
+0x03C8F4	0x03C8F5	data	data_03C8F4	verified	ghidra; data xref from verified code; not executed
+0x03C8F5	0x03C8F8	data	data_03C8F5	verified	ghidra; data xref from verified code; not executed
+0x03C8F8	0x03C8FA	data	data_03C8F8	verified	ghidra; data xref from verified code; not executed
+0x03C8FA	0x03C8FC	data	data_03C8FA	verified	ghidra; data xref from verified code; not executed
+0x03C8FC	0x03C8FD	data	data_03C8FC	verified	ghidra; data xref from verified code; not executed
+0x03C8FD	0x03C902	data	data_03C8FD	verified	ghidra; data xref from verified code; not executed
+0x03C902	0x03C90E	data	data_03C902	verified	ghidra; data xref from verified code; not executed
+0x03C90E	0x03C91A	data	data_03C90E	verified	ghidra; data xref from verified code; not executed
+0x03C91A	0x03C92C	data	data_03C91A	verified	ghidra; data xref from verified code; not executed
+0x03C92C	0x03C940	data	data_03C92C	verified	ghidra; data xref from verified code; not executed
+0x03C940	0x03C94E	data	data_03C940	verified	ghidra; data xref from verified code; not executed
+0x03C94E	0x03C95E	data	data_03C94E	verified	ghidra; data xref from verified code; not executed
+0x03C95E	0x03C96E	data	data_03C95E	verified	ghidra; data xref from verified code; not executed
+0x03C96E	0x03C978	data	data_03C96E	verified	ghidra; data xref from verified code; not executed
+0x03C978	0x03C98A	data	data_03C978	verified	ghidra; data xref from verified code; not executed
+0x03C98A	0x03C99E	data	data_03C98A	verified	ghidra; data xref from verified code; not executed
+0x03C99E	0x03C9B2	data	data_03C99E	verified	ghidra; data xref from verified code; not executed
+0x03C9B2	0x03C9C0	data	data_03C9B2	verified	ghidra; data xref from verified code; not executed
+0x03C9C0	0x03C9D2	data	data_03C9C0	verified	ghidra; data xref from verified code; not executed
+0x03C9D2	0x03C9EA	data	data_03C9D2	verified	ghidra; data xref from verified code; not executed
+0x03C9EA	0x03C9EC	data	data_03C9EA	verified	ghidra; data xref from verified code; not executed
+0x03C9EC	0x03C9F8	data	data_03C9EC	verified	ghidra; data xref from verified code; not executed
+0x03C9F8	0x03C9FA	data	data_03C9F8	verified	ghidra; data xref from verified code; not executed
+0x03C9FA	0x03CA0E	data	data_03C9FA	verified	ghidra; data xref from verified code; not executed
+0x03CA0E	0x03CA10	data	data_03CA0E	verified	ghidra; data xref from verified code; not executed
+0x03CA10	0x03CA28	data	data_03CA10	verified	ghidra; data xref from verified code; not executed
+0x03CA28	0x03CA2A	data	data_03CA28	verified	ghidra; data xref from verified code; not executed
+0x03CA2A	0x03CA4A	data	data_03CA2A	verified	ghidra; data xref from verified code; not executed
+0x03CA4A	0x03CA4C	data	data_03CA4A	verified	ghidra; data xref from verified code; not executed
+0x03CA4C	0x03CA5E	data	data_03CA4C	verified	ghidra; data xref from verified code; not executed
+0x03CA5E	0x03CA60	data	data_03CA5E	verified	ghidra; data xref from verified code; not executed
+0x03CA60	0x03CA7A	data	data_03CA60	verified	ghidra; data xref from verified code; not executed
+0x03CA7A	0x03CA7C	data	data_03CA7A	verified	ghidra; data xref from verified code; not executed
+0x03CA7C	0x03CA94	data	data_03CA7C	verified	ghidra; data xref from verified code; not executed
+0x03CA94	0x03CA96	data	data_03CA94	verified	ghidra; data xref from verified code; not executed
+0x03CA96	0x03CAB6	data	data_03CA96	verified	ghidra; data xref from verified code; not executed
+0x03CAB6	0x03CAB8	data	data_03CAB6	verified	ghidra; data xref from verified code; not executed
+0x03CAB8	0x03CAC8	data	data_03CAB8	verified	ghidra; data xref from verified code; not executed
+0x03CAC8	0x03CACA	data	data_03CAC8	verified	ghidra; data xref from verified code; not executed
+0x03CACA	0x03CADA	data	data_03CACA	verified	ghidra; data xref from verified code; not executed
+0x03CADA	0x03CAEA	data	data_03CADA	verified	ghidra; data xref from verified code; not executed
+0x03CAEA	0x03CAEC	data	data_03CAEA	verified	ghidra; data xref from verified code; not executed
+0x03CAEC	0x03CAFE	data	data_03CAEC	verified	ghidra; data xref from verified code; not executed
+0x03CAFE	0x03CB00	data	data_03CAFE	verified	ghidra; data xref from verified code; not executed
+0x03CB00	0x03CB0E	data	data_03CB00	verified	ghidra; data xref from verified code; not executed
+0x03CB0E	0x03CB1E	data	data_03CB0E	verified	ghidra; data xref from verified code; not executed
+0x03CB1E	0x03CB20	data	data_03CB1E	verified	ghidra; data xref from verified code; not executed
+0x03CB20	0x03CB36	data	data_03CB20	verified	ghidra; data xref from verified code; not executed
+0x03CB36	0x03CB38	data	data_03CB36	verified	ghidra; data xref from verified code; not executed
+0x03CB38	0x03CB3C	data	data_03CB38	verified	ghidra; data xref from verified code; not executed
+0x03CB3C	0x03CB3E	data	data_03CB3C	verified	ghidra; data xref from verified code; not executed
+0x03CB3E	0x03CB40	data	data_03CB3E	verified	ghidra; data xref from verified code; not executed
+0x03CB40	0x03CB42	data	data_03CB40	verified	ghidra; data xref from verified code; not executed
+0x03CB42	0x03CB48	data	data_03CB42	verified	ghidra; data xref from verified code; not executed
+0x03CB48	0x03CB4A	data	data_03CB48	verified	ghidra; data xref from verified code; not executed
+0x03CB4A	0x03CB4C	data	data_03CB4A	verified	ghidra; data xref from verified code; not executed
+0x03CB4C	0x03CB4E	data	data_03CB4C	verified	ghidra; data xref from verified code; not executed
+0x03CB4E	0x03CB50	data	data_03CB4E	verified	ghidra; data xref from verified code; not executed
+0x03CB50	0x03CB52	data	data_03CB50	verified	ghidra; data xref from verified code; not executed
+0x03CB52	0x03CB58	data	data_03CB52	verified	ghidra; data xref from verified code; not executed
+0x03CB58	0x03CB80	data	data_03CB58	verified	ghidra; data xref from verified code; not executed
+0x03CB80	0x03CBA8	data	data_03CB80	verified	ghidra; data xref from verified code; not executed
+0x03CBA8	0x03CBD0	data	data_03CBA8	verified	ghidra; data xref from verified code; not executed
+0x03CBD0	0x03CBD4	data	data_03CBD0	verified	ghidra; data xref from verified code; not executed
+0x03CBD4	0x03CBD8	data	data_03CBD4	verified	ghidra; data xref from verified code; not executed
+0x03CBD8	0x03CC10	data	data_03CBD8	verified	ghidra; data xref from verified code; not executed
+0x03CC10	0x03CC50	data	data_03CC10	verified	ghidra; data xref from verified code; not executed
+0x03CC50	0x03CC90	data	data_03CC50	verified	ghidra; data xref from verified code; not executed
+0x03CC90	0x03D010	data	data_03CC90	verified	ghidra; data xref from verified code; not executed
+0x03D010	0x03D011	data	data_03D010	verified	ghidra; data xref from verified code; not executed
+0x03D011	0x03D012	data	data_03D011	verified	ghidra; data xref from verified code; not executed
+0x03D012	0x03D013	data	data_03D012	verified	ghidra; data xref from verified code; not executed
+0x03D013	0x03D014	data	data_03D013	verified	ghidra; data xref from verified code; not executed
+0x03D014	0x03D015	data	data_03D014	verified	ghidra; data xref from verified code; not executed
+0x03D015	0x03D016	data	data_03D015	verified	ghidra; data xref from verified code; not executed
+0x03D016	0x03D017	data	data_03D016	verified	ghidra; data xref from verified code; not executed
+0x03D017	0x03D018	data	data_03D017	verified	ghidra; data xref from verified code; not executed
+0x03D018	0x03D019	data	data_03D018	verified	ghidra; data xref from verified code; not executed
+0x03D019	0x03D01A	data	data_03D019	verified	ghidra; data xref from verified code; not executed
+0x03D01A	0x03D01B	data	data_03D01A	verified	ghidra; data xref from verified code; not executed
+0x03D01B	0x03D01C	data	data_03D01B	verified	ghidra; data xref from verified code; not executed
+0x03D01C	0x03D01D	data	data_03D01C	verified	ghidra; data xref from verified code; not executed
+0x03D01D	0x03D01E	data	data_03D01D	verified	ghidra; data xref from verified code; not executed
+0x03D01E	0x03D01F	data	data_03D01E	verified	ghidra; data xref from verified code; not executed
+0x03D01F	0x03D020	data	data_03D01F	verified	ghidra; data xref from verified code; not executed
+0x03D020	0x03D021	data	data_03D020	verified	ghidra; data xref from verified code; not executed
+0x03D021	0x03D022	data	data_03D021	verified	ghidra; data xref from verified code; not executed
+0x03D022	0x03D023	data	data_03D022	verified	ghidra; data xref from verified code; not executed
+0x03D023	0x03D024	data	data_03D023	verified	ghidra; data xref from verified code; not executed
+0x03D024	0x03D025	data	data_03D024	verified	ghidra; data xref from verified code; not executed
+0x03D025	0x03D026	data	data_03D025	verified	ghidra; data xref from verified code; not executed
+0x03D026	0x03D027	data	data_03D026	verified	ghidra; data xref from verified code; not executed
+0x03D027	0x03D028	data	data_03D027	verified	ghidra; data xref from verified code; not executed
+0x03D028	0x03D030	data	data_03D028	verified	ghidra; data xref from verified code; not executed
+0x03D030	0x03D031	data	data_03D030	verified	ghidra; data xref from verified code; not executed
+0x03D031	0x03D032	data	data_03D031	verified	ghidra; data xref from verified code; not executed
+0x03D032	0x03D033	data	data_03D032	verified	ghidra; data xref from verified code; not executed
+0x03D033	0x03D034	data	data_03D033	verified	ghidra; data xref from verified code; not executed
+0x03D034	0x03D035	data	data_03D034	verified	ghidra; data xref from verified code; not executed
+0x03D035	0x03D036	data	data_03D035	verified	ghidra; data xref from verified code; not executed
+0x03D036	0x03D037	data	data_03D036	verified	ghidra; data xref from verified code; not executed
+0x03D037	0x03D038	data	data_03D037	verified	ghidra; data xref from verified code; not executed
+0x03D038	0x03D040	data	data_03D038	verified	ghidra; data xref from verified code; not executed
+0x03D040	0x03D041	data	data_03D040	verified	ghidra; data xref from verified code; not executed
+0x03D041	0x03D042	data	data_03D041	verified	ghidra; data xref from verified code; not executed
+0x03D042	0x03D043	data	data_03D042	verified	ghidra; data xref from verified code; not executed
+0x03D043	0x03D044	data	data_03D043	verified	ghidra; data xref from verified code; not executed
+0x03D044	0x03D045	data	data_03D044	verified	ghidra; data xref from verified code; not executed
+0x03D045	0x03D046	data	data_03D045	verified	ghidra; data xref from verified code; not executed
+0x03D046	0x03D047	data	data_03D046	verified	ghidra; data xref from verified code; not executed
+0x03D047	0x03D048	data	data_03D047	verified	ghidra; data xref from verified code; not executed
+0x03D048	0x03D050	data	data_03D048	verified	ghidra; data xref from verified code; not executed
+0x03D050	0x03D051	data	data_03D050	verified	ghidra; data xref from verified code; not executed
+0x03D051	0x03D052	data	data_03D051	verified	ghidra; data xref from verified code; not executed
+0x03D052	0x03D053	data	data_03D052	verified	ghidra; data xref from verified code; not executed
+0x03D053	0x03D054	data	data_03D053	verified	ghidra; data xref from verified code; not executed
+0x03D054	0x03D055	data	data_03D054	verified	ghidra; data xref from verified code; not executed
+0x03D055	0x03D056	data	data_03D055	verified	ghidra; data xref from verified code; not executed
+0x03D056	0x03D057	data	data_03D056	verified	ghidra; data xref from verified code; not executed
+0x03D057	0x03D058	data	data_03D057	verified	ghidra; data xref from verified code; not executed
+0x03D058	0x03D060	data	data_03D058	verified	ghidra; data xref from verified code; not executed
+0x03D060	0x03D061	data	data_03D060	verified	ghidra; data xref from verified code; not executed
+0x03D061	0x03D062	data	data_03D061	verified	ghidra; data xref from verified code; not executed
+0x03D062	0x03D063	data	data_03D062	verified	ghidra; data xref from verified code; not executed
+0x03D063	0x03D064	data	data_03D063	verified	ghidra; data xref from verified code; not executed
+0x03D064	0x03D065	data	data_03D064	verified	ghidra; data xref from verified code; not executed
+0x03D065	0x03D066	data	data_03D065	verified	ghidra; data xref from verified code; not executed
+0x03D066	0x03D067	data	data_03D066	verified	ghidra; data xref from verified code; not executed
+0x03D067	0x03D068	data	data_03D067	verified	ghidra; data xref from verified code; not executed
+0x03D068	0x03D070	data	data_03D068	verified	ghidra; data xref from verified code; not executed
+0x03D070	0x03D071	data	data_03D070	verified	ghidra; data xref from verified code; not executed
+0x03D071	0x03D072	data	data_03D071	verified	ghidra; data xref from verified code; not executed
+0x03D072	0x03D073	data	data_03D072	verified	ghidra; data xref from verified code; not executed
+0x03D073	0x03D074	data	data_03D073	verified	ghidra; data xref from verified code; not executed
+0x03D074	0x03D075	data	data_03D074	verified	ghidra; data xref from verified code; not executed
+0x03D075	0x03D076	data	data_03D075	verified	ghidra; data xref from verified code; not executed
+0x03D076	0x03D077	data	data_03D076	verified	ghidra; data xref from verified code; not executed
+0x03D077	0x03D078	data	data_03D077	verified	ghidra; data xref from verified code; not executed
+0x03D078	0x03D080	data	data_03D078	verified	ghidra; data xref from verified code; not executed
+0x03D080	0x03D081	data	data_03D080	verified	ghidra; data xref from verified code; not executed
+0x03D081	0x03D082	data	data_03D081	verified	ghidra; data xref from verified code; not executed
+0x03D082	0x03D083	data	data_03D082	verified	ghidra; data xref from verified code; not executed
+0x03D083	0x03D084	data	data_03D083	verified	ghidra; data xref from verified code; not executed
+0x03D084	0x03D085	data	data_03D084	verified	ghidra; data xref from verified code; not executed
+0x03D085	0x03D086	data	data_03D085	verified	ghidra; data xref from verified code; not executed
+0x03D086	0x03D087	data	data_03D086	verified	ghidra; data xref from verified code; not executed
+0x03D087	0x03D088	data	data_03D087	verified	ghidra; data xref from verified code; not executed
+0x03D088	0x03D090	data	data_03D088	verified	ghidra; data xref from verified code; not executed
+0x03D090	0x03D091	data	data_03D090	verified	ghidra; data xref from verified code; not executed
+0x03D091	0x03D092	data	data_03D091	verified	ghidra; data xref from verified code; not executed
+0x03D092	0x03D093	data	data_03D092	verified	ghidra; data xref from verified code; not executed
+0x03D093	0x03D094	data	data_03D093	verified	ghidra; data xref from verified code; not executed
+0x03D094	0x03D095	data	data_03D094	verified	ghidra; data xref from verified code; not executed
+0x03D095	0x03D096	data	data_03D095	verified	ghidra; data xref from verified code; not executed
+0x03D096	0x03D097	data	data_03D096	verified	ghidra; data xref from verified code; not executed
+0x03D097	0x03D098	data	data_03D097	verified	ghidra; data xref from verified code; not executed
+0x03D098	0x03D0A0	data	data_03D098	verified	ghidra; data xref from verified code; not executed
+0x03D0A0	0x03D0A1	data	data_03D0A0	verified	ghidra; data xref from verified code; not executed
+0x03D0A1	0x03D0A2	data	data_03D0A1	verified	ghidra; data xref from verified code; not executed
+0x03D0A2	0x03D0A3	data	data_03D0A2	verified	ghidra; data xref from verified code; not executed
+0x03D0A3	0x03D0A4	data	data_03D0A3	verified	ghidra; data xref from verified code; not executed
+0x03D0A4	0x03D0A5	data	data_03D0A4	verified	ghidra; data xref from verified code; not executed
+0x03D0A5	0x03D0A6	data	data_03D0A5	verified	ghidra; data xref from verified code; not executed
+0x03D0A6	0x03D0A7	data	data_03D0A6	verified	ghidra; data xref from verified code; not executed
+0x03D0A7	0x03D0A8	data	data_03D0A7	verified	ghidra; data xref from verified code; not executed
+0x03D0A8	0x03D0B0	data	data_03D0A8	verified	ghidra; data xref from verified code; not executed
+0x03D0B0	0x03D0B1	data	data_03D0B0	verified	ghidra; data xref from verified code; not executed
+0x03D0B1	0x03D0B2	data	data_03D0B1	verified	ghidra; data xref from verified code; not executed
+0x03D0B2	0x03D0B3	data	data_03D0B2	verified	ghidra; data xref from verified code; not executed
+0x03D0B3	0x03D0B4	data	data_03D0B3	verified	ghidra; data xref from verified code; not executed
+0x03D0B4	0x03D0B5	data	data_03D0B4	verified	ghidra; data xref from verified code; not executed
+0x03D0B5	0x03D0B6	data	data_03D0B5	verified	ghidra; data xref from verified code; not executed
+0x03D0B6	0x03D0B7	data	data_03D0B6	verified	ghidra; data xref from verified code; not executed
+0x03D0B7	0x03D0B8	data	data_03D0B7	verified	ghidra; data xref from verified code; not executed
+0x03D0B8	0x03D0C0	data	data_03D0B8	verified	ghidra; data xref from verified code; not executed
+0x03D0C0	0x03D0C1	data	data_03D0C0	verified	ghidra; data xref from verified code; not executed
+0x03D0C1	0x03D0C2	data	data_03D0C1	verified	ghidra; data xref from verified code; not executed
+0x03D0C2	0x03D0C3	data	data_03D0C2	verified	ghidra; data xref from verified code; not executed
+0x03D0C3	0x03D0C4	data	data_03D0C3	verified	ghidra; data xref from verified code; not executed
+0x03D0C4	0x03D0C5	data	data_03D0C4	verified	ghidra; data xref from verified code; not executed
+0x03D0C5	0x03D0C6	data	data_03D0C5	verified	ghidra; data xref from verified code; not executed
+0x03D0C6	0x03D0C7	data	data_03D0C6	verified	ghidra; data xref from verified code; not executed
+0x03D0C7	0x03D0C8	data	data_03D0C7	verified	ghidra; data xref from verified code; not executed
+0x03D0C8	0x03D0D0	data	data_03D0C8	verified	ghidra; data xref from verified code; not executed
+0x03D0D0	0x03D0D1	data	data_03D0D0	verified	ghidra; data xref from verified code; not executed
+0x03D0D1	0x03D0D2	data	data_03D0D1	verified	ghidra; data xref from verified code; not executed
+0x03D0D2	0x03D0D3	data	data_03D0D2	verified	ghidra; data xref from verified code; not executed
+0x03D0D3	0x03D0D4	data	data_03D0D3	verified	ghidra; data xref from verified code; not executed
+0x03D0D4	0x03D0D5	data	data_03D0D4	verified	ghidra; data xref from verified code; not executed
+0x03D0D5	0x03D0D6	data	data_03D0D5	verified	ghidra; data xref from verified code; not executed
+0x03D0D6	0x03D0D7	data	data_03D0D6	verified	ghidra; data xref from verified code; not executed
+0x03D0D7	0x03D0D8	data	data_03D0D7	verified	ghidra; data xref from verified code; not executed
+0x03D0D8	0x03D0E0	data	data_03D0D8	verified	ghidra; data xref from verified code; not executed
+0x03D0E0	0x03D0E1	data	data_03D0E0	verified	ghidra; data xref from verified code; not executed
+0x03D0E1	0x03D0E2	data	data_03D0E1	verified	ghidra; data xref from verified code; not executed
+0x03D0E2	0x03D0E3	data	data_03D0E2	verified	ghidra; data xref from verified code; not executed
+0x03D0E3	0x03D0E4	data	data_03D0E3	verified	ghidra; data xref from verified code; not executed
+0x03D0E4	0x03D0E5	data	data_03D0E4	verified	ghidra; data xref from verified code; not executed
+0x03D0E5	0x03D0E6	data	data_03D0E5	verified	ghidra; data xref from verified code; not executed
+0x03D0E6	0x03D0E7	data	data_03D0E6	verified	ghidra; data xref from verified code; not executed
+0x03D0E7	0x03D0E8	data	data_03D0E7	verified	ghidra; data xref from verified code; not executed
+0x03D0E8	0x03D0F0	data	data_03D0E8	verified	ghidra; data xref from verified code; not executed
+0x03D0F0	0x03D0F1	data	data_03D0F0	verified	ghidra; data xref from verified code; not executed
+0x03D0F1	0x03D0F2	data	data_03D0F1	verified	ghidra; data xref from verified code; not executed
+0x03D0F2	0x03D0F3	data	data_03D0F2	verified	ghidra; data xref from verified code; not executed
+0x03D0F3	0x03D0F4	data	data_03D0F3	verified	ghidra; data xref from verified code; not executed
+0x03D0F4	0x03D0F5	data	data_03D0F4	verified	ghidra; data xref from verified code; not executed
+0x03D0F5	0x03D0F6	data	data_03D0F5	verified	ghidra; data xref from verified code; not executed
+0x03D0F6	0x03D0F7	data	data_03D0F6	verified	ghidra; data xref from verified code; not executed
+0x03D0F7	0x03D0F8	data	data_03D0F7	verified	ghidra; data xref from verified code; not executed
+0x03D0F8	0x03D100	data	data_03D0F8	verified	ghidra; data xref from verified code; not executed
+0x03D100	0x03D101	data	data_03D100	verified	ghidra; data xref from verified code; not executed
+0x03D101	0x03D102	data	data_03D101	verified	ghidra; data xref from verified code; not executed
+0x03D102	0x03D103	data	data_03D102	verified	ghidra; data xref from verified code; not executed
+0x03D103	0x03D104	data	data_03D103	verified	ghidra; data xref from verified code; not executed
+0x03D104	0x03D105	data	data_03D104	verified	ghidra; data xref from verified code; not executed
+0x03D105	0x03D106	data	data_03D105	verified	ghidra; data xref from verified code; not executed
+0x03D106	0x03D107	data	data_03D106	verified	ghidra; data xref from verified code; not executed
+0x03D107	0x03D108	data	data_03D107	verified	ghidra; data xref from verified code; not executed
+0x03D108	0x03D110	data	data_03D108	verified	ghidra; data xref from verified code; not executed
+0x03D110	0x03D111	data	data_03D110	verified	ghidra; data xref from verified code; not executed
+0x03D111	0x03D112	data	data_03D111	verified	ghidra; data xref from verified code; not executed
+0x03D112	0x03D113	data	data_03D112	verified	ghidra; data xref from verified code; not executed
+0x03D113	0x03D114	data	data_03D113	verified	ghidra; data xref from verified code; not executed
+0x03D114	0x03D115	data	data_03D114	verified	ghidra; data xref from verified code; not executed
+0x03D115	0x03D116	data	data_03D115	verified	ghidra; data xref from verified code; not executed
+0x03D116	0x03D117	data	data_03D116	verified	ghidra; data xref from verified code; not executed
+0x03D117	0x03D118	data	data_03D117	verified	ghidra; data xref from verified code; not executed
+0x03D118	0x03D120	data	data_03D118	verified	ghidra; data xref from verified code; not executed
+0x03D120	0x03D121	data	data_03D120	verified	ghidra; data xref from verified code; not executed
+0x03D121	0x03D122	data	data_03D121	verified	ghidra; data xref from verified code; not executed
+0x03D122	0x03D123	data	data_03D122	verified	ghidra; data xref from verified code; not executed
+0x03D123	0x03D124	data	data_03D123	verified	ghidra; data xref from verified code; not executed
+0x03D124	0x03D125	data	data_03D124	verified	ghidra; data xref from verified code; not executed
+0x03D125	0x03D126	data	data_03D125	verified	ghidra; data xref from verified code; not executed
+0x03D126	0x03D127	data	data_03D126	verified	ghidra; data xref from verified code; not executed
+0x03D127	0x03D128	data	data_03D127	verified	ghidra; data xref from verified code; not executed
+0x03D128	0x03D130	data	data_03D128	verified	ghidra; data xref from verified code; not executed
+0x03D130	0x03D131	data	data_03D130	verified	ghidra; data xref from verified code; not executed
+0x03D131	0x03D132	data	data_03D131	verified	ghidra; data xref from verified code; not executed
+0x03D132	0x03D133	data	data_03D132	verified	ghidra; data xref from verified code; not executed
+0x03D133	0x03D134	data	data_03D133	verified	ghidra; data xref from verified code; not executed
+0x03D134	0x03D135	data	data_03D134	verified	ghidra; data xref from verified code; not executed
+0x03D135	0x03D136	data	data_03D135	verified	ghidra; data xref from verified code; not executed
+0x03D136	0x03D137	data	data_03D136	verified	ghidra; data xref from verified code; not executed
+0x03D137	0x03D138	data	data_03D137	verified	ghidra; data xref from verified code; not executed
+0x03D138	0x03D140	data	data_03D138	verified	ghidra; data xref from verified code; not executed
+0x03D140	0x03D141	data	data_03D140	verified	ghidra; data xref from verified code; not executed
+0x03D141	0x03D142	data	data_03D141	verified	ghidra; data xref from verified code; not executed
+0x03D142	0x03D143	data	data_03D142	verified	ghidra; data xref from verified code; not executed
+0x03D143	0x03D144	data	data_03D143	verified	ghidra; data xref from verified code; not executed
+0x03D144	0x03D145	data	data_03D144	verified	ghidra; data xref from verified code; not executed
+0x03D145	0x03D146	data	data_03D145	verified	ghidra; data xref from verified code; not executed
+0x03D146	0x03D147	data	data_03D146	verified	ghidra; data xref from verified code; not executed
+0x03D147	0x03D148	data	data_03D147	verified	ghidra; data xref from verified code; not executed
+0x03D148	0x03D150	data	data_03D148	verified	ghidra; data xref from verified code; not executed
+0x03D150	0x03D151	data	data_03D150	verified	ghidra; data xref from verified code; not executed
+0x03D151	0x03D152	data	data_03D151	verified	ghidra; data xref from verified code; not executed
+0x03D152	0x03D153	data	data_03D152	verified	ghidra; data xref from verified code; not executed
+0x03D153	0x03D154	data	data_03D153	verified	ghidra; data xref from verified code; not executed
+0x03D154	0x03D155	data	data_03D154	verified	ghidra; data xref from verified code; not executed
+0x03D155	0x03D156	data	data_03D155	verified	ghidra; data xref from verified code; not executed
+0x03D156	0x03D157	data	data_03D156	verified	ghidra; data xref from verified code; not executed
+0x03D157	0x03D158	data	data_03D157	verified	ghidra; data xref from verified code; not executed
+0x03D158	0x03D160	data	data_03D158	verified	ghidra; data xref from verified code; not executed
+0x03D160	0x03D161	data	data_03D160	verified	ghidra; data xref from verified code; not executed
+0x03D161	0x03D162	data	data_03D161	verified	ghidra; data xref from verified code; not executed
+0x03D162	0x03D163	data	data_03D162	verified	ghidra; data xref from verified code; not executed
+0x03D163	0x03D164	data	data_03D163	verified	ghidra; data xref from verified code; not executed
+0x03D164	0x03D165	data	data_03D164	verified	ghidra; data xref from verified code; not executed
+0x03D165	0x03D166	data	data_03D165	verified	ghidra; data xref from verified code; not executed
+0x03D166	0x03D167	data	data_03D166	verified	ghidra; data xref from verified code; not executed
+0x03D167	0x03D168	data	data_03D167	verified	ghidra; data xref from verified code; not executed
+0x03D168	0x03D170	data	data_03D168	verified	ghidra; data xref from verified code; not executed
+0x03D170	0x03D171	data	data_03D170	verified	ghidra; data xref from verified code; not executed
+0x03D171	0x03D172	data	data_03D171	verified	ghidra; data xref from verified code; not executed
+0x03D172	0x03D173	data	data_03D172	verified	ghidra; data xref from verified code; not executed
+0x03D173	0x03D174	data	data_03D173	verified	ghidra; data xref from verified code; not executed
+0x03D174	0x03D175	data	data_03D174	verified	ghidra; data xref from verified code; not executed
+0x03D175	0x03D176	data	data_03D175	verified	ghidra; data xref from verified code; not executed
+0x03D176	0x03D177	data	data_03D176	verified	ghidra; data xref from verified code; not executed
+0x03D177	0x03D178	data	data_03D177	verified	ghidra; data xref from verified code; not executed
+0x03D178	0x03D180	data	data_03D178	verified	ghidra; data xref from verified code; not executed
+0x03D180	0x03D181	data	data_03D180	verified	ghidra; data xref from verified code; not executed
+0x03D181	0x03D182	data	data_03D181	verified	ghidra; data xref from verified code; not executed
+0x03D182	0x03D183	data	data_03D182	verified	ghidra; data xref from verified code; not executed
+0x03D183	0x03D184	data	data_03D183	verified	ghidra; data xref from verified code; not executed
+0x03D184	0x03D185	data	data_03D184	verified	ghidra; data xref from verified code; not executed
+0x03D185	0x03D186	data	data_03D185	verified	ghidra; data xref from verified code; not executed
+0x03D186	0x03D187	data	data_03D186	verified	ghidra; data xref from verified code; not executed
+0x03D187	0x03D188	data	data_03D187	verified	ghidra; data xref from verified code; not executed
+0x03D188	0x03D190	data	data_03D188	verified	ghidra; data xref from verified code; not executed
+0x03D190	0x03D1A8	data	data_03D190	verified	ghidra; data xref from verified code; not executed
+0x03D1A8	0x03D256	data	data_03D1A8	verified	ghidra; data xref from verified code; not executed
+0x03D256	0x03D28C	data	data_03D256	verified	ghidra; data xref from verified code; not executed
+0x03D28C	0x03D2AE	data	data_03D28C	verified	ghidra; data xref from verified code; not executed
+0x03D2AE	0x03D30C	data	data_03D2AE	verified	ghidra; data xref from verified code; not executed
+0x03D30C	0x03D414	data	data_03D30C	verified	ghidra; data xref from verified code; not executed
+0x03D414	0x03D436	data	data_03D414	verified	ghidra; data xref from verified code; not executed
+0x03D436	0x03D44E	data	data_03D436	verified	ghidra; data xref from verified code; not executed
+0x03D44E	0x03D45A	data	data_03D44E	verified	ghidra; data xref from verified code; not executed
+0x03D45A	0x03D47C	data	data_03D45A	verified	ghidra; data xref from verified code; not executed
+0x03D47C	0x03D488	data	data_03D47C	verified	ghidra; data xref from verified code; not executed
+0x03D488	0x03D494	data	data_03D488	verified	ghidra; data xref from verified code; not executed
+0x03D494	0x03D56A	data	data_03D494	verified	ghidra; data xref from verified code; not executed
+0x03D56A	0x03D63C	code	code_03D56A	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x03D63C	0x03D682	code	code_03D63C	verified	ghidra; xref from verified code; not executed
+0x03D682	0x03D898	code	code_03D682	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x03D898	0x03D8CA	code	code_03D898	verified	ghidra; xref from verified code; not executed
+0x03D8CA	0x03D8E4	data	data_03D8CA	verified	ghidra; data xref from verified code; not executed
+0x03D8E4	0x03D901	data	data_03D8E4	verified	ghidra; data xref from verified code; not executed
+0x03D901	0x03D913	data	data_03D901	verified	ghidra; data xref from verified code; not executed
+0x03D913	0x03D92A	data	data_03D913	verified	ghidra; data xref from verified code; not executed
+0x03D92A	0x03D93D	data	data_03D92A	verified	ghidra; data xref from verified code; not executed
+0x03D93D	0x03D957	data	data_03D93D	verified	ghidra; data xref from verified code; not executed
+0x03D957	0x03D973	data	data_03D957	verified	ghidra; data xref from verified code; not executed
+0x03D973	0x03D974	data	data_03D973	verified	ghidra; data xref from verified code; not executed
+0x03D974	0x03D984	data	data_03D974	verified	ghidra; data xref from verified code; not executed
+0x03D984	0x03D99A	data	data_03D984	verified	ghidra; data xref from verified code; not executed
+0x03D99A	0x03D9B8	data	data_03D99A	verified	ghidra; data xref from verified code; not executed
+0x03D9B8	0x03D9CC	data	data_03D9B8	verified	ghidra; data xref from verified code; not executed
+0x03D9CC	0x03D9CD	data	data_03D9CC	verified	ghidra; data xref from verified code; not executed
+0x03D9CD	0x03D9DC	data	data_03D9CD	verified	ghidra; data xref from verified code; not executed
+0x03D9DC	0x03D9FA	data	data_03D9DC	verified	ghidra; data xref from verified code; not executed
+0x03D9FA	0x03DA06	data	data_03D9FA	verified	ghidra; data xref from verified code; not executed
+0x03DA06	0x03DA9A	data	data_03DA06	verified	ghidra; data xref from verified code; not executed
+0x03DA9A	0x03DA9C	data	data_03DA9A	verified	ghidra; data xref from verified code; not executed
+0x03DA9C	0x03DADC	data	data_03DA9C	verified	ghidra; data xref from verified code; not executed
+0x03DADC	0x03DADE	data	data_03DADC	verified	ghidra; data xref from verified code; not executed
+0x03DADE	0x03DAE0	data	data_03DADE	verified	ghidra; data xref from verified code; not executed
+0x03DAE0	0x03DB1E	data	data_03DAE0	verified	ghidra; data xref from verified code; not executed
+0x03DB1E	0x03DB20	data	data_03DB1E	verified	ghidra; data xref from verified code; not executed
+0x03DB20	0x03DB60	data	data_03DB20	verified	ghidra; data xref from verified code; not executed
+0x03DB60	0x03DB84	data	data_03DB60	verified	ghidra; data xref from verified code; not executed
+0x03DB84	0x03DCD4	data	data_03DB84	verified	ghidra; data xref from verified code; not executed
+0x03DCD4	0x03DCE0	data	data_03DCD4	verified	ghidra; data xref from verified code; not executed
+0x03DCE0	0x03DCE2	data	data_03DCE0	verified	ghidra; data xref from verified code; not executed
+0x03DCE2	0x03DDC8	data	data_03DCE2	verified	ghidra; data xref from verified code; not executed
+0x03DDC8	0x03DDCA	data	data_03DDC8	verified	ghidra; data xref from verified code; not executed
+0x03DDCA	0x03DDCC	data	data_03DDCA	verified	ghidra; data xref from verified code; not executed
+0x03DDCC	0x03DE0A	data	data_03DDCC	verified	ghidra; data xref from verified code; not executed
+0x03DE0A	0x03E726	code	code_03DE0A	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x03E726	0x03E8C4	code	code_03E726	verified	ghidra; xref from verified code; not executed
+0x03E8C4	0x03EA82	code	code_03E8C4	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x03EA82	0x03ECCC	code	code_03EA82	verified	ghidra; xref from verified code; not executed
+0x03ECCC	0x03EE44	code	code_03ECCC	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x03EE44	0x03EE64	data	data_03EE44	verified	ghidra; data xref from verified code; not executed
+0x03EE64	0x03EEA2	code	code_03EE64	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x03EEA2	0x03F09C	code	code_03EEA2	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x03F09C	0x03F1F0	code	code_03F09C	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x03F1F0	0x03F202	data	data_03F1F0	verified	ghidra; data xref from verified code; not executed
+0x03F202	0x03F21C	data	data_03F202	verified	ghidra; data xref from verified code; not executed
+0x03F21C	0x03F22C	data	data_03F21C	verified	ghidra; data xref from verified code; not executed
+0x03F22C	0x03F238	data	data_03F22C	verified	ghidra; data xref from verified code; not executed
+0x03F238	0x03F240	data	data_03F238	verified	ghidra; data xref from verified code; not executed
+0x03F240	0x03F246	data	data_03F240	verified	ghidra; data xref from verified code; not executed
+0x03F246	0x03F24A	data	data_03F246	verified	ghidra; data xref from verified code; not executed
+0x03F24A	0x03F24C	data	data_03F24A	verified	ghidra; data xref from verified code; not executed
+0x03F24C	0x03F25A	data	data_03F24C	verified	ghidra; data xref from verified code; not executed
+0x03F25A	0x03F25C	data	data_03F25A	verified	ghidra; data xref from verified code; not executed
+0x03F25C	0x03F266	data	data_03F25C	verified	ghidra; data xref from verified code; not executed
+0x03F266	0x03F268	data	data_03F266	verified	ghidra; data xref from verified code; not executed
+0x03F268	0x03F270	data	data_03F268	verified	ghidra; data xref from verified code; not executed
+0x03F270	0x03F276	data	data_03F270	verified	ghidra; data xref from verified code; not executed
+0x03F276	0x03F278	data	data_03F276	verified	ghidra; data xref from verified code; not executed
+0x03F278	0x03F44E	code	code_03F278	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x03F44E	0x03F450	data	data_03F44E	inferred	no xref; not executed
+0x03F450	0x03F486	code	code_03F450	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x03F486	0x03F488	data	data_03F486	verified	ghidra; data xref from verified code; not executed
+0x03F488	0x03F4A6	data	data_03F488	verified	ghidra; data xref from verified code; not executed
+0x03F4A6	0x03F4C2	data	data_03F4A6	verified	ghidra; data xref from verified code; not executed
+0x03F4C2	0x03F4CE	data	data_03F4C2	verified	ghidra; data xref from verified code; not executed
+0x03F4CE	0x03F4D8	data	data_03F4CE	verified	ghidra; data xref from verified code; not executed
+0x03F4D8	0x03F4E2	data	data_03F4D8	verified	ghidra; data xref from verified code; not executed
+0x03F4E2	0x03F4E6	data	data_03F4E2	verified	ghidra; data xref from verified code; not executed
+0x03F4E6	0x03F526	data	data_03F4E6	verified	ghidra; data xref from verified code; not executed
+0x03F526	0x03F527	data	data_03F526	verified	ghidra; data xref from verified code; not executed
+0x03F527	0x03F52E	data	data_03F527	verified	ghidra; data xref from verified code; not executed
+0x03F52E	0x03F56E	data	data_03F52E	verified	ghidra; data xref from verified code; not executed
+0x03F56E	0x03F62E	data	data_03F56E	verified	ghidra; data xref from verified code; not executed
+0x03F62E	0x03F64E	data	data_03F62E	verified	ghidra; data xref from verified code; not executed
+0x03F64E	0x03F66E	data	data_03F64E	verified	ghidra; data xref from verified code; not executed
+0x03F66E	0x03F68E	data	data_03F66E	verified	ghidra; data xref from verified code; not executed
+0x03F68E	0x03F6AE	data	data_03F68E	verified	ghidra; data xref from verified code; not executed
+0x03F6AE	0x03F6CE	data	data_03F6AE	verified	ghidra; data xref from verified code; not executed
+0x03F6CE	0x03F6EE	data	data_03F6CE	verified	ghidra; data xref from verified code; not executed
+0x03F6EE	0x03F70E	data	data_03F6EE	verified	ghidra; data xref from verified code; not executed
+0x03F70E	0x03F72E	data	data_03F70E	verified	ghidra; data xref from verified code; not executed
+0x03F72E	0x03F74E	data	data_03F72E	verified	ghidra; data xref from verified code; not executed
+0x03F74E	0x03F76E	data	data_03F74E	verified	ghidra; data xref from verified code; not executed
+0x03F76E	0x03F78E	data	data_03F76E	verified	ghidra; data xref from verified code; not executed
+0x03F78E	0x03F7AE	data	data_03F78E	verified	ghidra; data xref from verified code; not executed
+0x03F7AE	0x03F7D0	data	data_03F7AE	verified	ghidra; data xref from verified code; not executed
+0x03F7D0	0x03F7EC	data	data_03F7D0	verified	ghidra; data xref from verified code; not executed
+0x03F7EC	0x03F7FC	data	data_03F7EC	verified	ghidra; data xref from verified code; not executed
+0x03F7FC	0x03F7FE	data	data_03F7FC	verified	ghidra; data xref from verified code; not executed
+0x03F7FE	0x03F80C	data	data_03F7FE	verified	ghidra; data xref from verified code; not executed
+0x03F80C	0x03F80E	data	data_03F80C	verified	ghidra; data xref from verified code; not executed
+0x03F80E	0x03F81C	data	data_03F80E	verified	ghidra; data xref from verified code; not executed
+0x03F81C	0x03F834	data	data_03F81C	verified	ghidra; data xref from verified code; not executed
+0x03F834	0x040A04	code	code_03F834	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x040A04	0x040A18	code	code_040A04	verified	cov:cov_race_20261012T073129; ghidra
+0x040A18	0x040DA0	code	code_040A18	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x040DA0	0x040DB4	data	data_040DA0	verified	ghidra; data xref from verified code; not executed
+0x040DB4	0x040DC2	data	data_040DB4	verified	ghidra; data xref from verified code; not executed
+0x040DC2	0x040DD0	data	data_040DC2	verified	ghidra; data xref from verified code; not executed
+0x040DD0	0x040E02	data	data_040DD0	verified	ghidra; data xref from verified code; not executed
+0x040E02	0x040E03	data	data_040E02	verified	ghidra; data xref from verified code; not executed
+0x040E03	0x040E4E	data	data_040E03	verified	ghidra; data xref from verified code; not executed
+0x040E4E	0x040F2A	code	code_040E4E	verified	ghidra; xref from verified code; not executed
+0x040F2A	0x04150E	code	code_040F2A	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x04150E	0x041526	data	data_04150E	verified	ghidra; data xref from verified code; not executed
+0x041526	0x04167A	code	code_041526	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x04167A	0x0416A2	data	data_04167A	inferred	no xref; not executed
+0x0416A2	0x0416FC	code	code_0416A2	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x0416FC	0x041700	code	data_0416FC	verified	no xref; not executed; T1.6: dispatch closure data_0359DE; capstone 0 invalid; not executed in 4 bp runs
+0x041700	0x041706	code	code_041700	verified	cov:cov_race_20261012T073129; ghidra
+0x041706	0x0418A2	code	data_041706	verified	no xref; not executed; T1.6: dispatch closure data_0359DE; capstone 0 invalid; mame exec 11 block entries (bp runs)
+0x0418A2	0x0418AA	code	code_0418A2	verified	cov:cov_race_20261012T073129; ghidra
+0x0418AA	0x0418EA	code	data_0418AA	verified	no xref; not executed; T1.6: dispatch closure data_0359DE; capstone 0 invalid; mame exec 1 block entries (bp runs)
+0x0418EA	0x041918	code	code_0418EA	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x041918	0x04191E	data	data_041918	inferred	no xref; not executed
+0x04191E	0x041978	code	code_04191E	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x041978	0x0419AE	code	code_041978	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x0419AE	0x0419EA	code	code_0419AE	verified	ghidra bad instruction in body; cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; T4: flow from verified code; cond-skip block, mame forced 3/3
+0x0419EA	0x0419EE	code	data_0419EA	verified	no xref; not executed; T4: re-kind, cond-skip slot in verified flow; mame forced 3/3; ghidra decode gap
+0x0419EE	0x0419F4	code	code_0419EE	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra did not disassemble; T4: flow from verified code; cond-skip block, mame forced 3/3
+0x0419F4	0x0419F8	code	data_0419F4	verified	no xref; not executed; T4: re-kind, cond-skip slot in verified flow; mame forced 3/3; ghidra decode gap
+0x0419F8	0x0419FE	code	code_0419F8	verified	ghidra bad instruction in body; cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; T4: flow from verified code; cond-skip block, mame forced 3/3
+0x0419FE	0x041A02	code	data_0419FE	verified	no xref; not executed; T4: re-kind, cond-skip slot in verified flow; mame forced 3/3; ghidra decode gap
+0x041A02	0x041A08	code	code_041A02	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra did not disassemble; T4: flow from verified code; cond-skip block, mame forced 3/3
+0x041A08	0x041A0C	code	data_041A08	verified	no xref; not executed; T4: re-kind, cond-skip slot in verified flow; mame forced 3/3; ghidra decode gap
+0x041A0C	0x041A3A	code	code_041A0C	verified	ghidra bad instruction in body; cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; T4: flow from verified code; cond-skip block, mame forced 3/3
+0x041A3A	0x041A3E	code	data_041A3A	verified	no xref; not executed; T4: re-kind, cond-skip slot in verified flow; mame forced 3/3; ghidra decode gap
+0x041A3E	0x041A44	code	code_041A3E	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra did not disassemble; T4: flow from verified code; cond-skip block, mame forced 3/3
+0x041A44	0x041A48	code	data_041A44	verified	no xref; not executed; T4: re-kind, cond-skip slot in verified flow; mame forced 3/3; ghidra decode gap
+0x041A48	0x041A4E	code	code_041A48	verified	ghidra bad instruction in body; cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; T4: flow from verified code; cond-skip block, mame forced 3/3
+0x041A4E	0x041A52	code	data_041A4E	verified	no xref; not executed; T4: re-kind, cond-skip slot in verified flow; mame forced 3/3; ghidra decode gap
+0x041A52	0x041A58	code	code_041A52	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra did not disassemble; T4: flow from verified code; cond-skip block, mame forced 3/3
+0x041A58	0x041A5C	code	data_041A58	verified	no xref; not executed; T4: re-kind, cond-skip slot in verified flow; mame forced 3/3; ghidra decode gap
+0x041A5C	0x041A84	code	code_041A5C	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x041A84	0x041F0C	code	code_041A84	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x041F0C	0x041F26	data	data_041F0C	verified	ghidra; data xref from verified code; not executed
+0x041F26	0x041F4E	data	data_041F26	verified	ghidra; data xref from verified code; not executed
+0x041F4E	0x041F50	data	data_041F4E	verified	ghidra; data xref from verified code; not executed
+0x041F50	0x041F54	data	data_041F50	verified	ghidra; data xref from verified code; not executed
+0x041F54	0x041F74	data	data_041F54	verified	ghidra; data xref from verified code; not executed
+0x041F74	0x042012	code	code_041F74	verified	cov:cov_attract_20261011T232135; ghidra
+0x042012	0x04239A	code	code_042012	verified	cov:cov_attract_20261011T232135;cov_race_20261012T073129; ghidra
+0x04239A	0x0429E2	code	code_04239A	verified	ghidra; xref from verified code; not executed
+0x0429E2	0x042CE4	code	code_0429E2	verified	cov:cov_attract_20261011T232135;cov_boot_20261011T231654;cov_boot_20261011T232726;cov_race_20261012T073129; ghidra
+0x042CE4	0x042D46	data	data_042CE4	verified	ghidra; data xref from verified code; not executed
+0x042D46	0x042DCA	data	data_042D46	verified	ghidra; data xref from verified code; not executed
+0x042DCA	0x042DCD	data	data_042DCA	verified	ghidra; data xref from verified code; not executed
+0x042DCD	0x042E58	data	data_042DCD	verified	ghidra; data xref from verified code; not executed
+0x042E58	0x042E5A	data	data_042E58	verified	ghidra; data xref from verified code; not executed
+0x042E5A	0x042E64	data	data_042E5A	verified	ghidra; data xref from verified code; not executed
+0x042E64	0x042EC6	data	data_042E64	verified	ghidra; data xref from verified code; not executed
+0x042EC6	0x042ECA	data	data_042EC6	verified	ghidra; data xref from verified code; not executed
+0x042ECA	0x042EF2	data	data_042ECA	verified	ghidra; data xref from verified code; not executed
+0x042EF2	0x042EF4	data	data_042EF2	verified	ghidra; data xref from verified code; not executed
+0x042EF4	0x042F0A	data	data_042EF4	verified	ghidra; data xref from verified code; not executed
+0x042F0A	0x042F0C	data	data_042F0A	verified	ghidra; data xref from verified code; not executed
+0x042F0C	0x04313E	data	data_042F0C	verified	ghidra; data xref from verified code; not executed
+0x04313E	0x043232	data	data_04313E	verified	ghidra; data xref from verified code; not executed
+0x043232	0x0434D8	code	code_043232	verified	ghidra; xref from verified code; not executed
+0x0434D8	0x0434DA	data	data_0434D8	inferred	no xref; not executed
+0x0434DA	0x043AAC	code	code_0434DA	verified	ghidra; xref from verified code; not executed
+0x043AAC	0x043AC6	data	data_043AAC	verified	ghidra; data xref from verified code; not executed
+0x043AC6	0x043B94	code	code_043AC6	verified	ghidra; xref from verified code; not executed
+0x043B94	0x043B95	data	data_043B94	verified	ghidra; data xref from verified code; not executed
+0x043B95	0x043BA6	data	data_043B95	verified	ghidra; data xref from verified code; not executed
+0x043BA6	0x043BB0	data	data_043BA6	verified	ghidra; data xref from verified code; not executed
+0x043BB0	0x043BBA	data	data_043BB0	verified	ghidra; data xref from verified code; not executed
+0x043BBA	0x043BC4	data	data_043BBA	verified	ghidra; data xref from verified code; not executed
+0x043BC4	0x043BD2	data	data_043BC4	verified	ghidra; data xref from verified code; not executed
+0x043BD2	0x043BD3	data	data_043BD2	verified	ghidra; data xref from verified code; not executed
+0x043BD3	0x043BDA	data	data_043BD3	verified	ghidra; data xref from verified code; not executed
+0x043BDA	0x043BF2	data	data_043BDA	verified	ghidra; data xref from verified code; not executed
+0x043BF2	0x043C02	data	data_043BF2	verified	ghidra; data xref from verified code; not executed
+0x043C02	0x043C14	data	data_043C02	verified	ghidra; data xref from verified code; not executed
+0x043C14	0x043C26	data	data_043C14	verified	ghidra; data xref from verified code; not executed
+0x043C26	0x043C2A	data	data_043C26	verified	ghidra; data xref from verified code; not executed
+0x043C2A	0x043CBE	data	data_043C2A	verified	ghidra; data xref from verified code; not executed
+0x043CBE	0x043CD2	data	data_043CBE	verified	ghidra; data xref from verified code; not executed
+0x043CD2	0x043CE4	data	data_043CD2	verified	ghidra; data xref from verified code; not executed
+0x043CE4	0x043CF6	data	data_043CE4	verified	ghidra; data xref from verified code; not executed
+0x043CF6	0x043D12	data	data_043CF6	verified	ghidra; data xref from verified code; not executed
+0x043D12	0x043D13	data	data_043D12	verified	ghidra; data xref from verified code; not executed
+0x043D13	0x043DA6	data	data_043D13	verified	ghidra; data xref from verified code; not executed
+0x043DA6	0x043DA7	data	data_043DA6	verified	ghidra; data xref from verified code; not executed
+0x043DA7	0x043E3A	data	data_043DA7	verified	ghidra; data xref from verified code; not executed
+0x043E3A	0x043E84	data	data_043E3A	verified	ghidra; data xref from verified code; not executed
+0x043E84	0x043E90	data	data_043E84	verified	ghidra; data xref from verified code; not executed
+0x043E90	0x043E9C	data	data_043E90	verified	ghidra; data xref from verified code; not executed
+0x043E9C	0x043EA8	data	data_043E9C	verified	ghidra; data xref from verified code; not executed
+0x043EA8	0x04440C	data	data_043EA8	verified	ghidra; data xref from verified code; not executed
+0x04440C	0x04440D	data	data_04440C	verified	ghidra; data xref from verified code; not executed
+0x04440D	0x04446C	data	data_04440D	verified	ghidra; data xref from verified code; not executed
+0x04446C	0x0444DC	data	data_04446C	verified	ghidra; data xref from verified code; not executed
+0x0444DC	0x0444E6	data	data_0444DC	verified	ghidra; data xref from verified code; not executed
+0x0444E6	0x0444EA	data	data_0444E6	verified	ghidra; data xref from verified code; not executed
+0x0444EA	0x0444F4	data	data_0444EA	verified	ghidra; data xref from verified code; not executed
+0x0444F4	0x044514	data	data_0444F4	verified	ghidra; data xref from verified code; not executed
+0x044514	0x04454C	data	data_044514	verified	ghidra; data xref from verified code; not executed
+0x04454C	0x044554	data	data_04454C	verified	ghidra; data xref from verified code; not executed
+0x044554	0x044556	data	data_044554	verified	ghidra; data xref from verified code; not executed
+0x044556	0x0445D8	data	data_044556	verified	ghidra; data xref from verified code; not executed
+0x0445D8	0x0445DA	data	data_0445D8	verified	ghidra; data xref from verified code; not executed
+0x0445DA	0x0445DC	data	data_0445DA	verified	ghidra; data xref from verified code; not executed
+0x0445DC	0x0445E0	data	data_0445DC	verified	ghidra; data xref from verified code; not executed
+0x0445E0	0x0445E2	data	data_0445E0	verified	ghidra; data xref from verified code; not executed
+0x0445E2	0x0445E6	data	data_0445E2	verified	ghidra; data xref from verified code; not executed
+0x0445E6	0x0445E8	data	data_0445E6	verified	ghidra; data xref from verified code; not executed
+0x0445E8	0x0445EE	data	data_0445E8	verified	ghidra; data xref from verified code; not executed
+0x0445EE	0x0445F0	data	data_0445EE	verified	ghidra; data xref from verified code; not executed
+0x0445F0	0x044680	data	data_0445F0	verified	ghidra; data xref from verified code; not executed
+0x044680	0x044682	data	data_044680	verified	ghidra; data xref from verified code; not executed
+0x044682	0x044684	data	data_044682	verified	ghidra; data xref from verified code; not executed
+0x044684	0x044688	data	data_044684	verified	ghidra; data xref from verified code; not executed
+0x044688	0x04468A	data	data_044688	verified	ghidra; data xref from verified code; not executed
+0x04468A	0x0452C2	data	data_04468A	verified	ghidra; data xref from verified code; not executed
+0x0452C2	0x0452C4	data	data_0452C2	verified	ghidra; data xref from verified code; not executed
+0x0452C4	0x0452C5	data	data_0452C4	verified	ghidra; data xref from verified code; not executed
+0x0452C5	0x0452DF	data	data_0452C5	verified	ghidra; data xref from verified code; not executed
+0x0452DF	0x0452E0	data	data_0452DF	verified	ghidra; data xref from verified code; not executed
+0x0452E0	0x0452E1	data	data_0452E0	verified	ghidra; data xref from verified code; not executed
+0x0452E1	0x0452E2	data	data_0452E1	verified	ghidra; data xref from verified code; not executed
+0x0452E2	0x0452E3	data	data_0452E2	verified	ghidra; data xref from verified code; not executed
+0x0452E3	0x045320	data	data_0452E3	verified	ghidra; data xref from verified code; not executed
+0x045320	0x04532E	data	data_045320	verified	ghidra; data xref from verified code; not executed
+0x04532E	0x04543A	data	data_04532E	verified	ghidra; data xref from verified code; not executed
+0x04543A	0x04548A	data	data_04543A	verified	ghidra; data xref from verified code; not executed
+0x04548A	0x04548B	data	data_04548A	verified	ghidra; data xref from verified code; not executed
+0x04548B	0x045498	data	data_04548B	verified	ghidra; data xref from verified code; not executed
+0x045498	0x045499	data	data_045498	verified	ghidra; data xref from verified code; not executed
+0x045499	0x04549A	data	data_045499	verified	ghidra; data xref from verified code; not executed
+0x04549A	0x0454A8	data	data_04549A	verified	ghidra; data xref from verified code; not executed
+0x0454A8	0x0454A9	data	data_0454A8	verified	ghidra; data xref from verified code; not executed
+0x0454A9	0x0457FC	data	data_0454A9	verified	ghidra; data xref from verified code; not executed
+0x0457FC	0x045908	data	data_0457FC	verified	ghidra; data xref from verified code; not executed
+0x045908	0x045A14	data	data_045908	verified	ghidra; data xref from verified code; not executed
+0x045A14	0x045A58	data	data_045A14	verified	ghidra; data xref from verified code; not executed
+0x045A58	0x045A59	data	data_045A58	verified	ghidra; data xref from verified code; not executed
+0x045A59	0x045ADE	data	data_045A59	verified	ghidra; data xref from verified code; not executed
+0x045ADE	0x045B22	data	data_045ADE	verified	ghidra; data xref from verified code; not executed
+0x045B22	0x045B66	data	data_045B22	verified	ghidra; data xref from verified code; not executed
+0x045B66	0x045BAA	data	data_045B66	verified	ghidra; data xref from verified code; not executed
+0x045BAA	0x045CEC	data	data_045BAA	verified	ghidra; data xref from verified code; not executed
+0x045CEC	0x045DF8	data	data_045CEC	verified	ghidra; data xref from verified code; not executed
+0x045DF8	0x045F04	data	data_045DF8	verified	ghidra; data xref from verified code; not executed
+0x045F04	0x046010	data	data_045F04	verified	ghidra; data xref from verified code; not executed
+0x046010	0x04611C	data	data_046010	verified	ghidra; data xref from verified code; not executed
+0x04611C	0x046228	data	data_04611C	verified	ghidra; data xref from verified code; not executed
+0x046228	0x04626C	data	data_046228	verified	ghidra; data xref from verified code; not executed
+0x04626C	0x0462AF	data	data_04626C	verified	ghidra; data xref from verified code; not executed
+0x0462AF	0x0462F2	data	data_0462AF	verified	ghidra; data xref from verified code; not executed
+0x0462F2	0x046336	data	data_0462F2	verified	ghidra; data xref from verified code; not executed
+0x046336	0x04637A	data	data_046336	verified	ghidra; data xref from verified code; not executed
+0x04637A	0x0463BE	data	data_04637A	verified	ghidra; data xref from verified code; not executed
+0x0463BE	0x0464CA	data	data_0463BE	verified	ghidra; data xref from verified code; not executed
+0x0464CA	0x0464CC	data	data_0464CA	verified	ghidra; data xref from verified code; not executed
+0x0464CC	0x0464CE	data	data_0464CC	verified	ghidra; data xref from verified code; not executed
+0x0464CE	0x0464D0	data	data_0464CE	verified	ghidra; data xref from verified code; not executed
+0x0464D0	0x0466E2	data	data_0464D0	verified	ghidra; data xref from verified code; not executed
+0x0466E2	0x0466E4	data	data_0466E2	verified	ghidra; data xref from verified code; not executed
+0x0466E4	0x0467EE	data	data_0466E4	verified	ghidra; data xref from verified code; not executed
+0x0467EE	0x046832	data	data_0467EE	verified	ghidra; data xref from verified code; not executed
+0x046832	0x04693E	data	data_046832	verified	ghidra; data xref from verified code; not executed
+0x04693E	0x046A46	data	data_04693E	verified	ghidra; data xref from verified code; not executed
+0x046A46	0x046B1A	data	data_046A46	verified	ghidra; data xref from verified code; not executed
+0x046B1A	0x046B1C	data	data_046B1A	verified	ghidra; data xref from verified code; not executed
+0x046B1C	0x046B1E	data	data_046B1C	verified	ghidra; data xref from verified code; not executed
+0x046B1E	0x046B20	data	data_046B1E	verified	ghidra; data xref from verified code; not executed
+0x046B20	0x046C78	data	data_046B20	verified	ghidra; data xref from verified code; not executed
+0x046C78	0x046D84	data	data_046C78	verified	ghidra; data xref from verified code; not executed
+0x046D84	0x046F24	data	data_046D84	verified	ghidra; data xref from verified code; not executed
+0x046F24	0x046F2C	data	data_046F24	verified	ghidra; data xref from verified code; not executed
+0x046F2C	0x047310	data	data_046F2C	verified	ghidra; data xref from verified code; not executed
+0x047310	0x047312	data	data_047310	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x047312	0x047314	data	data_047312	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x047314	0x047352	data	data_047314	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x047352	0x047354	data	data_047352	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x047354	0x0477BA	data	data_047354	verified	ghidra; data xref from unverified code; not executed; T4: xref source code now verified
+0x0477BA	0x047F98	compressed	imp_000	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0477BA, size endOffset+0x32
+0x047F98	0x048010	compressed	imp_001	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x047F98, size endOffset+0x32
+0x048010	0x04826A	compressed	imp_002	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x048010, size endOffset+0x32
+0x04826A	0x0484EE	compressed	imp_003	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04826A, size endOffset+0x32
+0x0484EE	0x04892E	compressed	imp_004	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0484EE, size endOffset+0x32
+0x04892E	0x048B7E	compressed	imp_005	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04892E, size endOffset+0x32
+0x048B7E	0x048DA2	compressed	imp_006	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x048B7E, size endOffset+0x32
+0x048DA2	0x048FC8	compressed	imp_007	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x048DA2, size endOffset+0x32
+0x048FC8	0x0491EA	compressed	imp_008	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x048FC8, size endOffset+0x32
+0x0491EA	0x0493FE	compressed	imp_009	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0491EA, size endOffset+0x32
+0x0493FE	0x049632	compressed	imp_010	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0493FE, size endOffset+0x32
+0x049632	0x049880	compressed	imp_011	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x049632, size endOffset+0x32
+0x049880	0x049AEA	compressed	imp_012	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x049880, size endOffset+0x32
+0x049AEA	0x049D24	compressed	imp_013	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x049AEA, size endOffset+0x32
+0x049D24	0x049F8E	compressed	imp_014	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x049D24, size endOffset+0x32
+0x049F8E	0x04A1B6	compressed	imp_015	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x049F8E, size endOffset+0x32
+0x04A1B6	0x04A3D2	compressed	imp_016	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04A1B6, size endOffset+0x32
+0x04A3D2	0x04A64E	compressed	imp_017	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04A3D2, size endOffset+0x32
+0x04A64E	0x04AA0A	compressed	imp_018	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04A64E, size endOffset+0x32
+0x04AA0A	0x04AE7E	compressed	imp_019	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04AA0A, size endOffset+0x32
+0x04AE7E	0x04B32C	compressed	imp_020	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04AE7E, size endOffset+0x32
+0x04B32C	0x04B588	compressed	imp_021	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04B32C, size endOffset+0x32
+0x04B588	0x04BAB4	compressed	imp_022	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04B588, size endOffset+0x32
+0x04BAB4	0x04BD3C	compressed	imp_023	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04BAB4, size endOffset+0x32
+0x04BD3C	0x04C158	compressed	imp_024	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04BD3C, size endOffset+0x32
+0x04C158	0x04C38C	compressed	imp_025	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04C158, size endOffset+0x32
+0x04C38C	0x04C660	compressed	imp_026	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04C38C, size endOffset+0x32
+0x04C660	0x04C8CE	compressed	imp_027	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04C660, size endOffset+0x32
+0x04C8CE	0x04CD34	compressed	imp_028	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04C8CE, size endOffset+0x32
+0x04CD34	0x04D172	compressed	imp_029	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04CD34, size endOffset+0x32
+0x04D172	0x04D3D4	compressed	imp_030	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04D172, size endOffset+0x32
+0x04D3D4	0x04D806	compressed	imp_031	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04D3D4, size endOffset+0x32
+0x04D806	0x04DC3C	compressed	imp_032	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04D806, size endOffset+0x32
+0x04DC3C	0x04E0B2	compressed	imp_033	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04DC3C, size endOffset+0x32
+0x04E0B2	0x04E316	compressed	imp_034	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04E0B2, size endOffset+0x32
+0x04E316	0x04E568	compressed	imp_035	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04E316, size endOffset+0x32
+0x04E568	0x04E9D2	compressed	imp_036	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04E568, size endOffset+0x32
+0x04E9D2	0x04EE38	compressed	imp_037	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04E9D2, size endOffset+0x32
+0x04EE38	0x04F2E0	compressed	imp_038	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04EE38, size endOffset+0x32
+0x04F2E0	0x04F78C	compressed	imp_039	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04F2E0, size endOffset+0x32
+0x04F78C	0x04FBA2	compressed	imp_040	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04F78C, size endOffset+0x32
+0x04FBA2	0x04FF9E	compressed	imp_041	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04FBA2, size endOffset+0x32
+0x04FF9E	0x0501F6	compressed	imp_042	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x04FF9E, size endOffset+0x32
+0x0501F6	0x0506D6	compressed	imp_043	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0501F6, size endOffset+0x32
+0x0506D6	0x050946	compressed	imp_044	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0506D6, size endOffset+0x32
+0x050946	0x050D3C	compressed	imp_045	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x050946, size endOffset+0x32
+0x050D3C	0x050F84	compressed	imp_046	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x050D3C, size endOffset+0x32
+0x050F84	0x0513AC	compressed	imp_047	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x050F84, size endOffset+0x32
+0x0513AC	0x05179E	compressed	imp_048	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0513AC, size endOffset+0x32
+0x05179E	0x051A6A	compressed	imp_049	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05179E, size endOffset+0x32
+0x051A6A	0x051C78	compressed	imp_050	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x051A6A, size endOffset+0x32
+0x051C78	0x051FDA	compressed	imp_051	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x051C78, size endOffset+0x32
+0x051FDA	0x0521E6	compressed	imp_052	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x051FDA, size endOffset+0x32
+0x0521E6	0x052434	compressed	imp_053	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0521E6, size endOffset+0x32
+0x052434	0x052662	compressed	imp_054	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x052434, size endOffset+0x32
+0x052662	0x0528B2	compressed	imp_055	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x052662, size endOffset+0x32
+0x0528B2	0x052AE6	compressed	imp_056	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0528B2, size endOffset+0x32
+0x052AE6	0x052D06	compressed	imp_057	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x052AE6, size endOffset+0x32
+0x052D06	0x052DE0	compressed	imp_058	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x052D06, size endOffset+0x32
+0x052DE0	0x052EBA	compressed	imp_059	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x052DE0, size endOffset+0x32
+0x052EBA	0x0542A4	compressed	imp_060	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x052EBA, size endOffset+0x32
+0x0542A4	0x0546A8	compressed	imp_061	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0542A4, size endOffset+0x32
+0x0546A8	0x0548DC	compressed	imp_062	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0546A8, size endOffset+0x32
+0x0548DC	0x054AE6	compressed	imp_063	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0548DC, size endOffset+0x32
+0x054AE6	0x054CA8	compressed	imp_064	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x054AE6, size endOffset+0x32
+0x054CA8	0x054EDC	compressed	imp_065	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x054CA8, size endOffset+0x32
+0x054EDC	0x055148	compressed	imp_066	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x054EDC, size endOffset+0x32
+0x055148	0x0551BA	compressed	imp_067	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x055148, size endOffset+0x32
+0x0551BA	0x0559C2	compressed	imp_068	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0551BA, size endOffset+0x32
+0x0559C2	0x0562DC	compressed	imp_069	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0559C2, size endOffset+0x32
+0x0562DC	0x056BFC	compressed	imp_070	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0562DC, size endOffset+0x32
+0x056BFC	0x056EF4	compressed	imp_071	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x056BFC, size endOffset+0x32
+0x056EF4	0x0577BC	compressed	imp_072	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x056EF4, size endOffset+0x32
+0x0577BC	0x0583FA	compressed	imp_073	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0577BC, size endOffset+0x32
+0x0583FA	0x058AAE	compressed	imp_074	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0583FA, size endOffset+0x32
+0x058AAE	0x059062	compressed	imp_075	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x058AAE, size endOffset+0x32
+0x059062	0x059464	compressed	imp_076	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x059062, size endOffset+0x32
+0x059464	0x0599AE	compressed	imp_077	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x059464, size endOffset+0x32
+0x0599AE	0x059E26	compressed	imp_078	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0599AE, size endOffset+0x32
+0x059E26	0x05A2C0	compressed	imp_079	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x059E26, size endOffset+0x32
+0x05A2C0	0x05AAEA	compressed	imp_080	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05A2C0, size endOffset+0x32
+0x05AAEA	0x05B05A	compressed	imp_081	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05AAEA, size endOffset+0x32
+0x05B05A	0x05BDF0	compressed	imp_082	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05B05A, size endOffset+0x32
+0x05BDF0	0x05CD76	compressed	imp_083	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05BDF0, size endOffset+0x32
+0x05CD76	0x05D8EA	compressed	imp_084	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05CD76, size endOffset+0x32
+0x05D8EA	0x05E200	compressed	imp_085	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05D8EA, size endOffset+0x32
+0x05E200	0x05EDF4	compressed	imp_086	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05E200, size endOffset+0x32
+0x05EDF4	0x05FAE2	compressed	imp_087	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05EDF4, size endOffset+0x32
+0x05FAE2	0x060A96	compressed	imp_088	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x05FAE2, size endOffset+0x32
+0x060A96	0x06177C	compressed	imp_089	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x060A96, size endOffset+0x32
+0x06177C	0x063644	compressed	imp_090	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06177C, size endOffset+0x32
+0x063644	0x0646D8	compressed	imp_091	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x063644, size endOffset+0x32
+0x0646D8	0x0655D0	compressed	imp_092	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0646D8, size endOffset+0x32
+0x0655D0	0x066242	compressed	imp_093	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0655D0, size endOffset+0x32
+0x066242	0x067128	compressed	imp_094	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x066242, size endOffset+0x32
+0x067128	0x068060	compressed	imp_095	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x067128, size endOffset+0x32
+0x068060	0x068FCC	compressed	imp_096	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x068060, size endOffset+0x32
+0x068FCC	0x069E8E	compressed	imp_097	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x068FCC, size endOffset+0x32
+0x069E8E	0x06ACE4	compressed	imp_098	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x069E8E, size endOffset+0x32
+0x06ACE4	0x06BB06	compressed	imp_099	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06ACE4, size endOffset+0x32
+0x06BB06	0x06C2A2	compressed	imp_100	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06BB06, size endOffset+0x32
+0x06C2A2	0x06C832	compressed	imp_101	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06C2A2, size endOffset+0x32
+0x06C832	0x06CC5E	compressed	imp_102	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06C832, size endOffset+0x32
+0x06CC5E	0x06CFB8	compressed	imp_103	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06CC5E, size endOffset+0x32
+0x06CFB8	0x06D48C	compressed	imp_104	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06CFB8, size endOffset+0x32
+0x06D48C	0x06D77A	compressed	imp_105	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06D48C, size endOffset+0x32
+0x06D77A	0x06DAF0	compressed	imp_106	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06D77A, size endOffset+0x32
+0x06DAF0	0x06DD52	compressed	imp_107	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06DAF0, size endOffset+0x32
+0x06DD52	0x06E0A6	compressed	imp_108	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06DD52, size endOffset+0x32
+0x06E0A6	0x06E4DC	compressed	imp_109	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06E0A6, size endOffset+0x32
+0x06E4DC	0x06E8F6	compressed	imp_110	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06E4DC, size endOffset+0x32
+0x06E8F6	0x06EC8A	compressed	imp_111	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06E8F6, size endOffset+0x32
+0x06EC8A	0x06EF96	compressed	imp_112	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06EC8A, size endOffset+0x32
+0x06EF96	0x06F360	compressed	imp_113	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06EF96, size endOffset+0x32
+0x06F360	0x06F774	compressed	imp_114	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06F360, size endOffset+0x32
+0x06F774	0x06FC20	compressed	imp_115	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06F774, size endOffset+0x32
+0x06FC20	0x06FFB0	compressed	imp_116	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06FC20, size endOffset+0x32
+0x06FFB0	0x0702E4	compressed	imp_117	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x06FFB0, size endOffset+0x32
+0x0702E4	0x0704A2	compressed	imp_118	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0702E4, size endOffset+0x32
+0x0704A2	0x0707E0	compressed	imp_119	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0704A2, size endOffset+0x32
+0x0707E0	0x0709CC	compressed	imp_120	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0707E0, size endOffset+0x32
+0x0709CC	0x070A92	compressed	imp_121	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0709CC, size endOffset+0x32
+0x070A92	0x070C8C	compressed	imp_122	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x070A92, size endOffset+0x32
+0x070C8C	0x070E4A	compressed	imp_123	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x070C8C, size endOffset+0x32
+0x070E4A	0x071058	compressed	imp_124	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x070E4A, size endOffset+0x32
+0x071058	0x07123E	compressed	imp_125	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x071058, size endOffset+0x32
+0x07123E	0x0715D2	compressed	imp_126	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07123E, size endOffset+0x32
+0x0715D2	0x071AFE	compressed	imp_127	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0715D2, size endOffset+0x32
+0x071AFE	0x071E9E	compressed	imp_128	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x071AFE, size endOffset+0x32
+0x071E9E	0x07203E	compressed	imp_129	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x071E9E, size endOffset+0x32
+0x07203E	0x072406	compressed	imp_130	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07203E, size endOffset+0x32
+0x072406	0x072622	compressed	imp_131	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x072406, size endOffset+0x32
+0x072622	0x0729B4	compressed	imp_132	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x072622, size endOffset+0x32
+0x0729B4	0x072CC0	compressed	imp_133	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0729B4, size endOffset+0x32
+0x072CC0	0x072F70	compressed	imp_134	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x072CC0, size endOffset+0x32
+0x072F70	0x073132	compressed	imp_135	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x072F70, size endOffset+0x32
+0x073132	0x073320	compressed	imp_136	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x073132, size endOffset+0x32
+0x073320	0x073662	compressed	imp_137	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x073320, size endOffset+0x32
+0x073662	0x07386A	compressed	imp_138	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x073662, size endOffset+0x32
+0x07386A	0x073B30	compressed	imp_139	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07386A, size endOffset+0x32
+0x073B30	0x073E46	compressed	imp_140	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x073B30, size endOffset+0x32
+0x073E46	0x073FEE	compressed	imp_141	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x073E46, size endOffset+0x32
+0x073FEE	0x074132	compressed	imp_142	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x073FEE, size endOffset+0x32
+0x074132	0x074E68	compressed	imp_143	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x074132, size endOffset+0x32
+0x074E68	0x0756B0	compressed	imp_144	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x074E68, size endOffset+0x32
+0x0756B0	0x076100	compressed	imp_145	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0756B0, size endOffset+0x32
+0x076100	0x076980	compressed	imp_146	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x076100, size endOffset+0x32
+0x076980	0x077BE4	compressed	imp_147	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x076980, size endOffset+0x32
+0x077BE4	0x07A4D8	compressed	imp_148	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x077BE4, size endOffset+0x32
+0x07A4D8	0x07AE94	compressed	imp_149	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07A4D8, size endOffset+0x32
+0x07AE94	0x07B5A6	compressed	imp_150	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07AE94, size endOffset+0x32
+0x07B5A6	0x07BA60	compressed	imp_151	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07B5A6, size endOffset+0x32
+0x07BA60	0x07BDD2	compressed	imp_152	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07BA60, size endOffset+0x32
+0x07BDD2	0x07C78C	compressed	imp_153	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07BDD2, size endOffset+0x32
+0x07C78C	0x07D2D4	compressed	imp_154	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07C78C, size endOffset+0x32
+0x07D2D4	0x07D3B4	compressed	imp_155	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07D2D4, size endOffset+0x32
+0x07D3B4	0x07D83A	compressed	imp_156	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07D3B4, size endOffset+0x32
+0x07D83A	0x07DD1C	compressed	imp_157	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07D83A, size endOffset+0x32
+0x07DD1C	0x07E41A	compressed	imp_158	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07DD1C, size endOffset+0x32
+0x07E41A	0x07EFD8	compressed	imp_159	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07E41A, size endOffset+0x32
+0x07EFD8	0x081404	compressed	imp_160	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x07EFD8, size endOffset+0x32
+0x081404	0x0814DE	compressed	imp_161	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x081404, size endOffset+0x32
+0x0814DE	0x08180C	compressed	imp_162	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0814DE, size endOffset+0x32
+0x08180C	0x081992	compressed	imp_163	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08180C, size endOffset+0x32
+0x081992	0x08232C	compressed	imp_164	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x081992, size endOffset+0x32
+0x08232C	0x083CB6	compressed	imp_165	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08232C, size endOffset+0x32
+0x083CB6	0x083E92	compressed	imp_166	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x083CB6, size endOffset+0x32
+0x083E92	0x0845DC	compressed	imp_167	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x083E92, size endOffset+0x32
+0x0845DC	0x085122	compressed	imp_168	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0845DC, size endOffset+0x32
+0x085122	0x0857DC	compressed	imp_169	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x085122, size endOffset+0x32
+0x0857DC	0x085C46	compressed	imp_170	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0857DC, size endOffset+0x32
+0x085C46	0x086A70	compressed	imp_171	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x085C46, size endOffset+0x32
+0x086A70	0x089CCE	compressed	imp_172	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x086A70, size endOffset+0x32
+0x089CCE	0x08A19E	compressed	imp_173	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x089CCE, size endOffset+0x32
+0x08A19E	0x08A8C4	compressed	imp_174	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08A19E, size endOffset+0x32
+0x08A8C4	0x08A962	compressed	imp_175	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08A8C4, size endOffset+0x32
+0x08A962	0x08AF5A	compressed	imp_176	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08A962, size endOffset+0x32
+0x08AF5A	0x08B00E	compressed	imp_177	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08AF5A, size endOffset+0x32
+0x08B00E	0x08B74C	compressed	imp_178	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08B00E, size endOffset+0x32
+0x08B74C	0x08C550	compressed	imp_179	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08B74C, size endOffset+0x32
+0x08C550	0x08EA46	compressed	imp_180	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08C550, size endOffset+0x32
+0x08EA46	0x08EB06	compressed	imp_181	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08EA46, size endOffset+0x32
+0x08EB06	0x08EBDA	compressed	imp_182	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08EB06, size endOffset+0x32
+0x08EBDA	0x08F21C	compressed	imp_183	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08EBDA, size endOffset+0x32
+0x08F21C	0x08F8D8	compressed	imp_184	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08F21C, size endOffset+0x32
+0x08F8D8	0x08FE1A	compressed	imp_185	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08F8D8, size endOffset+0x32
+0x08FE1A	0x090D28	compressed	imp_186	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x08FE1A, size endOffset+0x32
+0x090D28	0x093D5E	compressed	imp_187	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x090D28, size endOffset+0x32
+0x093D5E	0x094B9E	compressed	imp_188	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x093D5E, size endOffset+0x32
+0x094B9E	0x095056	compressed	imp_189	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x094B9E, size endOffset+0x32
+0x095056	0x0955BE	compressed	imp_190	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x095056, size endOffset+0x32
+0x0955BE	0x095B16	compressed	imp_191	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0955BE, size endOffset+0x32
+0x095B16	0x0969A8	compressed	imp_192	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x095B16, size endOffset+0x32
+0x0969A8	0x0990F4	compressed	imp_193	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0969A8, size endOffset+0x32
+0x0990F4	0x099990	compressed	imp_194	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0990F4, size endOffset+0x32
+0x099990	0x099AA6	compressed	imp_195	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x099990, size endOffset+0x32
+0x099AA6	0x09A1AE	compressed	imp_196	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x099AA6, size endOffset+0x32
+0x09A1AE	0x09A780	compressed	imp_197	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x09A1AE, size endOffset+0x32
+0x09A780	0x09AA20	compressed	imp_198	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x09A780, size endOffset+0x32
+0x09AA20	0x09AE94	compressed	imp_199	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x09AA20, size endOffset+0x32
+0x09AE94	0x09C004	compressed	imp_200	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x09AE94, size endOffset+0x32
+0x09C004	0x09F052	compressed	imp_201	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x09C004, size endOffset+0x32
+0x09F052	0x09F19E	compressed	imp_202	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x09F052, size endOffset+0x32
+0x09F19E	0x09F2AE	compressed	imp_203	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x09F19E, size endOffset+0x32
+0x09F2AE	0x09F790	compressed	imp_204	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x09F2AE, size endOffset+0x32
+0x09F790	0x0A0068	compressed	imp_205	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x09F790, size endOffset+0x32
+0x0A0068	0x0A11A4	compressed	imp_206	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A0068, size endOffset+0x32
+0x0A11A4	0x0A35A4	compressed	imp_207	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A11A4, size endOffset+0x32
+0x0A35A4	0x0A3B24	compressed	imp_208	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A35A4, size endOffset+0x32
+0x0A3B24	0x0A3C86	compressed	imp_209	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A3B24, size endOffset+0x32
+0x0A3C86	0x0A4568	compressed	imp_210	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A3C86, size endOffset+0x32
+0x0A4568	0x0A4DC4	compressed	imp_211	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A4568, size endOffset+0x32
+0x0A4DC4	0x0A528A	compressed	imp_212	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A4DC4, size endOffset+0x32
+0x0A528A	0x0A6274	compressed	imp_213	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A528A, size endOffset+0x32
+0x0A6274	0x0A8E0E	compressed	imp_214	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A6274, size endOffset+0x32
+0x0A8E0E	0x0A9ADA	compressed	imp_215	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A8E0E, size endOffset+0x32
+0x0A9ADA	0x0AA0B2	compressed	imp_216	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0A9ADA, size endOffset+0x32
+0x0AA0B2	0x0AAAC0	compressed	imp_217	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0AA0B2, size endOffset+0x32
+0x0AAAC0	0x0AB03C	compressed	imp_218	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0AAAC0, size endOffset+0x32
+0x0AB03C	0x0AB83A	compressed	imp_219	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0AB03C, size endOffset+0x32
+0x0AB83A	0x0ABDE6	compressed	imp_220	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0AB83A, size endOffset+0x32
+0x0ABDE6	0x0AC794	compressed	imp_221	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0ABDE6, size endOffset+0x32
+0x0AC794	0x0ACCD4	compressed	imp_222	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0AC794, size endOffset+0x32
+0x0ACCD4	0x0AD4A6	compressed	imp_223	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0ACCD4, size endOffset+0x32
+0x0AD4A6	0x0AE532	compressed	imp_224	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0AD4A6, size endOffset+0x32
+0x0AE532	0x0B1616	compressed	imp_225	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0AE532, size endOffset+0x32
+0x0B1616	0x0B17C4	compressed	imp_226	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B1616, size endOffset+0x32
+0x0B17C4	0x0B1972	compressed	imp_227	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B17C4, size endOffset+0x32
+0x0B1972	0x0B1FC8	compressed	imp_228	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B1972, size endOffset+0x32
+0x0B1FC8	0x0B271C	compressed	imp_229	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B1FC8, size endOffset+0x32
+0x0B271C	0x0B2EB2	compressed	imp_230	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B271C, size endOffset+0x32
+0x0B2EB2	0x0B3496	compressed	imp_231	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B2EB2, size endOffset+0x32
+0x0B3496	0x0B3A2A	compressed	imp_232	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B3496, size endOffset+0x32
+0x0B3A2A	0x0B4838	compressed	imp_233	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B3A2A, size endOffset+0x32
+0x0B4838	0x0B6512	compressed	imp_234	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B4838, size endOffset+0x32
+0x0B6512	0x0B6D42	compressed	imp_235	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B6512, size endOffset+0x32
+0x0B6D42	0x0B80EE	compressed	imp_236	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B6D42, size endOffset+0x32
+0x0B80EE	0x0B9090	compressed	imp_237	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B80EE, size endOffset+0x32
+0x0B9090	0x0B9208	compressed	imp_238	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B9090, size endOffset+0x32
+0x0B9208	0x0B9A46	compressed	imp_239	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B9208, size endOffset+0x32
+0x0B9A46	0x0BA1E8	compressed	imp_240	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0B9A46, size endOffset+0x32
+0x0BA1E8	0x0BA73C	compressed	imp_241	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0BA1E8, size endOffset+0x32
+0x0BA73C	0x0BAD26	compressed	imp_242	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0BA73C, size endOffset+0x32
+0x0BAD26	0x0BBD00	compressed	imp_243	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0BAD26, size endOffset+0x32
+0x0BBD00	0x0BE9C0	compressed	imp_244	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0BBD00, size endOffset+0x32
+0x0BE9C0	0x0BF5A6	compressed	imp_245	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0BE9C0, size endOffset+0x32
+0x0BF5A6	0x0BF682	compressed	imp_246	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0BF5A6, size endOffset+0x32
+0x0BF682	0x0BFC7A	compressed	imp_247	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0BF682, size endOffset+0x32
+0x0BFC7A	0x0C009A	compressed	imp_248	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0BFC7A, size endOffset+0x32
+0x0C009A	0x0C0C12	compressed	imp_249	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C009A, size endOffset+0x32
+0x0C0C12	0x0C289C	compressed	imp_250	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C0C12, size endOffset+0x32
+0x0C289C	0x0C2EF0	compressed	imp_251	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C289C, size endOffset+0x32
+0x0C2EF0	0x0C3820	compressed	imp_252	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C2EF0, size endOffset+0x32
+0x0C3820	0x0C3D88	compressed	imp_253	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C3820, size endOffset+0x32
+0x0C3D88	0x0C3FC4	compressed	imp_254	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C3D88, size endOffset+0x32
+0x0C3FC4	0x0C4CC4	compressed	imp_255	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C3FC4, size endOffset+0x32
+0x0C4CC4	0x0C75AE	compressed	imp_256	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C4CC4, size endOffset+0x32
+0x0C75AE	0x0C76D6	compressed	imp_257	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C75AE, size endOffset+0x32
+0x0C76D6	0x0C7AAE	compressed	imp_258	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C76D6, size endOffset+0x32
+0x0C7AAE	0x0C7D40	compressed	imp_259	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C7AAE, size endOffset+0x32
+0x0C7D40	0x0C7F82	compressed	imp_260	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C7D40, size endOffset+0x32
+0x0C7F82	0x0C806A	compressed	imp_261	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C7F82, size endOffset+0x32
+0x0C806A	0x0C847E	compressed	imp_262	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C806A, size endOffset+0x32
+0x0C847E	0x0C8A16	compressed	imp_263	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C847E, size endOffset+0x32
+0x0C8A16	0x0C99F2	compressed	imp_264	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C8A16, size endOffset+0x32
+0x0C99F2	0x0CC796	compressed	imp_265	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0C99F2, size endOffset+0x32
+0x0CC796	0x0CCF50	compressed	imp_266	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0CC796, size endOffset+0x32
+0x0CCF50	0x0CD14C	compressed	imp_267	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0CCF50, size endOffset+0x32
+0x0CD14C	0x0CD5E6	compressed	imp_268	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0CD14C, size endOffset+0x32
+0x0CD5E6	0x0CDB7E	compressed	imp_269	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0CD5E6, size endOffset+0x32
+0x0CDB7E	0x0CE01A	compressed	imp_270	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0CDB7E, size endOffset+0x32
+0x0CE01A	0x0CE458	compressed	imp_271	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0CE01A, size endOffset+0x32
+0x0CE458	0x0CF2B8	compressed	imp_272	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0CE458, size endOffset+0x32
+0x0CF2B8	0x0D22D0	compressed	imp_273	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0CF2B8, size endOffset+0x32
+0x0D22D0	0x0D356E	compressed	imp_274	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D22D0, size endOffset+0x32
+0x0D356E	0x0D36F6	compressed	imp_275	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D356E, size endOffset+0x32
+0x0D36F6	0x0D3832	compressed	imp_276	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D36F6, size endOffset+0x32
+0x0D3832	0x0D3FA6	compressed	imp_277	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D3832, size endOffset+0x32
+0x0D3FA6	0x0D4228	compressed	imp_278	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D3FA6, size endOffset+0x32
+0x0D4228	0x0D4826	compressed	imp_279	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D4228, size endOffset+0x32
+0x0D4826	0x0D49A2	compressed	imp_280	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D4826, size endOffset+0x32
+0x0D49A2	0x0D4DFC	compressed	imp_281	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D49A2, size endOffset+0x32
+0x0D4DFC	0x0D5712	compressed	imp_282	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D4DFC, size endOffset+0x32
+0x0D5712	0x0D6694	compressed	imp_283	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D5712, size endOffset+0x32
+0x0D6694	0x0D678C	compressed	imp_284	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D6694, size endOffset+0x32
+0x0D678C	0x0D6888	compressed	imp_285	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D678C, size endOffset+0x32
+0x0D6888	0x0D6986	compressed	imp_286	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D6888, size endOffset+0x32
+0x0D6986	0x0D6FEA	compressed	imp_287	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D6986, size endOffset+0x32
+0x0D6FEA	0x0D79D6	compressed	imp_288	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D6FEA, size endOffset+0x32
+0x0D79D6	0x0D7D3A	compressed	imp_289	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D79D6, size endOffset+0x32
+0x0D7D3A	0x0D7EB4	compressed	imp_290	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D7D3A, size endOffset+0x32
+0x0D7EB4	0x0D8514	compressed	imp_291	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D7EB4, size endOffset+0x32
+0x0D8514	0x0D8B5C	compressed	imp_292	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D8514, size endOffset+0x32
+0x0D8B5C	0x0D8C70	compressed	imp_293	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D8B5C, size endOffset+0x32
+0x0D8C70	0x0D8D0C	compressed	imp_294	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D8C70, size endOffset+0x32
+0x0D8D0C	0x0D8F82	compressed	imp_295	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D8D0C, size endOffset+0x32
+0x0D8F82	0x0D8FFE	compressed	imp_296	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D8F82, size endOffset+0x32
+0x0D8FFE	0x0D9938	compressed	imp_297	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D8FFE, size endOffset+0x32
+0x0D9938	0x0D9A30	compressed	imp_298	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D9938, size endOffset+0x32
+0x0D9A30	0x0D9AEE	compressed	imp_299	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D9A30, size endOffset+0x32
+0x0D9AEE	0x0DC2A6	compressed	imp_300	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0D9AEE, size endOffset+0x32
+0x0DC2A6	0x0DC664	compressed	imp_301	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0DC2A6, size endOffset+0x32
+0x0DC664	0x0DC83A	compressed	imp_302	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0DC664, size endOffset+0x32
+0x0DC83A	0x0DCEAC	compressed	imp_303	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0DC83A, size endOffset+0x32
+0x0DCEAC	0x0DCF2A	compressed	imp_304	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0DCEAC, size endOffset+0x32
+0x0DCF2A	0x0DF0A2	compressed	imp_305	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0DCF2A, size endOffset+0x32
+0x0DF0A2	0x0DF1AC	compressed	imp_306	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0DF0A2, size endOffset+0x32
+0x0DF1AC	0x0E1B9C	compressed	imp_307	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0DF1AC, size endOffset+0x32
+0x0E1B9C	0x0E25BA	compressed	imp_308	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E1B9C, size endOffset+0x32
+0x0E25BA	0x0E2F1C	compressed	imp_309	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E25BA, size endOffset+0x32
+0x0E2F1C	0x0E315A	compressed	imp_310	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E2F1C, size endOffset+0x32
+0x0E315A	0x0E3DAE	compressed	imp_311	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E315A, size endOffset+0x32
+0x0E3DAE	0x0E3EFC	compressed	imp_312	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E3DAE, size endOffset+0x32
+0x0E3EFC	0x0E40D6	compressed	imp_313	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E3EFC, size endOffset+0x32
+0x0E40D6	0x0E441A	compressed	imp_314	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E40D6, size endOffset+0x32
+0x0E441A	0x0E48D8	compressed	imp_315	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E441A, size endOffset+0x32
+0x0E48D8	0x0E4CD4	compressed	imp_316	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E48D8, size endOffset+0x32
+0x0E4CD4	0x0E4E02	compressed	imp_317	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E4CD4, size endOffset+0x32
+0x0E4E02	0x0E5038	compressed	imp_318	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E4E02, size endOffset+0x32
+0x0E5038	0x0E514C	compressed	imp_319	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E5038, size endOffset+0x32
+0x0E514C	0x0E546C	compressed	imp_320	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E514C, size endOffset+0x32
+0x0E546C	0x0E5592	compressed	imp_321	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E546C, size endOffset+0x32
+0x0E5592	0x0E5EA2	compressed	imp_322	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E5592, size endOffset+0x32
+0x0E5EA2	0x0E7626	compressed	imp_323	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E5EA2, size endOffset+0x32
+0x0E7626	0x0E7B6A	compressed	imp_324	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E7626, size endOffset+0x32
+0x0E7B6A	0x0E7D5C	compressed	imp_325	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E7B6A, size endOffset+0x32
+0x0E7D5C	0x0E92C2	compressed	imp_326	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E7D5C, size endOffset+0x32
+0x0E92C2	0x0E9AEA	compressed	imp_327	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E92C2, size endOffset+0x32
+0x0E9AEA	0x0E9B68	compressed	imp_328	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E9AEA, size endOffset+0x32
+0x0E9B68	0x0EA5B2	compressed	imp_329	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0E9B68, size endOffset+0x32
+0x0EA5B2	0x0EB0A4	compressed	imp_330	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0EA5B2, size endOffset+0x32
+0x0EB0A4	0x0EB97C	compressed	imp_331	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0EB0A4, size endOffset+0x32
+0x0EB97C	0x0EC560	compressed	imp_332	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0EB97C, size endOffset+0x32
+0x0EC560	0x0ECEB8	compressed	imp_333	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0EC560, size endOffset+0x32
+0x0ECEB8	0x0ED9BC	compressed	imp_334	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0ECEB8, size endOffset+0x32
+0x0ED9BC	0x0EE31A	compressed	imp_335	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0ED9BC, size endOffset+0x32
+0x0EE31A	0x0EEE24	compressed	imp_336	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0EE31A, size endOffset+0x32
+0x0EEE24	0x0EFA64	compressed	imp_337	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0EEE24, size endOffset+0x32
+0x0EFA64	0x0F033E	compressed	imp_338	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0EFA64, size endOffset+0x32
+0x0F033E	0x0F0E5C	compressed	imp_339	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F033E, size endOffset+0x32
+0x0F0E5C	0x0F151C	compressed	imp_340	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F0E5C, size endOffset+0x32
+0x0F151C	0x0F1FAA	compressed	imp_341	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F151C, size endOffset+0x32
+0x0F1FAA	0x0F2CFC	compressed	imp_342	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F1FAA, size endOffset+0x32
+0x0F2CFC	0x0F3708	compressed	imp_343	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F2CFC, size endOffset+0x32
+0x0F3708	0x0F4182	compressed	imp_344	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F3708, size endOffset+0x32
+0x0F4182	0x0F4F2A	compressed	imp_345	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F4182, size endOffset+0x32
+0x0F4F2A	0x0F58EC	compressed	imp_346	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F4F2A, size endOffset+0x32
+0x0F58EC	0x0F63EE	compressed	imp_347	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F58EC, size endOffset+0x32
+0x0F63EE	0x0F6FD0	compressed	imp_348	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F63EE, size endOffset+0x32
+0x0F6FD0	0x0F76C4	compressed	imp_349	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F6FD0, size endOffset+0x32
+0x0F76C4	0x0F7EAA	compressed	imp_350	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F76C4, size endOffset+0x32
+0x0F7EAA	0x0F84C4	compressed	imp_351	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F7EAA, size endOffset+0x32
+0x0F84C4	0x0F8B6E	compressed	imp_352	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F84C4, size endOffset+0x32
+0x0F8B6E	0x0F9298	compressed	imp_353	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F8B6E, size endOffset+0x32
+0x0F9298	0x0F9798	compressed	imp_354	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F9298, size endOffset+0x32
+0x0F9798	0x0F9D4E	compressed	imp_355	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F9798, size endOffset+0x32
+0x0F9D4E	0x0FA236	compressed	imp_356	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0F9D4E, size endOffset+0x32
+0x0FA236	0x0FA98E	compressed	imp_357	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FA236, size endOffset+0x32
+0x0FA98E	0x0FB032	compressed	imp_358	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FA98E, size endOffset+0x32
+0x0FB032	0x0FB6E0	compressed	imp_359	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FB032, size endOffset+0x32
+0x0FB6E0	0x0FBD34	compressed	imp_360	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FB6E0, size endOffset+0x32
+0x0FBD34	0x0FC266	compressed	imp_361	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FBD34, size endOffset+0x32
+0x0FC266	0x0FCA28	compressed	imp_362	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FC266, size endOffset+0x32
+0x0FCA28	0x0FD38E	compressed	imp_363	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FCA28, size endOffset+0x32
+0x0FD38E	0x0FDAAE	compressed	imp_364	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FD38E, size endOffset+0x32
+0x0FDAAE	0x0FED8E	compressed	imp_365	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FDAAE, size endOffset+0x32
+0x0FED8E	0x0FF0C4	compressed	imp_366	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FED8E, size endOffset+0x32
+0x0FF0C4	0x0FFB1A	compressed	imp_367	verified	emu:decrunch_all_20261011T225656; R1.1-002; IMP! (Imploder) hdr @0x0FF0C4, size endOffset+0x32
+0x0FFB1A	0x0FFB20	data	data_0ffb1a	inferred	T5 gap close: 6 B between imp_367 end and pad_0ffb20; trailing longword is an Amiga HUNK_END id (packer residue)
+0x0FFB20	0x0FFFFD	padding	pad_0ffb20	inferred	R1.1-002; 0x00 run @0x0FFB20
+0x0FFFFD	0x100000	data	data_0ffffd	inferred	T5 gap close: last 3 B of the ROM after pad_0ffb20; non-zero, no decoder; purpose unknown

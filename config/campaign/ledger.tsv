@@ -1,0 +1,279 @@
+id	kind	status	insns	bytes	raw_abs	named_ops	labels	embedded_bytes	comments	entries	named_entries	closeness	class	blocker	route	evidence	system	system_basis
+init	code	verified	50	142	13	3	10	0	1	1	1	1	srcform-ok	1 raw nameable addresses	developer-review	auto	rest:initialisation	rest: reset entry region
+code_0002FA	code	verified	455	1938	119	281	62	0	0	0	0	7	unowned-head	no function entry; 7 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_000A8C	code	verified	173	648	32	99	21	0	0	3	3	0	srcform-ok	comments and meaning names pending	developer-review	auto	rules	proximity1: 3 located RAM words
+code_000D14	code	verified	153	698	61	96	18	0	0	0	0	8	unowned-head	no function entry; 8 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_000FCE	code	verified	28	96	13	7	5	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_00102E	code	verified	133	542	51	80	15	0	0	0	0	2	unowned-head	no function entry; 2 raw nameable addresses	developer-review	auto	rules	located: Race start and finish, Difficulty, Vehicle and track tables
+code_00124C	code	verified	29	104	13	7	5	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_0012B4	code	verified	88	392	32	62	10	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	developer-review	auto	rules	located: Scoring and win condition
+code_00143C	code	verified	89	328	25	42	13	0	0	3	3	0	srcform-ok	comments and meaning names pending	developer-review	auto	data	located: Vehicle and track tables
+code_0015C0	code	verified	66	282	10	35	8	0	0	2	2	1	srcform-ok	1 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_001978	code	verified	827	3222	428	238	70	0	0	8	8	0	srcform-ok	comments and meaning names pending	developer-review	auto	data	located: Drift and traction, Construction kit and saved tracks (kit race setup)
+code_00266E	code	verified	2231	8032	1181	401	258	0	0	26	26	1	srcform-ok	1 raw nameable addresses	developer-review	auto	data	located: Construction kit and saved tracks
+code_0045CE	code	verified	456	1894	126	313	79	0	0	3	3	5	srcform-ok	5 raw nameable addresses	developer-review	auto	rules	located: Race start and finish, Acceleration
+code_004D34	code	verified	375	1674	92	324	48	0	0	8	8	1	srcform-ok	1 raw nameable addresses	developer-review	auto	data	located: Car-to-car collisions, Input and J-Cart four-player, Construction kit and saved tracks (EEPROM access of the kit; eight-car collision copy not reached)
+code_0053BE	code	verified	16	52	6	2	2	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_0053F2	code	verified	17	52	8	2	3	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 2, coverage none)
+code_005426	code	verified	27	90	10	5	3	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	data	located: Input and J-Cart four-player, Construction kit and saved tracks (EEPROM image transfer of the kit)
+code_005480	code	verified	35	100	11	7	8	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_0054E4	code	verified	121	340	48	0	19	0	0	7	7	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 2, coverage attract+boot+race)
+code_005638	code	verified	168	606	45	89	12	0	0	1	1	0	unowned-head	unowned head 24 bytes	developer-review	auto	rest:other	rest: no located link (callers 4, coverage attract+race)
+code_00589A	code	verified	211	784	55	111	26	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 3, coverage attract+race)
+code_005BBA	code	verified	368	1462	168	155	52	0	0	4	4	4	srcform-ok	4 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+data_006170	data	inferred	-	32	-	-	-	-	0	0	0	-	unreferenced-table	8 longwords, Ghidra has no reference, no absolute or pc-relative operand in code points into it; 0 reads in 3 MAME scenarios; needs a reader	keep-inferred	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_006190	code	verified	63	246	17	33	12	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	vehicle-handling	proximity1: 4 located RAM words
+code_006286	code	verified	61	216	23	30	9	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_00635E	code	verified	334	1394	65	489	32	0	14	10	10	0	srcform-ok	none; banked wave 1 (T7 review)	unattended	T7 review: wave 1 banked	collisions	located: Car-to-car collisions, Collision areas, Opponent AI
+data_0068D0	data	inferred	-	2	-	-	-	-	0	0	0	-	lone-return	decodes as a lone 2-byte return after a terminal jump (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios; needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_0068D2	code	verified	692	2292	201	312	64	0	0	3	3	0	srcform-ok	comments and meaning names pending	developer-review	auto	collisions	located: Car-to-car collisions, Collision areas, Bounce and impulse response, Race start and finish
+code_0071C6	code	verified	115	404	54	44	12	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	view-and-scrolling	proximity1: 5 located RAM words
+code_007376	code	verified	43	152	25	10	4	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_00741A	code	verified	266	886	58	121	38	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	view-and-scrolling	located: View and scrolling, Pool-table levels and the mini-micro question
+code_007790	code	verified	233	804	93	41	30	0	0	12	12	10	srcform-ok	10 raw nameable addresses	developer-review	auto	vehicle-handling	located: Input and J-Cart four-player
+code_007AB4	code	verified	62	178	25	0	11	0	0	4	4	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_007B66	code	verified	18	52	6	6	0	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 23, coverage attract+boot+race)
+code_007B9A	code	verified	4	10	0	2	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 6, coverage attract+race)
+code_007BA4	code	verified	16	56	6	6	4	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_007BDC	code	verified	206	792	88	84	35	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rules	located: Scoring and win condition, Tie-break playoff
+code_007EF4	code	verified	89	316	43	19	16	0	0	1	1	1	srcform-ok	1 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_00803C	code	verified	330	1250	115	168	50	0	0	1	1	18	srcform-ok	18 raw nameable addresses	developer-review	auto	rules	proximity1: calls code_00855A; 11 located RAM words
+code_00851E	code	verified	16	60	1	10	1	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_00855A	code	verified	850	2956	372	328	114	0	0	1	1	16	unowned-head	unowned head 766 bytes; 16 raw nameable addresses	developer-review	auto	rules	located: Scoring and win condition, Out-of-view scoring
+code_0090EE	code	verified	717	2542	279	294	85	0	0	9	9	0	srcform-ok	comments and meaning names pending	developer-review	auto	rules	located: Out-of-view scoring, Tie-break playoff, Pool-table levels and the mini-micro question
+code_009ADC	code	verified	47	166	15	26	8	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rules	proximity1: calls code_0090EE; 2 located RAM words
+code_009B82	code	verified	90	312	25	31	10	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 1, coverage attract+race)
+code_009CBA	code	verified	445	1748	148	211	68	0	0	11	11	4	srcform-ok	4 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_00A38E	code	verified	68	266	22	35	8	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:attract	rest: executed only in the attract coverage run
+code_00A498	code	verified	150	554	41	76	31	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	vehicle-handling	proximity1: 4 located RAM words
+code_00A6C2	code	verified	745	2970	289	361	88	0	0	15	15	8	srcform-ok	8 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_00B25C	code	verified	683	2430	218	281	89	0	0	9	9	2	srcform-ok	2 raw nameable addresses	developer-review	auto	data	located: Construction kit and saved tracks
+code_00BBDA	code	verified	15	64	2	7	3	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	data	proximity2: calls code_00BC1A; called by code_00B25C
+code_00BC1A	code	verified	105	410	22	60	11	0	0	1	1	1	srcform-ok	1 raw nameable addresses	developer-review	auto	data	proximity1: calls code_00266E; calls code_00BE02; calls code_010EE2
+code_00BDB4	code	verified	23	78	11	6	5	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_00BE02	code	verified	478	1878	216	206	76	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	data	located: Vehicle and track tables
+code_00C558	code	verified	88	300	56	12	14	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_00C684	code	verified	43	144	21	12	6	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage race)
+code_00C714	code	verified	58	220	14	31	8	0	0	3	3	0	srcform-ok	comments and meaning names pending	developer-review	auto	course	proximity1: calls code_013BD6
+code_00C7F0	code	verified	11	34	3	2	1	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage attract+race)
+code_00C812	code	verified	21	58	10	1	5	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage race)
+code_00C84C	code	verified	47	156	14	16	6	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	data	proximity1: calls code_010EE2; reads data_0454A8
+code_00C8E8	code	verified	38	176	8	32	0	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	data	proximity1: 1 located RAM words; reads data_0463BE
+code_00C998	code	verified	2002	7584	719	881	310	0	0	51	51	10	srcform-ok	10 raw nameable addresses	developer-review	auto	data	located: Vehicle and track tables
+data_00E738	data	inferred	-	14	-	-	-	-	0	0	0	-	unreached-code	decodes as a complete routine, Capstone 0 invalid (re-kind-to-code candidate); no reference or flow; 0 exec bp on every leader in 14 MAME scenarios (P119-P132); needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_00E746	code	verified	216	854	78	112	28	0	0	3	3	2	srcform-ok	2 raw nameable addresses	developer-review	auto	rules	proximity1: 4 located RAM words
+code_00EA9C	code	verified	347	1378	118	195	41	0	0	5	5	2	srcform-ok	2 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 7, coverage race)
+code_00EFFE	code	verified	29	96	4	16	6	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_00F05E	code	verified	3	18	0	3	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 10, coverage race)
+code_00F070	code	verified	19	82	3	15	2	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	course	proximity1: calls code_013BD6
+code_00F0C2	code	verified	363	1516	144	223	36	0	0	2	2	3	srcform-ok	3 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_00F6AE	code	verified	148	514	48	41	27	0	0	7	7	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 3, coverage none)
+code_00F8B0	code	verified	266	884	110	52	51	0	0	4	4	1	srcform-ok	1 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 7, coverage race)
+code_00FC54	code	verified	275	1030	89	126	37	0	0	5	5	3	srcform-ok	3 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_01005A	code	verified	14	50	2	7	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_01008C	code	verified	385	1372	151	122	63	0	0	9	9	2	srcform-ok	2 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 9, coverage race)
+code_0105E8	code	verified	21	70	9	2	1	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_01062E	code	verified	73	326	19	51	10	0	0	1	1	2	srcform-ok	2 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_010774	code	verified	32	156	2	30	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_010810	code	verified	1	2	0	0	0	0	1	1	1	0	srcform-ok	none; banked wave 1 (T7 review)	unattended	T7 review: wave 1 banked	rest:other	rest: no located link (callers 7, coverage race)
+code_010812	code	verified	5	20	0	4	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 21, coverage attract+boot+race)
+code_010826	code	verified	42	136	14	14	7	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage race)
+data_0108AE	data	inferred	-	8	-	-	-	-	0	0	0	-	unreached-code	decodes as a code fragment next to executed code_0108B6 (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios; needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_0108B6	code	verified	2	8	2	1	0	0	0	1	1	1	srcform-ok	1 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 17, coverage attract+boot+race)
+data_0108BE	data	inferred	-	4	-	-	-	-	0	0	0	-	unreached-code	decodes as a code fragment next to executed code_0108C2 (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios; needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_0108C2	code	verified	221	690	89	26	44	0	0	6	6	4	unowned-head	unowned head 24 bytes; 4 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 30, coverage attract+boot+race)
+code_010B74	code	verified	9	44	0	8	1	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 2, coverage attract+race)
+code_010BA0	code	verified	3	16	1	3	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 2, coverage attract+boot+race)
+code_010BB0	code	verified	3	14	0	3	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_010BBE	code	verified	38	208	2	36	2	0	0	3	3	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 6, coverage race)
+code_010C8E	code	verified	53	270	3	50	2	0	0	6	6	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 4, coverage none)
+code_010D9C	code	verified	13	62	3	9	1	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 5, coverage race)
+code_010DDA	code	verified	13	74	1	13	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_010E24	code	verified	7	36	0	6	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 6, coverage race)
+code_010EE2	code	verified	1547	6054	515	747	250	0	0	48	48	4	srcform-ok	4 raw nameable addresses	developer-review	auto	data	located: Construction kit and saved tracks
+code_012688	code	verified	184	770	56	118	34	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_01298A	code	verified	17	84	3	15	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_0129DE	code	verified	340	1280	130	102	48	0	0	7	7	5	srcform-ok	5 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+data_012EDE	data	inferred	-	2	-	-	-	-	0	0	0	-	return-stub	return-only stub interleaved with executed one-word stubs code_012EE0..code_012EF4 (re-kind-to-code candidate); no reference; 0 exec in 14 MAME scenarios (P119-P132); needs the dispatch that reaches the siblings; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_012EE0	code	verified	1	2	0	0	0	0	1	1	1	0	srcform-ok	none; banked wave 1 (T7 review)	unattended	T7 review: wave 1 banked	rest:menus	rest: called only from rest:menus
+data_012EE2	data	inferred	-	6	-	-	-	-	0	0	0	-	return-stub	return-only stubs interleaved with executed one-word stubs code_012EE0..code_012EF4 (re-kind-to-code candidate); no reference; 0 exec in 14 MAME scenarios (P119-P132); needs the dispatch that reaches the siblings; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_012EE8	code	verified	1	2	0	0	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+data_012EEA	data	inferred	-	4	-	-	-	-	0	0	0	-	return-stub	return-only stubs interleaved with executed one-word stubs code_012EE0..code_012EF4 (re-kind-to-code candidate); no reference; 0 exec in 14 MAME scenarios (P119-P132); needs the dispatch that reaches the siblings; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_012EEE	code	verified	1	2	0	0	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 2, coverage race)
+data_012EF0	data	inferred	-	4	-	-	-	-	0	0	0	-	return-stub	return-only stubs interleaved with executed one-word stubs code_012EE0..code_012EF4 (re-kind-to-code candidate); no reference; 0 exec in 14 MAME scenarios (P119-P132); needs the dispatch that reaches the siblings; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_012EF4	code	verified	2	8	1	2	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_012EFC	code	verified	58	250	16	42	7	0	0	2	2	2	srcform-ok	2 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_012FF6	code	verified	196	774	61	86	27	0	0	4	4	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_0132FC	code	verified	65	198	36	5	7	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:menus	rest: called only from rest:menus
+code_0133C2	code	verified	5	24	3	3	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_0133DA	code	verified	2	8	1	2	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_0133E2	code	verified	36	180	9	36	1	0	0	1	1	2	srcform-ok	2 raw nameable addresses	unattended	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_013496	code	verified	236	998	79	146	35	0	0	5	5	2	srcform-ok	2 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_01387C	code	verified	11	64	1	11	0	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 8, coverage attract+boot+race)
+code_0138BC	code	verified	5	24	0	5	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_0138D4	code	verified	21	104	7	13	2	0	0	2	2	2	srcform-ok	2 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 2, coverage none)
+code_01393C	code	verified	23	82	2	11	2	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 2, coverage attract+boot+race)
+img_layout_load	code	verified	5	24	3	5	0	0	1	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 8, coverage attract+boot+race)
+code_0139A6	code	verified	2	10	1	2	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 8, coverage race)
+code_0139B0	code	verified	75	264	26	31	8	0	0	2	2	1	srcform-ok	1 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 6, coverage attract+boot+race)
+code_013AB8	code	verified	2	8	1	2	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_013AC0	code	verified	1	6	0	1	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 6, coverage race)
+code_013AC6	code	verified	5	20	2	4	1	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 19, coverage attract+boot+race)
+data_013ADA	data	inferred	-	18	-	-	-	-	0	0	0	-	unreached-code	decodes as a code fragment branching into executed code_013AEC (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios; needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_013AEC	code	verified	64	234	27	25	10	0	0	1	1	7	srcform-ok	7 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 3, coverage attract+boot+race)
+code_013BD6	code	verified	1782	6846	475	1319	214	0	0	45	45	34	srcform-ok	34 raw nameable addresses	developer-review	auto	course	located: Track boundary and out-of-bounds, Car-to-car collisions
+data_015694	code	verified	9	34	2	4	0	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 3, coverage none)
+code_0156B6	code	verified	4	12	2	2	0	0	0	1	1	2	srcform-ok	2 raw nameable addresses	unattended	auto	data	located: Sound cues
+code_0156C2	code	verified	2	10	1	1	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	data	located: Sound cues
+code_0156CC	code	verified	1	2	0	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	rest:attract	rest: executed only in the attract coverage run
+code_0156CE	code	verified	53	198	20	26	4	0	0	3	3	0	srcform-ok	comments and meaning names pending	developer-review	auto	data	located: Sound cues
+data_015794	data	inferred	-	56	-	-	-	-	0	0	0	-	unreached-code	decodes as a sound-command routine like verified siblings code_0157CC, code_015800 (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132); needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_0157CC	code	verified	10	36	4	4	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	data	located: Sound cues
+data_0157F0	data	inferred	-	16	-	-	-	-	0	0	0	-	unreached-code	decodes as a sound-command routine like verified siblings code_0157CC, code_015800 (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132); needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_015800	code	verified	14	48	7	4	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	data	located: Sound cues
+code_015830	code	verified	13	48	4	5	1	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	data	located: Sound cues
+code_015860	code	verified	21	66	11	5	1	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	data	located: Sound cues
+code_0158A2	code	verified	14	46	7	4	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	data	located: Sound cues
+code_0158D0	code	verified	4	22	1	4	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	data	located: Sound cues
+data_0158E6	data	inferred	-	50	-	-	-	-	0	0	0	-	unreached-code	decodes as two sound-command routines like verified siblings code_0157CC, code_015800 (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132); needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+z80_upload_driver	code	verified	23	98	3	11	4	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:sound-driver	rest: z80_ region (Z80 driver)
+code_016DE6	code	verified	8	40	0	4	2	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	data	located: Sound cues
+code_016E0E	code	verified	8	24	2	2	1	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage attract+race)
+data_016E26	code	verified	141	518	65	72	14	0	0	1	1	8	srcform-ok	8 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_017044	code	verified	215	794	81	111	27	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_017444	code	verified	61	246	28	18	3	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_017728	code	verified	78	264	57	11	5	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_017850	code	verified	8	32	5	2	1	0	0	1	1	1	srcform-ok	1 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 1, coverage attract+race)
+data_017870	code	verified	516	1932	209	225	48	0	0	6	6	6	srcform-ok	6 raw nameable addresses	developer-review	auto	course	proximity1: 4 located RAM words
+code_018014	code	verified	177	640	67	56	18	0	0	5	5	8	srcform-ok	8 raw nameable addresses	developer-review	auto	course	proximity1: calls code_0182BC; 1 located RAM words
+code_0182BC	code	verified	248	998	105	171	27	0	0	2	2	13	srcform-ok	13 raw nameable addresses	developer-review	auto	course	located: Pickups and hazards
+code_0186A0	code	verified	12	56	9	10	0	0	0	0	0	4	unowned-head	no function entry; 4 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 0, coverage none)
+data_0186DA	code	verified	183	874	124	165	24	0	0	0	0	23	unowned-head	no function entry; 23 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_018A44	code	verified	6	24	5	1	0	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 2, coverage none)
+data_018A5C	code	verified	66	336	49	80	8	0	0	0	0	5	unowned-head	no function entry; 5 raw nameable addresses	developer-review	auto	course	proximity1: called by code_0182BC; 2 located RAM words
+code_018BAC	code	verified	1	2	0	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	rest:other	rest: no located link (callers 4, coverage none)
+data_018BAE	code	verified	112	414	31	78	23	0	0	0	0	0	unowned-head	no function entry	developer-review	auto	view-and-scrolling	proximity1: 4 located RAM words
+code_018D4C	code	verified	26	102	0	25	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 2, coverage none)
+data_018DB2	code	verified	1233	5402	655	948	163	0	0	5	5	67	srcform-ok	67 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 2, coverage none)
+code_01A2EC	code	verified	79	280	34	25	7	0	0	0	0	0	unowned-head	no function entry	developer-review	auto	view-and-scrolling	proximity1: 4 located RAM words
+code_01A404	code	inferred	0	2	0	0	0	2	0	0	0	1	lone-return	lone 2-byte return after a terminal branch; no reference or flow (Ghidra refs, pointer and operand scans); 0 exec bp in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios with controls firing; needs a caller or an execution; promote on a verified caller or an execution	promote	T5 verdict; phase-ends/current/tasks/T5.md	rest:other	rest: no located link (callers 0, coverage none)
+code_01A406	code	verified	52	168	22	22	8	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_01A4AE	code	verified	8	26	2	2	1	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage attract+race)
+data_01A4C8	code	verified	290	1104	118	135	38	0	0	2	2	2	srcform-ok	2 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_01A968	code	verified	119	452	41	75	13	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_01ABD4	code	verified	76	272	33	22	9	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_01ACFC	code	verified	324	1130	146	114	32	0	0	4	4	5	srcform-ok	5 raw nameable addresses	developer-review	auto	course	proximity2: calls data_017870; 1 located RAM words
+code_01B166	code	inferred	0	2	0	0	0	2	0	0	0	1	lone-return	lone 2-byte return after a terminal branch; no reference or flow (Ghidra refs, pointer and operand scans); 0 exec bp in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios with controls firing; needs a caller or an execution; promote on a verified caller or an execution	promote	T5 verdict; phase-ends/current/tasks/T5.md	rest:other	rest: no located link (callers 0, coverage none)
+code_01B168	code	verified	66	256	26	26	10	0	0	1	1	1	srcform-ok	1 raw nameable addresses	developer-review	auto	view-and-scrolling	proximity2: calls code_01B3AA
+data_01B268	code	verified	89	322	43	27	11	0	0	1	1	1	srcform-ok	1 raw nameable addresses	developer-review	auto	view-and-scrolling	proximity2: calls code_01B3AA
+code_01B3AA	code	verified	43	128	8	7	7	0	0	1	1	0	unowned-head	unowned head 54 bytes	unattended	auto	view-and-scrolling	proximity1: 4 located RAM words
+data_01B42A	code	verified	320	1190	96	221	37	0	0	1	1	5	srcform-ok	5 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 3, coverage none)
+code_01B8D0	code	inferred	0	2	0	0	0	2	0	0	0	1	lone-return	lone 2-byte return after a terminal branch; no reference or flow (Ghidra refs, pointer and operand scans); 0 exec bp in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios with controls firing; needs a caller or an execution; promote on a verified caller or an execution	promote	T5 verdict; phase-ends/current/tasks/T5.md	rest:other	rest: no located link (callers 0, coverage none)
+code_01B8D2	code	verified	29	98	15	4	3	0	0	0	0	2	unowned-head	no function entry; 2 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_01B934	code	inferred	0	2	0	0	0	2	0	0	0	1	lone-return	lone 2-byte return after a terminal branch; no reference or flow (Ghidra refs, pointer and operand scans); 0 exec bp in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios with controls firing; needs a caller or an execution; promote on a verified caller or an execution	promote	T5 verdict; phase-ends/current/tasks/T5.md	rest:other	rest: no located link (callers 0, coverage none)
+code_01B936	code	verified	969	3544	384	417	139	0	0	6	6	19	srcform-ok	19 raw nameable addresses	developer-review	auto	course	proximity2: calls data_017870; 6 located RAM words
+code_01C70E	code	verified	17	60	4	5	3	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	view-and-scrolling	proximity1: 4 located RAM words
+data_01C74A	code	verified	3	8	0	2	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_01C752	code	verified	3	14	2	2	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 4, coverage none)
+data_01C760	code	verified	136	500	58	58	12	0	0	1	1	7	srcform-ok	7 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_01C964	code	verified	333	1232	126	130	27	0	0	2	2	4	unowned-head	unowned head 142 bytes; 4 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_01CE34	code	verified	891	3812	314	680	97	0	0	7	7	18	srcform-ok	18 raw nameable addresses	developer-review	auto	data	located: Acceleration, Top speed, Vehicle types, Opponent AI, Scoring and win condition, Race start and finish, Difficulty, Level data and loading, Vehicle and track tables, Pool-table levels and the mini-micro question, Bounce and impulse response (course setup; the other sections read what it copies)
+code_01DD18	code	verified	115	394	55	26	16	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rules	proximity1: 3 located RAM words
+code_01DEA2	code	verified	94	394	41	62	18	0	0	0	0	3	unowned-head	no function entry; 3 raw nameable addresses	developer-review	auto	rules	proximity1: 4 located RAM words
+code_01E02C	code	verified	92	316	45	20	15	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rules	proximity1: 3 located RAM words
+code_01E168	code	verified	40	166	23	22	6	0	0	0	0	2	unowned-head	no function entry; 2 raw nameable addresses	unattended	auto	rules	located: Scoring and win condition, Out-of-view scoring, Tie-break playoff
+code_01E20E	code	verified	2	10	1	1	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	rest:other	rest: no located link (callers 2, coverage none)
+code_01E218	code	verified	196	748	60	126	25	0	0	2	2	6	srcform-ok	6 raw nameable addresses	developer-review	auto	rules	located: Out-of-view scoring, Track boundary and out-of-bounds
+code_01E504	code	verified	82	244	15	33	10	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	course	located: Track boundary and out-of-bounds
+code_01E5F8	code	verified	27	114	13	21	3	0	0	1	1	2	srcform-ok	2 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 2, coverage attract+race)
+code_01E66A	code	verified	88	258	18	34	10	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 3, coverage none)
+code_01E76C	code	verified	29	118	13	22	4	0	0	1	1	2	srcform-ok	2 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 2, coverage attract+race)
+code_01E7E2	code	verified	70	214	15	31	4	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 3, coverage none)
+code_01E8B8	code	verified	27	112	13	21	3	0	0	1	1	2	srcform-ok	2 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 2, coverage attract+race)
+code_01E928	code	verified	121	346	25	35	14	0	0	3	3	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 6, coverage none)
+code_01EA82	code	verified	165	602	62	89	28	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	course	located: Track boundary and out-of-bounds, Ramps and airborne, Pickups and hazards, Drift and traction
+code_01ECDC	code	verified	53	174	10	21	7	0	0	6	6	0	srcform-ok	comments and meaning names pending	developer-review	auto	course	located: Pickups and hazards
+data_01ED8A	data	inferred	-	2	-	-	-	-	0	0	0	-	lone-return	decodes as a lone 2-byte return after a terminal jump (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios; needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_01ED8C	code	verified	491	1794	186	277	84	0	0	3	3	0	srcform-ok	comments and meaning names pending	developer-review	auto	course	located: Track boundary and out-of-bounds, Pickups and hazards, Drift and traction
+code_01F48E	code	verified	31	98	9	5	5	0	0	4	4	0	srcform-ok	comments and meaning names pending	unattended	auto	course	located: Ramps and airborne
+code_01F4F0	code	verified	212	774	79	88	36	0	0	4	4	4	srcform-ok	4 raw nameable addresses	developer-review	auto	course	located: Race start and finish, Lap detection and checkpoints (lap count and quarter flags)
+code_01F7F6	code	verified	2	10	1	1	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	course	located: Lap detection and checkpoints
+code_01F800	code	verified	93	356	70	4	10	0	12	11	11	10	srcform-ok	none; banked wave 1 (T7 review)	unattended	T7 review: wave 1 banked	rest:other	rest: no located link (callers 5, coverage attract+boot+race)
+code_01F964	code	verified	2	6	1	1	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_01F96A	code	verified	52	196	12	36	9	0	0	1	1	1	srcform-ok	1 raw nameable addresses	developer-review	auto	vehicle-handling	located: Input and J-Cart four-player
+code_01FA2E	code	verified	5	10	0	0	0	0	0	5	5	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_01FA38	code	verified	8	24	5	1	1	0	0	1	1	1	srcform-ok	1 raw nameable addresses	unattended	auto	vehicle-handling	proximity2: called by code_006190; called by code_007790; called by code_00A498
+vdp_dma	code	verified	31	124	25	3	1	0	0	1	1	2	srcform-ok	2 raw nameable addresses	unattended	auto	rest:other	rest: no located link (callers 8, coverage attract+boot+race)
+pad_01facc	padding	inferred	-	1332	-	-	-	-	0	0	0	-	vector-target-fill	uniform zero fill; bus-error vector 2 points at its start; forced vector-2 entry in 3 MAME scenarios never returns (zero slide into sound_data); unforced 0 exec, prefetch-only reads; no other reference	keep-inferred	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+data_02FA86	data	inferred	-	22928	-	-	-	-	0	0	0	-	unread-data	tail of the VDP DMA source block after sound_data; Capstone 34 percent invalid (not code); no reference; 0 reads in 3 MAME scenarios (T5) and 3 (1.6/T1) with the sound_data control firing; needs a scenario that reads it	keep-inferred	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+imp_decrunch	code	verified	17	52	8	0	2	0	1	1	1	1	srcform-ok	1 raw nameable addresses	unattended	auto	data	located: Level data and loading
+imp_decrunch_core	code	verified	159	348	35	2	35	0	1	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:decompression	rest: imp_ decompressor region
+code_0355B6	code	verified	8	38	2	7	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 2, coverage attract+boot+race)
+code_0355DC	code	verified	88	352	27	36	11	0	0	6	6	0	srcform-ok	comments and meaning names pending	developer-review	auto	course	proximity1: calls code_013BD6
+code_03573C	code	verified	44	124	8	11	7	0	0	3	3	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+data_0357B8	data	inferred	-	100	-	-	-	-	0	0	0	-	unreached-code	decodes as three routines calling code_03581C and a routine inside data_035852 (re-kind-to-code candidate); no reference; 0 exec bp on every leader in 14 MAME scenarios (P119-P132); needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_03581C	code	inferred	19	50	5	2	3	0	0	0	0	0	unreached-code	complete routine (Capstone 0 invalid, Ghidra decodes); only caller is inferred data_0357B8; no other reference; 0 exec bp on every leader in 14 MAME scenarios (P119-P132) with controls firing; needs a verified caller or an execution	promote	T5 verdict; phase-ends/current/tasks/T5.md	rest:other	rest: no located link (callers 0, coverage none)
+data_03584E	data	inferred	-	4	-	-	-	-	0	0	0	-	data-of-inferred-code	head of a 6-longword table read pc-relative only by inferred code_03581C; 0 reads in 3 MAME scenarios; promotes with its referrer	keep-inferred	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+data_035852	data	inferred	-	62	-	-	-	-	0	0	0	-	data-of-inferred-code	tail of the code_03581C table (+0x00..+0x14) then an unreached routine called by inferred data_0357B8 (re-split candidate at +0x14); 0 reads, 0 exec in 3 MAME scenarios; promotes or re-splits with its referrer	keep-inferred	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_035890	code	verified	90	334	27	34	5	0	0	3	3	0	srcform-ok	comments and meaning names pending	developer-review	auto	data	located: Level data and loading
+code_03D56A	code	verified	48	210	15	23	9	0	0	1	1	1	srcform-ok	1 raw nameable addresses	unattended	auto	rest:menus	rest: called only from rest:menus
+code_03D63C	code	verified	17	70	6	7	2	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:menus	rest: called only from rest:menus
+code_03D682	code	verified	133	534	39	69	22	0	0	1	1	1	srcform-ok	1 raw nameable addresses	developer-review	auto	data	proximity1: calls code_005426
+code_03D898	code	verified	11	50	6	4	0	0	0	2	2	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_03DE0A	code	verified	643	2332	191	352	68	0	0	6	6	0	srcform-ok	comments and meaning names pending	developer-review	auto	view-and-scrolling	located: View and scrolling, Pool-table levels and the mini-micro question
+code_03E726	code	verified	132	414	57	31	8	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 1, coverage none)
+code_03E8C4	code	verified	143	446	54	31	7	0	0	1	1	2	srcform-ok	2 raw nameable addresses	developer-review	auto	view-and-scrolling	located: View and scrolling
+code_03EA82	code	verified	178	586	80	48	8	0	0	3	3	3	srcform-ok	3 raw nameable addresses	developer-review	auto	view-and-scrolling	located: View and scrolling, Pool-table levels and the mini-micro question
+code_03ECCC	code	verified	108	376	56	24	4	0	0	1	1	20	srcform-ok	20 raw nameable addresses	developer-review	auto	view-and-scrolling	located: View and scrolling, Pool-table levels and the mini-micro question
+code_03EE64	code	verified	16	62	6	7	0	0	0	1	1	1	srcform-ok	1 raw nameable addresses	unattended	auto	data	located: Level data and loading
+code_03EEA2	code	verified	211	506	70	7	25	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 41, coverage attract+boot+race)
+code_03F09C	code	verified	85	340	18	48	7	0	0	5	5	0	srcform-ok	comments and meaning names pending	developer-review	auto	data	located: Level data and loading, Vehicle and track tables
+code_03F278	code	verified	151	470	50	28	19	0	8	7	7	0	srcform-ok	none; banked wave 1 (T7 review)	unattended	T7 review: wave 1 banked	data	located: Level data and loading
+data_03F44E	data	inferred	-	2	-	-	-	-	0	0	0	-	lone-return	decodes as a lone 2-byte return after a terminal branch (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios; needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_03F450	code	verified	21	54	7	1	3	0	0	1	1	0	unowned-head	unowned head 16 bytes	unattended	auto	rest:other	rest: no located link (callers 1, coverage attract+boot+race)
+code_03F834	code	verified	1371	4560	477	570	168	0	0	7	7	32	srcform-ok	32 raw nameable addresses	developer-review	auto	vehicle-handling	located: Acceleration, Top speed, Braking, Steering, Drift and traction, Track boundary and out-of-bounds, Ramps and airborne, Pickups and hazards, Bounce and impulse response
+code_040A04	code	verified	5	20	1	2	1	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	collisions	located: Bounce and impulse response
+code_040A18	code	verified	325	904	107	63	59	0	0	5	5	0	srcform-ok	comments and meaning names pending	developer-review	auto	collisions	located: Car-to-car collisions, Bounce and impulse response, Top speed, Steering
+code_040E4E	code	verified	87	220	39	2	12	0	0	2	2	0	srcform-ok	comments and meaning names pending	developer-review	auto	course	located: Track boundary and out-of-bounds
+code_040F2A	code	verified	353	1508	78	437	42	0	0	5	5	16	srcform-ok	16 raw nameable addresses	developer-review	auto	course	located: Track boundary and out-of-bounds, Ramps and airborne, Acceleration, Input and J-Cart four-player
+code_041526	code	verified	97	340	30	33	10	0	0	1	1	2	srcform-ok	2 raw nameable addresses	developer-review	auto	data	located: Level data and loading
+data_04167A	data	inferred	-	40	-	-	-	-	0	0	0	-	unreached-code	decodes as a code fragment falling into executed code_0416A2 (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132); needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_0416A2	code	verified	28	90	15	4	2	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	course	located: Track boundary and out-of-bounds
+data_0416FC	code	verified	2	4	0	0	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_041700	code	verified	3	6	2	0	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 0, coverage race)
+data_041706	code	verified	141	412	55	20	10	0	0	10	10	0	srcform-ok	comments and meaning names pending	developer-review	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_0418A2	code	verified	3	8	2	0	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 0, coverage race)
+data_0418AA	code	verified	24	64	12	2	2	0	0	4	4	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 0, coverage none)
+code_0418EA	code	verified	17	46	10	1	0	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	course	located: Track boundary and out-of-bounds
+data_041918	data	inferred	-	6	-	-	-	-	0	0	0	-	unreached-code	decodes as a two-instruction routine (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios; needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_04191E	code	verified	25	90	15	3	3	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	rest:other	rest: no located link (callers 2, coverage attract+race)
+code_041978	code	verified	12	54	5	6	1	0	0	1	1	0	srcform-ok	comments and meaning names pending	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_0419AE	code	verified	13	60	6	8	1	0	0	1	1	1	srcform-ok	1 raw nameable addresses	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+data_0419EA	code	verified	1	4	1	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_0419EE	code	verified	2	6	2	0	0	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+data_0419F4	code	verified	1	4	1	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_0419F8	code	verified	2	6	2	0	0	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+data_0419FE	code	verified	1	4	1	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_041A02	code	verified	2	6	2	0	0	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+data_041A08	code	verified	1	4	1	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_041A0C	code	verified	14	46	10	0	4	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+data_041A3A	code	verified	1	4	1	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_041A3E	code	verified	2	6	2	0	0	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+data_041A44	code	verified	1	4	1	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_041A48	code	verified	2	6	2	0	0	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+data_041A4E	code	verified	1	4	1	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_041A52	code	verified	2	6	2	0	0	0	0	0	0	1	unowned-head	no function entry; 1 raw nameable addresses	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+data_041A58	code	verified	1	4	1	0	0	0	0	0	0	0	unowned-head	no function entry	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_041A5C	code	verified	12	40	6	2	3	0	0	0	0	0	unowned-head	no function entry	unattended	auto	vehicle-handling	located: Input and J-Cart four-player
+code_041A84	code	verified	301	1160	95	143	31	0	6	5	5	0	srcform-ok	none; banked wave 1 (T7 review)	unattended	T7 review: wave 1 banked	course	located: Lap detection and checkpoints
+code_041F74	code	verified	33	158	6	40	3	0	0	1	1	2	srcform-ok	2 raw nameable addresses	unattended	auto	vehicle-handling	proximity1: calls code_042012; 8 located RAM words
+code_042012	code	verified	229	904	68	178	28	0	0	4	4	9	srcform-ok	9 raw nameable addresses	developer-review	auto	vehicle-handling	located: Car-to-car collisions, Opponent AI (computer driver (opponent AI))
+code_04239A	code	verified	392	1608	163	187	54	0	0	10	10	0	srcform-ok	comments and meaning names pending	developer-review	auto	vehicle-handling	proximity1: 6 located RAM words
+code_0429E2	code	verified	193	770	87	78	21	0	0	2	2	1	srcform-ok	1 raw nameable addresses	developer-review	auto	rest:other	rest: no located link (callers 2, coverage attract+boot+race)
+code_043232	code	verified	157	678	63	97	17	0	0	1	1	7	srcform-ok	7 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+data_0434D8	data	inferred	-	2	-	-	-	-	0	0	0	-	lone-return	decodes as a lone 2-byte return after a terminal branch (re-kind-to-code candidate); no reference or flow; 0 exec in 14 MAME scenarios (P119-P132), 0 non-prefetch reads in 3 MAME scenarios; needs a caller or an execution; re-kind on a verified caller or an execution	re-kind	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+code_0434DA	code	verified	372	1490	126	179	53	0	0	12	12	1	unowned-head	unowned head 14 bytes; 1 raw nameable addresses	developer-review	auto	rest:menus	rest: uses mode word ram_FFE69A
+code_043AC6	code	verified	59	206	6	39	7	0	0	1	1	0	srcform-ok	comments and meaning names pending	developer-review	auto	rules	proximity2: calls code_00E746
+data_0ffb1a	data	inferred	-	6	-	-	-	-	0	0	0	-	rom-tail-residue	6 bytes between imp_367 and pad_0ffb20, packer residue (HUNK_END id); no reference; 0 reads in 3 MAME scenarios	keep-inferred	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+pad_0ffb20	padding	inferred	-	1245	-	-	-	-	0	0	0	-	rom-tail-fill	uniform zero fill at the ROM tail after the last compressed blob; no reference; 0 reads in 3 MAME scenarios; nothing can reference it by construction	keep-inferred	T5 verdict; phase-ends/current/tasks/T5.md	-	-
+data_0ffffd	data	inferred	-	3	-	-	-	-	0	0	0	-	rom-tail-residue	last 3 bytes of the ROM after pad_0ffb20, no decoder; no reference; 0 reads in 3 MAME scenarios	keep-inferred	T5 verdict; phase-ends/current/tasks/T5.md	-	-

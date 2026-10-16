@@ -1,0 +1,65 @@
+# .github/workflows/no-rom.yml — the dump-less CI.
+#
+# The project's contract is byte-identity of build/mmtt96.bin against the retail dump, which is never in CI, so CI
+# cannot build (`make build` needs the dump, Ghidra, Java and the AS assembler). CI runs only what needs none of them:
+#   * audits   — tools/audit_public.py: the tracked tree is public-clean (no game-derived bytes, no purge path,
+#                nothing over the size threshold, no pasted disassembly). Stdlib only.
+#   * selftest — the no-dump self-tests on synthetic fixtures: census.py --fixture, signatures.py --fixture
+#                (capstone 5.0.9 from the hash-pinned requirements-python.txt), commentcheck.py --self-test, and the
+#                asm_leak.py --plant control, which must exit 1. No game data is fetched or used.
+# Byte-identity and `make health` are verified locally with the dump (scripts/contract.sh).
+name: no-rom
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "17 6 * * 1"        # weekly: re-runs both jobs
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audits:
+    name: public-clean audit (no game bytes)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: audit_public — no game-derived bytes, no purge path, nothing > 50 MiB, no pasted disassembly
+        run: python tools/audit_public.py
+
+  selftest:
+    name: no-dump self-tests (synthetic fixtures)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: install capstone (hash-pinned)
+        run: python -m pip install --require-hashes -r requirements-python.txt
+      - name: census.py --fixture
+        run: python scripts/census/census.py --fixture
+      - name: signatures.py --fixture
+        run: python scripts/census/signatures.py --fixture
+      - name: commentcheck.py --self-test
+        run: python scripts/census/commentcheck.py --self-test
+      - name: asm_leak.py --plant (control, must exit 1)
+        run: |
+          set +e
+          python scripts/health/asm_leak.py --plant
+          rc=$?
+          set -e
+          if [ "$rc" -ne 1 ]; then echo "asm_leak --plant: expected exit 1, got $rc"; exit 1; fi
+          echo "asm_leak --plant: exit 1 as expected"

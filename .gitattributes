@@ -1,0 +1,7 @@
+# Our tools parse LF only (db.py refuses CR); core.autocrlf=true must not rewrite checkouts.
+* text=auto eol=lf
+*.bin binary
+*.zip binary
+*.exe binary
+*.png binary
+*.gz binary

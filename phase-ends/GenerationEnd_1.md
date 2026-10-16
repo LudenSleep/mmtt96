@@ -1,0 +1,181 @@
+# GenerationEnd — Generation 1: Byte-identical reassembly of Micro Machines Turbo Tournament 96
+Closed: 2026-10-16 | Phases: 9 (9 closed)
+
+## Phases
+- 1.1 | Extraction and manifest | milestone: one command regenerates the ROM region manifest, a second run is identical, the audit reads it as a required hash source | closed | phase-ends/PhaseEnd_Phase1.1.md
+- 1.2 | Oracles and load map | milestone: disassembler database round-trips from a text export; emulator oracle scripted; ROM and RAM maps proven against live memory | closed | phase-ends/PhaseEnd_Phase1.2.md
+- 1.3 | All-data baseline | milestone: make build emits a ROM with SHA-1 equal to the original at 100% data | closed | phase-ends/PhaseEnd_Phase1.3.md
+- 1.4 | Assembler pinned | milestone: one assembler version and flags reproduce probe routines byte-for-byte | closed | phase-ends/PhaseEnd_Phase1.4.md
+- 1.5 | Census and differential harness | milestone: scanners assert coverage; a second disassembler agrees on instruction boundaries; denominators derive from the build | closed | phase-ends/PhaseEnd_Phase1.5.md
+- 1.6 | Multipliers and encoding map | milestone: one named routine propagates to all repeats; encoding map covers each assembler form used | closed | phase-ends/PhaseEnd_Phase1.6.md
+- 1.7 | Campaign | milestone: census reads 0 undecoded code regions; build stays hash-equal after every batch | closed | phase-ends/PhaseEnd_Phase1.7.md
+- 1.8 | Publish gate | milestone: fresh clone rebuilds from own dump using README only; no-ROM CI green | closed | phase-ends/PhaseEnd_Phase1.8.md
+- 1.9 | Readability | milestone: names, comments and constants complete; build still byte-identical | closed | phase-ends/PhaseEnd_Phase1.9.md
+
+## Decisions that still bind
+- T2 — compression format name for decode_<fmt>.py is `imp` (Amiga Imploder, magic "IMP!").
+- T3 — decoded rows stay `status: inferred` until the phase 1.2 emulator cross-check promotes them.
+- Compression format name is `imp` (Amiga Imploder, magic "IMP!"): contract, recorded in `docs/ops/ops-setup-decomp.md:21` and `scripts/extract/manifest.py` `DECODERS`.
+- Decoded manifest rows stay `status: inferred` until the phase 1.2 emulator cross-check promotes them: contract, recorded in `docs/ops/ops-setup-decomp.md:21`.
+- Next task needs: phase 1.2 confirms the inferred entry 0x000200 (vector 0x10 trap) in an emulator, segments 0x020000-0x0477BA, and promotes decoded rows from `inferred`.
+- Next task needs: confirm the no-ROM CI result for the pushed main before relying on CI as a gate.
+- T1 — annotations of record are `config/ghidra/*.tsv`; the Ghidra project under `ghidra/` is disposable, rebuilt by `db.py rebuild`.
+- T1 — export holds only owned symbols (USER_DEFINED/IMPORTED, non-default names); auto-analysis output never exported.
+- T2 — oracle is MAME 0.289, `megadriv microm96` (software list slot rom_mm96, J-Cart with EEPROM); no BizHawk fallback needed.
+- T3 — decruncher convention 0x035416: in A0 = compressed blob, A1 = dest; out D1 = raw size, D0 = -1 (0xFFFFFFFF) ok / 0 fail; clobbers D0, A1, A5; rts at 0x035448.
+- T3 — oracle files split: decrunch.tsv = forced harness (368 rows), decrunch_natural.tsv = natural in-game calls; check_maps decrunch_dest reads the natural file.
+- T4 — rerun order for segmentation is coverage `--write` -> `classify.py seeds` -> `db.py analyse` -> `classify.py merge` -> manifest -> roundtrip.
+- T4 — `verified` code = executed or Ghidra call/jump/flow-reachable from a verified unit (vectors alone do not verify); `verified` data = referenced only as data and never executed.
+- T5 — a map claim with a `second` value must agree across MAME and BizHawk; disagreement = blocked with both outputs.
+- T5 — MCP emulator bridge: none; revisit at phase 1.7 (ops doc).
+- Annotations of record are `config/ghidra/*.tsv` (owned symbols only); `ghidra/` is disposable: contract, `docs/ops/ops-setup-decomp.md` oracles section, tested by `db.py roundtrip`.
+- Region status rule (verified code = executed or reachable from verified code; verified data = data-referenced, never executed): contract, `docs/ops/ops-setup-decomp.md` classification lines, tested by `coverage.py --check`.
+- Segmentation rerun order coverage `--write` -> `classify.py seeds` -> `db.py analyse` -> `classify.py merge` -> manifest -> roundtrip: environment fact, `docs/ops/ops-setup-decomp.md` and the card `ghidra_db` row.
+- Decruncher 0x035416 convention and oracle file split (`decrunch.tsv` forced, `decrunch_natural.tsv` natural): contract, `docs/ops/ops-setup-decomp.md`, tested by `decrunch.py --all` and `check_maps.py`.
+- A claim with a `second` column must agree across MAME and BizHawk; disagreement is `blocked` with both outputs: contract, `docs/ops/ops-setup-decomp.md`, tested by `check_maps.py --live`.
+- MAME 0.289 `megadriv microm96` is the primary oracle; BizHawk 2.11 is second: environment fact, card Paths `Oracles:` line.
+- MCP bridge: none; revisit at phase 1.7: scope, `docs/ops/ops-setup-decomp.md` MCP decision.
+- Next task needs: phase 1.3 can rely on `config/maps/{rom,ram}.tsv` and `check_maps.py --live` (run detached via `run.sh --bg/--wait`; can exceed 285 s).
+- Next task needs: 97 `inferred` partition rows (incl. 0x0419EE bad bytes, `pad_01facc`, 0x020000-0x035416 data) remain for later phases to confirm.
+- T1 — assembler = clownassembler v1.1.3 `tools/bin/clownassembler_asm68k.exe`, sha256 `9d18134fa7172ba8f068056c8773b7c4d4d3b554880c444e37fce1f66658b269`, 131,072 B, AGPL-3.0-or-later (env fact → ops doc row, done).
+- T1 — command line `tools/bin/clownassembler_asm68k.exe //p <src.asm>,<out.bin>`; `/p` = flat binary, no header, no padding past the last byte. From Git bash / GNU make write `//p` (or set `MSYS_NO_PATHCONV=1`); a bare `/p` is rewritten to a path and fails rc=1.
+- T1 — boundary assert form (end exclusive, hex): `\tif\t* <> $XXXXXX` / `\tinform\t3,"<msg>"` / `\tendc` → assembly fails rc=1 and no output file is written.
+- T2 — the build gate is `make build` ending in `sha1sum -c config/check.retail.sha`; any byte drift fails it.
+- T3 — Test/gate = `make build`, green = `build/mmtt96.bin: OK` and exit 0; decisive = `make clean && make build`.
+- Assembler pin clownassembler v1.1.3, sha256 `9d18134f…b269`, command `//p <src>,<out>`: environment fact, `docs/ops/ops-setup-decomp.md` Version pins row and card Environment Pins line.
+- Boundary assert form `if * <> $END` / `inform 3,"msg"` / `endc` (rc=1, no output): contract, ops doc pins row, emitted by `split.py`, proven by T3 control 2.
+- The gate is `make build` ending in `sha1sum -c config/check.retail.sha`, green = `build/mmtt96.bin: OK` and exit 0; decisive = `make clean && make build`: contract, card Build/Test lines and ops doc build section, tested by the milestone chain.
+- `config/check.*.sha` is `required:` in `config/firewall.txt`: contract, tested by `tools/audit_public.py` (exit 1 when missing).
+- Next task needs: make `build/mmtt96.bin` depend on the generated `asm/` files; today a hand-tampered `asm/` file is only rebuilt after deleting the bin or `make clean`.
+- Next task needs: the stale comment at `.github/workflows/no-rom.yml:19` ("full-fleet compile-only run") still needs fixing.
+- Next task needs: the card `HOW_WE_WORK.md` is exactly at its 7000-char cap; any addition needs a trim elsewhere.
+- Next task needs: P1.2-1 stays deferred to phase 1.5.
+- T1 — T3 and later sources assemble with no switches from the source root; every short encoding is written explicitly (environment fact, recorded in docs/ops/ops-setup-decomp.md).
+- T2 — listing output lives only under ignored paths (asm/src/, .run/); never in tracked files, logs or messages.
+- T2 — `make build SRC=` forces all-data; default SRC=asm/src includes any asm/src/<id>.asm present.
+- T3 — the build assembler is Macroassembler AS V1.42 Bld 313, `asw -q -xx -n -U -i .` then `p2bin`; clownassembler retired from the build (R1.4-002: it rewrites literal-source CMP/ADD/SUB/AND/OR to the I-form unconditionally, class A unreachable).
+- T3 — verdict hand-written 68000 assembly; no compiler phases (kit phases 4 and 7 stay out) unless contradicted.
+- T3 — listing source spells every size and the original mnemonic (cmp vs cmpi, add vs addi); zero (d16,An) is written `0.w(An)`.
+- Build assembler is Macroassembler AS V1.42 Bld 313, `asw -q -xx -n -U -i .` then `p2bin`; clownassembler retired from the build: environment fact, card Environment Pins line, `docs/ops/ops-setup-decomp.md` pins row, `docs/encoding-map.md`.
+- Listing source spells every size and the original mnemonic (cmp vs cmpi, add vs addi); zero (d16,An) is `0.w(An)`: contract, `db.py listing` self-check, `docs/encoding-map.md`.
+- `make build SRC=` forces all-data; default `SRC=asm/src` includes any `asm/src/<id>.asm` present: contract, card Build line, ops doc, tested by the milestone chain.
+- Instruction source and listings live only under ignored `asm/src/` and `.run/`; never in tracked files, logs or messages: contract, `tools/audit_public.py` disassembly-run cap, tested by the milestone chain.
+- Hand-written verdict, no compiler kit phases 4 and 7 unless contradicted: scope, `docs/encoding-map.md`.
+- Next task needs: the card names `docs/ops/INDEX.md` (Project, Pins, Docs map lines) but only `docs/ops/ops-setup-decomp.md` exists; create the index or repoint, within the 7000-char cap (card 6981).
+- Next task needs: `asm/src/` is empty at close; regenerate regions with `db.py listing <id>` before an instruction-form build.
+- T1 — Capstone 5.0.9 installed with the developer's approval; wheel sha256 matched PyPI (pin in docs/ops/ops-setup-decomp.md).
+- T3 — `make health` is the closer's regression gate: green iff `health: pairs n/n agree` and exit 0; results in `.run/mmtt96-health/pairs/`, report `.run/mmtt96-health/report.txt`, child logs `.run/mmtt96-health/logs/<pair>.log`.
+- T4 — data_020000 stays one verified data row until 1.6 checks a split (only 0x020000-0x02FA85 read; 22928 trailing bytes never read).
+- T5 — `make health` is part of every phase-close gate (recorded in card gate line and `docs/ops/INDEX.md`)
+- Capstone 5.0.9 (`M68K_000`) is the second 68000 oracle; pin and wheel sha256 in `docs/ops/ops-setup-decomp.md`: environment fact, card Pins and `docs/ops/INDEX.md` (already recorded by T1/T5).
+- `make health` is part of every phase-close gate: green iff `health: pairs n/n agree` and exit 0: contract, card gate line, `docs/ops/INDEX.md`, tested by this milestone (T3, T5).
+- Regions Ghidra cannot decode are listed by id in `config/oracle/boundary_exceptions.tsv`; nothing instruction-level leaves `.run/`: contract, `boundaries.py`, `asm_leak` rung.
+- Next task needs: data_020000 stays one verified data row until 1.6 checks a split (its trailing 22928 bytes are never read).
+- Next task needs: 1.6 re-kinds the 16 dispatch-reached data rows (V10) to code after seeding Ghidra at the 47 dispatch entries and re-splitting.
+- Next task needs: 1.6 fixes code_0186A0's start (2 bytes early; the one `db.py listing` self-check mismatch); code_01A968, code_03581C, code_01FA2E stay inferred until entry evidence exists.
+- Next task needs: kept inferred: 4 code rows and 48 data rows (V9-V13); each needs the evidence named in T4's verdicts.
+- Next task needs: the next planner reads `docs/ops/INDEX.md` first for tool detail and pins.
+- T1 — the verified code denominator for T2-T5 is 246 rows (144596 bytes), per progress.py after commit 7a7bc4d.
+- T2 — function body = entry .. next entry or region end, over verified code rows only; bytes before a region's first entry are unowned and counted; region bodies scanned separately.
+- T2 — group id = `f|r` + `E|N|S` + 10 hex of the layer hash; defined for singletons too, so `check` recomputes uniformly.
+- T2 — propagate gate (until T3 rendering) = layer hash recomputed from `--rom` + `db.py listing` self-check `match` + `make build SRC=.run/signatures/src` OK, per member; any failure refuses the whole group; registry untouched.
+- T3 — abs.w operand becomes a name only if the sign-extended word address equals the name's address; abs.l only if the 32-bit value equals the address with a zero high byte; else raw hex (AS silently emits a longer form for an abs.w name that cannot be sign-extended, e.g. the VDP control port). Immediates stay raw.
+- T3 — code-name asserts live at the end of main.asm, not in names.inc (inside names.inc each name would be compared to its own generating value).
+- T3 — names.inc emits ram.tsv rows, structs.tsv fields and only kind=code rows of routines.tsv; split refuses reserved names (68000 mnemonics, e.g. rts) and duplicate names/addresses.
+- T3 — after editing config/names run `db.py mirror` then `db.py roundtrip`; pair `names` fails (unmirrored > 0) until then.
+- T5 — form name `<mn>[.<sz>]:<modes>` (mnemonic unaliased, conditions collapsed bcc/dbcc/scc, branches .s/.w); unknown operand kinds render `?<type>.<am>` so they surface as unmapped, never silent.
+- T5 — map Coverage section is generated by `encodings.py --write-map`, never hand-edited; the check fails on absent and count-stale forms.
+- T6 — card detail for census/names tools lives in docs/ops/ops-tools.md; the card keeps one row per tool family pointing there
+- Verified code denominator after T1: 246 rows, 144596 bytes, from `progress.py`: contract, the boundaries rung counts it from the file each run.
+- Signature layers, group ids, function body = entry to next entry or region end over verified code only, propagate refuses whole groups: contract, `docs/ops/ops-tools.md` signatures section, tested by the `signatures` pair (T2, T6).
+- Name rendering only when the encoding is reproduced (abs.w sign-extension, abs.l zero high byte, immediates raw); code-name asserts at the end of `main.asm`; reserved/duplicate names refused: contract, `docs/ops/ops-tools.md` names section, tested by the `names` pair (T3, T6).
+- After any `config/names` edit: `db.py mirror`, `db.py roundtrip`, `pairs.py names`: workflow, skill `names-edit-mirror`, `docs/ops/ops-tools.md`.
+- `docs/encoding-map.md` Coverage section is generated by `encodings.py --write-map`, never hand-edited; unknown operand kinds surface as unmapped: contract, the `encmap` health rung (T5).
+- Card detail for census/names tools lives in `docs/ops/ops-tools.md`; the card keeps one row per tool family: environment fact, already applied by T6.
+- Next task needs: key `config/oracle/decrunch*.tsv` by start address (positional manifest ids shift on every row insert; T1 remapped them by hand, skill `decrunch-parent-remap` until fixed).
+- Next task needs: trim the card further; it is at 6989 of 7000 chars after this close.
+- Next task needs: the 6 inferred code rows (code_01FA2E, code_03581C and the 4 lone returns code_01A404, code_01B166, code_01B8D0, code_01B934) and 26 inferred other rows keep the blockers named in 1.5/T4 and 1.6/T1.
+- Next task needs: a value-logging census (written values across scenarios) could upgrade the placeholder struct field names (`w00`, `f12`, ...) and RAM names to meaning names (cookbook C0017).
+- T1 — D1 (developer): converted instruction source lives locally only under ignored asm/ paths, generated from tracked sidecar files plus the developer's own dump (for T3).
+- T2 — decrunch oracle TSVs key parents by region start address (`parent_start`), never by positional manifest id.
+- T3 — D1 = (a): instruction source never tracked; lives in ignored `asm/src/`, generated from `config/names/*.tsv`, `config/ghidra/comments.tsv`, `config/campaign/ledger.tsv`, routine/signature names plus the local dump (contract: docs/decisions/source-location.md).
+- T3 — readability constructs are sidecar rows keyed by address, each with a renderer in the listing path; never hand-edited source (H1).
+- T3 — firewall, asm_leak.py, audit_public.py, README unchanged by D1; publishing source would need a project rule superseding G12 at a named commit, never a private exemption.
+- T4 — tracked text files are checked out LF regardless of core.autocrlf (`.gitattributes`); readers may keep refusing CR.
+- T4 — `make build` builds from asm/src (instruction listings, ignored); `make build SRC=` is the all-data form; a mismatched listing fails the build (no dc.b fallback).
+- T6 — a meaning name needs >= 3 consistent datapoints that support that exact meaning; values that merely vary, or a pattern that fits several meanings, keep the neutral name (C0017).
+- T7 — every routines.tsv row goes through `signatures.py propagate`, never a hand edit; names lower_snake (fn_<addr6> lower-case hex; NAME_RE refuses upper case).
+- T7 — a plate/eol comment is checked against `db.py listing <region>` before commit; claims not shown by the listing are dropped or restated (axes, sortedness, "same as" claims).
+- T8 — route rule for code rows: insns < 50 -> `unattended` (comments only, commentcheck-gated); insns >= 50 ->
+- T8 — every comment added to config/ghidra/comments.tsv passes `commentcheck.py` (health rung); a new claim form
+- D1: instruction source is local-only under ignored `asm/src`, generated from tracked sidecars plus the developer's dump; publishing it needs a project rule superseding G12: contract, `docs/decisions/source-location.md`, guarded by `asm_leak` and `audit_public` (T1, T3).
+- Decrunch oracle TSVs key parents by `parent_start`: contract, `docs/ops/ops-tools.md`, `docs/ops/ops-setup-decomp.md` (T2).
+- Default `make build` builds from `asm/src` and fails on a mismatched listing; `make build SRC=` is the all-data form; tracked text is LF via `.gitattributes`: contract, card Build line, `docs/ops/ops-setup-decomp.md`, the `srcform` pair (T4, T5).
+- A meaning name needs >= 3 consistent datapoints for that exact meaning: technique under rule G62, cookbook C0017 (T6).
+- `routines.tsv` is written only by `propagate`/`bulk-neutral`, lower_snake names: contract, `docs/ops/ops-tools.md` names section (closer added the case note) (T7).
+- Every comment passes `commentcheck.py`; the route rule (`unattended` < 50 insns, else `developer-review`): contract, `docs/ops/ops-tools.md` ledger/commentcheck sections, health rungs `ledger` and `commentcheck` (T8).
+- Next task needs: phase 1.9 waves-2+ plan from T8 (about 27 coder runs of ~1,500 instructions each, comments and meaning names).
+- Next task needs: extend `db.py mirror` to regions; a Makefile names-dir variable; refresh older route text and stale `no listing` blocker text on the ledger.
+- Next task needs: a value-logging probe aimed at `jcart_38FFFE` (nearest miss of the 3-datapoint bar).
+- Next task needs: the card is at 6986 of 7000 chars after this close; any addition must trim elsewhere.
+- T2 — a clone whose path has an element starting with `.` sets MMTT96_GHIDRA_PROJ to a dot-free dir; the T6 contract
+- T2 — commentcheck --self-test needs no dump (CI no-dump job may run it); regenerate fixtures/commentcheck_starts.txt from a built tree when a fixture row changes.
+- T3 — the AS snapshot zip is the only thing bootstrap downloads (D1, 2026-10-13); Python, Java, Ghidra, make are checked only, never installed
+- T4 — CI runs only checks needing no dump, Ghidra, Java or the assembler, with the runner's `python`; a new no-dump check goes into the `selftest` job and `docs/ops/ops-tools.md ## ci` together.
+- T6 — the contract clone lives outside the repo on a dot-free path (default `<repo parent>/_contract/<ts>`, env MMTT96_CONTRACT_DIR / --dir); dotted or existing dirs are refused; scratch clones are never deleted by the script.
+- Repository private; public flip deferred, gated (G17/DK-56 host proof, the developer's copyright decision, G58/G63/G64), off by default: contract, README `## Repository visibility`, `docs/68k-adaptation.md` (T5).
+- D1 (b): bootstrap downloads only the AS zip, sha256-verified before extraction; Python, Java, Ghidra, make are checked, never installed: contract, `scripts/bootstrap.sh`, README step 3, `docs/ops/ops-setup-decomp.md` (T3).
+- A clone on a dotted path sets `MMTT96_GHIDRA_PROJ` to a dot-free dir; `db.py` refuses dotted project paths: contract, README, `docs/ops/ops-tools.md`, cookbook C0029 (T2).
+- `config/names` is written only after all signatures gates pass on a scratch copy; `--plant-gate3` is the control: contract, `docs/ops/ops-tools.md` (T2).
+- CI runs only no-dump checks; a new one goes into job `selftest` and `docs/ops/ops-tools.md ## ci` together: contract, `.github/workflows/no-rom.yml` (T4).
+- The contract clone lives outside the repo on a dot-free path, never deleted by the script; reproducibility is re-proved with `scripts/contract.sh`, recorded in `docs/verification.md`: contract, `docs/ops/ops-tools.md ## contract` (T6).
+- Next task needs: phase 1.9 routes its readability waves to the developer's stated interests first: the camera that follows the pack, scoring by forcing an opponent out of view, the tie-break playoff, and the pool-table levels with the zoomed-out camera (find them via the ledger, signature groups, RAM names such as the slot tables, and MAME traces; the track editor/construction kit and its saved-track format is a lead for how levels are stored).
+- Next task needs: the about-27-run waves-2+ plan from 1.7/T8, re-ordered by those subsystems; the value-logging probe aimed at `jcart_38FFFE`.
+- Next task needs: the milestone's `verified by` text should not hold prose clauses (`phaseend_index.py verify` executes them) and a contract clause needs its `--dump` argument or env in the clause, or the clause names the record instead.
+- Next task needs: the card is at 6991 of 7000 chars after this close; any addition must trim elsewhere. Extend nothing of 1.8's scope.
+- T1 — probe runs use a per-run EEPROM copy from `.run/mame/nvram_seed`; a run never inherits another run's saves (docs/ops/ops-tools.md).
+- T2 — probe scripts drive scenarios through drive.lua hooks, loading it with `loadfile(path, "t", _ENV)` (a `dofile` runs in a different env and the hooks are invisible).
+- T2 — writers controls are always on: positive `ram_frame_counter` FFC220 every frame (from frame 10 in boot runs), negative ROM header 000100 never written; writers_agg refuses a failing run.
+- T3 — a hardware constant enters `hw.tsv` only with `published-doc: <source>` evidence (basereg rows: `rom:` evidence, and constants.py checks the invariant); game constants go to `consts.tsv` only with >= 3 datapoints or a confirmed mechanics claim.
+- T3 — the in-scope set is "an immediate stored or bit-tested at a HW_PORTS address, resolved through absolute operands or a tracked port base"; constants.py exits 1 on any raw member. The vdp data port, PSG (C00011), J-Cart and the Z80 RAM mailbox stay raw (data or game protocol, not hardware constants).
+- T4 — a mechanics claim is one `- ` bullet ending `[confirmed: ptrs]`, `[hypothesis: ptrs]` or bare `[hypothesis]` (open, no lead); `confirmed` = >= 3 distinct run ids or one `controlled` probe; tables and prose are not claims.
+- T5 — scale questions use the same-vehicle pair Pool Slalom (list index 16, Mini Micro) vs Ball Chase (index 40, Pro), Ferry Fiasco as normal reference.
+- T6 — idle or poked runs from a saved state use an unlisted SCEN id (no inputs, no saves); named scenarios replay inputs and overwrite their state.
+- T11 — the system map is regenerated only by `systems.py map` (needs `ledger.py write` listing + Ghidra refs); `ledger.py write` keeps `system`/`system_basis`; waves own `batches.tsv` `status` (map refuses to overwrite a non-open batch without `--force`).
+- T11 — system names: `view-and-scrolling rules course collisions vehicle-handling data`, `rest:<family>` (menus sound-driver music-effects attract input initialisation decompression other); no `camera`.
+- T12 — RAM meaning names carry the house `ram_` prefix (`ram_view_x`); routine meaning names stay unprefixed. Later waves follow it.
+- T24 — never add a routines.tsv row whose label equals a region-id entry; describe such entries with plate comments.
+- T33 — ledger route vocabulary is `unattended developer-review promote re-kind keep-inferred`; the condition for promote/re-kind lives in the blocker column (contract: ops-tools.md + `ledger.py check`).
+- T34 — Ghidra label symbols are applied after auto-analysis (postScript), never before; pre-analysis labels make Ghidra create/rename functions after them (`SymbolManager.createCodeSymbol` -> `tryUpdatingDefaultFunction`).
+- Terminology: names, comments, headings and ledger rows use the period terms screen, view, scroll and level/stage, never a modern engine term for the view: `docs/ops/ops-tools.md` systems line, the T11 system names.
+- A mechanics claim is one `- ` bullet ending `[confirmed: ...]` or `[hypothesis...]`; confirmed means >= 3 distinct run ids or one controlled probe: contract `commentcheck.py --doc` and its fixtures, `docs/ops/ops-tools.md` (T4).
+- Meaning names need >= 3 datapoints or a confirmed mechanics claim; otherwise a neutral name with an `unresolved:` verdict; RAM names carry `ram_`, routines are unprefixed: `docs/ops/ops-tools.md` evidence rule (T12).
+- `hw.tsv` rows need `published-doc:` evidence; the in-scope set of hardware immediates is checked by `constants.py check` (exit 1 on a raw member): contract `constants.py`, `docs/ops/ops-tools.md ## constants` (T3).
+- Ledger routes are `unattended developer-review promote re-kind keep-inferred`, enforced by `ledger.py check`; readability completeness by `ledger.py check --complete`: `docs/ops/ops-tools.md` (T33, T34).
+- Ghidra label symbols are applied after auto-analysis (postScript `labels` pass): `docs/ops/ops-setup-decomp.md`, cookbook C0043 (T34).
+- Probe runs use a per-run EEPROM copy; idle runs from a saved state use an unlisted scenario id; drive hooks load with `loadfile(path, "t", _ENV)`: `docs/ops/ops-tools.md` (T1, T2, T6).
+- `scripts/contract.sh` needs `PY` exported to the Python 3.11 interpreter: environment fact, skill `make-path-detached` (this close).
+- Next task needs: the Group 7 open questions that a run can answer (menus, sound driver, attract): `docs/mechanics.md` Group 7 open-question blocks (T32).
+- Next task needs: decoding the Z80 sound driver's music and effect data, for music extraction; the driver code is commented but its data is not decoded.
+- Next task needs: whether the kit's 4 Player and 4 Player Teams races field computer cars, and which tiles the half-scale kit drawer keeps (`docs/mechanics.md` Construction kit open questions, T44).
+- Next task needs: an eight-car course select with a fourth entry needs the shared course-name list `dat_04548A` extended or relocated (no free space), plus the per-course tables in the capacity lines (T45).
+- Next task needs: the two renames above, only if the developer wants them, as a task owning `config/names/ram.tsv` and the names mirror (T35); the card has 19 chars headroom (6981/7000).
+
+## Deferred
+- from T4: phase 1.2 promotes decoded rows from `inferred`; the `unknown` 68000 region 0x020000-0x0477BA awaits the disassembler. (unconsumed)
+- from T5: phase 1.3 can rely on ram.tsv/rom.tsv claims and `check_maps.py --live` (MAME + BizHawk, run detached via run.sh --bg/--wait; > 285 s possible). (unconsumed)
+- from T3: follow-up gap: make `$(OUT)` depend on generated `asm/` files (or document that `asm/` edits need `make clean`); stale no-rom.yml:19 comment; card has 0 chars headroom. (unconsumed)
+- from T4: phase 1.4 closed; build is AS; `db.py listing <id> --out asm/src` + `make build` is the source path; asm/src is empty at close. (unconsumed)
+- from T5: phase close; next phase planner reads `docs/ops/INDEX.md` first for tool detail and pins (unconsumed)
+- from T6: phase 1.7 starts from 9 pairs + encmap rung; any new tool gets a docs/ops/ops-tools.md section, card stays <= 7000 chars. (unconsumed)
+- from T8: phase 1.8 (publish gate) reads ledger counts above; 1.9 waves use the route column and commentcheck. (unconsumed)
+- from T7: phase close (PHASE-END) once the developer accepts T7. (unconsumed)
+- T18 | superseded — wave: collisions
+- T40 | superseded — rename pass: course and collisions names
+- from T45: adding a Mini Micro course with a new number means relocating dat_04548A (no free space) plus the per-course tables in the capacity lines. (unconsumed)
+- I5 (deferred:gen2): T18.1 static findings (hold in inbox, no task this phase): fn_040d5a search range, fn_000a8c dead code 0x000B46-0x000B84
+- I12 (deferred:gen-next): next-generation planner: Group 7 run-answerable open questions in docs/mechanics.md (Menus, Attract mode, Effects, Sound
+- I13 (deferred:gen-next): Next task needs: decode the Z80 sound data format (data_020000-02FA85, scores vs samples) for music extraction
+
+## Plain-English Recap
+Generation 1 set out to rebuild Micro Machines Turbo Tournament 96 (Mega Drive, Europe v1.1) from source so that the assembled ROM matches the original byte for byte, and then to make that source understandable. Phases 1.1 to 1.4 extracted the ROM into a region manifest, set up the Ghidra database and the MAME and BizHawk emulators as oracles, produced the first byte-identical build from data, and pinned one assembler version that reproduces the code exactly. Phases 1.5 to 1.7 added coverage counts and a second disassembler to check instruction boundaries, a signature system that names one routine and propagates the name to its copies, and a campaign that turned every code region from raw data into instructions while keeping the build identical. Phase 1.8 proved a fresh clone rebuilds from the owner's own ROM dump using the README alone and set up continuous integration that runs without the ROM; the repository stayed private, by the developer's choice. Phase 1.9 then grew from "names, comments and constants" into the developer's wider goal of understanding every game system well enough to replicate it, which is why it ran to forty-five tasks with a developer review after each group of systems. The plan changed course mid-phase: developer reviews added follow-up tasks (open probe runs for the rules and vehicle-handling groups, two rename passes, and the eight-car and construction-kit questions of T43 to T45), because the reviews showed claims that a few more runs could settle. The next generation inherits a readable, byte-identical source, a mechanics document with its open questions and the runs that would settle them, the deferred items listed above, and the developer's request for a process retrospective.

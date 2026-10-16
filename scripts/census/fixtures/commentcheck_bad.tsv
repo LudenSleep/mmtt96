@@ -1,0 +1,13 @@
+addr	type	text
+0x010810	plate	Empty routine: returns at once. One of five identical two-byte return stubs (signature group fEa65b6b38d5).
+0x010810	plate	Empty routine (signature group fEa65b6b38d5: 0x010810, 0x012EE0, 0x012EE8).
+0x010810	plate	Empty routine; executed in all four coverage runs.
+0x012EE0	plate	Empty routine; executed in one race coverage run.
+0x012EE0	plate	Empty routine; first of two such stubs at 0x012EE0, 0x012EE8, 0x012EEE.
+0x006490	plate	Pair test, slots 0 and 2 (group pair_test_sj).
+0x0063C4	plate	Pair test reading ram_FFD999 and pair_test_s0.
+0x0063C5	plate	Pair test, slots 0 and 1.
+0x0063C4	plate	Pair test; see 0x0063C5.
+0x01F820	plate	Clears work RAM 0xFFEDCF-0xFFC240.
+0x01F820	plate	Twin of 0x01F840 (signature group fNffffffffff).
+0x0063C4	plate	Calls pair_test_s0_00655D.
